@@ -1,0 +1,78 @@
+<div class="products" id="pro">
+  <h2>PRODUCTS 富汇钱码头 <a href="${ctxPath}/productlist">More >></a></h2>
+  <ul>
+   <#cms_banner type="首页活动banner" rows="10";bans>
+     <#pro_Lists  rows="3";pros>
+    <Li class="lihover" style="min-height: 466px;">
+    <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%><%if(banLP.index==5){%><img src="${pic}" ><%}%><%}%>
+    <%for(pro in pros.dataList){%>
+    <%if(proLP.index==1){%>
+    <h1>资金灵活配置</h1><h3>${pro.pro_name}</h3><span>${pro.i_prostyle}<br><br>
+    <center>${pro.vc_leastsubscribe}起 | ${pro.pro_due} | ${pro.pro_features}</center>
+    </span><br>
+    <%if(pro.pro_style=='1'){%>
+   <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'" >
+   <%}%>
+     <%if(pro.pro_style=='2'){%>
+   <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'" >
+   <%}%>
+     <%if(pro.pro_style=='3'){%>
+     <%if(pro.flag=='1'){%>
+   <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'" >
+   <%}else{%>
+    <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'" >
+   <%}%>
+    <%}%>
+    <%}%>
+    <%}%>
+    </Li>
+    <Li style="min-height: 466px;">
+    <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%><%if(banLP.index==6){%><img src="${pic}" ><%}%><%}%>
+    <%for(pro in pros.dataList){%>
+    <%if(proLP.index==2){%>
+    <h1>资金灵活配置</h1><h3>${pro.pro_name}</h3><span>${pro.i_prostyle}<br><br>
+    <center>${pro.vc_leastsubscribe}起 | ${pro.pro_due} | ${pro.pro_features}</center>
+     </span><br>    
+     <%if(pro.pro_style=='1'){%>
+   <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'" >
+   <%}%>
+     <%if(pro.pro_style=='2'){%>
+   <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'" >
+   <%}%>
+     <%if(pro.pro_style=='3'){%>
+     <%if(pro.flag=='1'){%>
+   <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'" >
+   <%}else{%>
+    <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'" >
+   <%}%>
+    <%}%>
+    <%}%>
+    <%}%>
+    <Li style="min-height: 466px;">
+    <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%><%if(banLP.index==7){%><img src="${pic}" ><%}%><%}%>
+    <%for(pro in pros.dataList){%>
+    <%if(proLP.index==3){%>
+    <h1>资金灵活配置</h1><h3>${pro.pro_name}</h3><span>${pro.i_prostyle}<br><br>
+    <center>${pro.vc_leastsubscribe}起 | ${pro.pro_due} | ${pro.pro_features}</center>
+     </span><br>
+       <%if(pro.pro_style=='1'){%>
+   <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'" >
+   <%}%>
+     <%if(pro.pro_style=='2'){%>
+   <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'" >
+   <%}%>
+     <%if(pro.pro_style=='3'){%>
+     <%if(pro.flag=='1'){%>
+   <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'" >
+   <%}else{%>
+    <input type="button" value="查看详情" onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'" >
+    <%}%>
+    <%}%>
+    <%}%>
+    <%}%>
+    </Li>
+    </#pro_Lists>
+   </#cms_banner>
+  </ul>
+  <div class="clear"></div>
+</div>

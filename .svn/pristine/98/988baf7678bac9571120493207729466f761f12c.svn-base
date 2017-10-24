@@ -1,0 +1,43 @@
+  <h2><img src="${static_ctx}/portal/images/protb.JPG" width="15" height="15">&nbsp;人民币浮动收益类产品</h2>
+<table width="100%" border="0" cellpadding="1" cellspacing="1">
+  <tr class="trbg">
+    <td>产品简称</td>
+    <td>募集期/开放期</td>
+    <td width="80">运作期</td>
+    <td>资金投向</td>
+    <td width="100">开放状态</td>
+    <td width="250">操作</td>
+    <td>&nbsp;</td>
+  </tr>
+ <#pro_Lists pro_style="2" i_prostatus="${i_prostatus!}"  page="${p1!}"  rows="3";pageRecord>
+ <%if(pageRecord.dataList.~size>0){%>
+        <%for(pro in pageRecord.dataList){%>
+  <tr>	
+    <td>${pro.pro_name}</td>
+    <td>${strutil.subStringTo (pro.d_startdate,0,10)}至${strutil.subStringTo (pro.d_enddate,0,10)}</td>
+    <td>${pro.pro_due}</td>
+    <td>${pro.vc_pub1}</td>
+    <td><%if(pro.i_prostatus=='1'){%>在售<%}%><%if(pro.i_prostatus=='2'){%>即将开放<%}%><%if(pro.i_prostatus=='3'){%>已售罄<%}%></td>
+    <td><div class="ljxq">
+    <%if(pro.flag=='2'){%>
+    <a href="${ctxPath}/proone_detail?pro_code=${pro.pro_code}">了解详情</a>
+    <%}else{%>
+    <a href="${ctxPath}/protwo_detail?pro_code=${pro.pro_code}">了解详情</a>
+    <%}%>
+    </div> <div class="wyzx">
+    <a href="javascript:void(0);"  onclick="immediatelysign('${pro.pro_code}','${pro.pro_name}')" >我要咨询</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+   <%}%>
+      <%}else{%>
+   <tr><td colspan="7">暂无相关数据</td></tr>
+   <%}%>
+</table>
+ <%
+    var page = pageRecord.page;   // 当前页
+    var totalPage = pageRecord.totalPage;     // 总页数
+%>
+<%if(totalPage>0&&page>=1){%>
+    <div class="jjtcfy"  id="proc"><a onclick='gopage1(${page}-1)' href="javascript:void(0)">上一页</a>&nbsp;&nbsp;&nbsp;<a onclick='gopage1(${page}+1)' href="javascript:void(0)">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;${page}/${totalPage}</div>
+<%}%>
+ </#pro_Lists>	

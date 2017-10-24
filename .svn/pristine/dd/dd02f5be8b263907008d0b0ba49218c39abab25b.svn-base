@@ -1,0 +1,48 @@
+  <div class="newwk">
+    <div class="proview">
+      <h2><a href="product.html">富汇钱码头</a> > <a href="productlist.html">全部产品</a> > 人民币固定收益产品</h2>
+      <div class="proviewnr">
+         <div class="proviewnrleft">
+          <h1>富汇财富月月鑫基金</h1>
+          
+          <div style="width:100%; height:96px;"><p class="projzp">开放状态：已售罄<br>相关产品：<a href="#">富汇衫利鑫富越2号投资基金</a></p>
+          <p class="projzp">募集期/开放期：2016-3-15至2016-3-22<br>运作期：3个月起</p>
+          </div>
+          
+    <div class="productviewnav">
+     <ul>
+       <li><a href="#pro1">资金投向</a></li>
+       <li><a href="#pro2">风险控制</a></li>
+       <li><a href="#pro3">相关资讯</a></li>
+     </ul>
+    </div> 
+    <div class="productview">
+     <ul>
+      <li id="pro1">
+        <img src="${static_ctx}/portal/images/zftz.jpg" style="margin:20px 5%; width:90%;">
+      </li>
+      <div class="banx"></div>
+      <li id="pro2">
+        <h2>风险控制</h2>
+        <img src="${static_ctx}/portal/images/fxkz.jpg" style="margin:20px 5%; width:90%;">
+      </li>
+ <div class="banx"></div>
+      <li id="pro3">
+      
+      </li>
+      <script>
+     	$(function(){
+		 gopage("1");
+		   })
+       function gopage(p){
+		$("#pro3").load("${ctxPath}/informationPage?p="+p);
+        }
+      </script>
+     </ul>
+    </div>
+        </div>
+         <%include("/pc/include/product/appointment.html"){}%>
+        </div>
+    </div>
+<div class="clear"></div>
+  </div>

@@ -1,0 +1,79 @@
+package ${tables.controllerDir};
+
+import ${tables.modelDir}.${tables.objectName+tables.modelast};
+import ${tables.serviceDir}.${tables.objectName+tables.servicelast};
+import com.fhcf.manager.util.MyBeanUtils;
+import com.puff.framework.annotation.Controller;
+import com.puff.framework.annotation.Inject;
+import com.puff.framework.annotation.Mapping;
+import com.puff.framework.annotation.BeanScope;
+import com.puff.jdbc.core.PageRecord;
+import com.puff.web.mvc.PuffContext;
+import com.puff.web.view.View;
+import com.puff.web.view.ViewFactory;
+import cn.aresoft.common.model.RetMsg;
+import cn.aresoft.common.model.CommonParam;
+import cn.aresoft.manager.controller.CommonController;
+import cn.aresoft.manager.plugin.MyBeetlView;
+
+@Controller(value="${tables.callPath}",scope = BeanScope.SINGLETON)
+public class ${tables.objectName+tables.controllerlast} extends CommonController{
+
+	@Inject
+	private ${tables.objectName+tables.servicelast} ${strutil.toLowerCase(tables.objectName)+tables.servicelast};
+
+
+	public View index() {
+		MyBeetlView view =new  MyBeetlView("/${tables.viewBasePag}/${strutil.toLowerCase(tables.objectName)}_list${tables.fileNamefix}");
+		return view;
+	}
+	
+	public View json() {
+		CommonParam p =getCommonParam();
+		PageRecord<${tables.objectName+tables.modelast}> data = ${strutil.toLowerCase(tables.objectName)+tables.servicelast}.paging(PuffContext.getModel(${tables.objectName+tables.modelast}.class), p);
+		return ViewFactory.json(data);
+	}
+
+	public View add() {
+		MyBeetlView view =new  MyBeetlView("/${tables.viewBasePag}/${strutil.toLowerCase(tables.objectName)}_add${tables.fileNamefix}");
+		return view;
+	}
+
+	@Mapping("/insert")
+	public View add${tables.objectName}() {
+		${tables.objectName+tables.modelast} ${strutil.toLowerCase(tables.objectName)+tables.modelast} = PuffContext.getModel(${tables.objectName+tables.modelast}.class);
+		${strutil.toLowerCase(tables.objectName)+tables.servicelast}.insert(${strutil.toLowerCase(tables.objectName)+tables.modelast});
+		return ViewFactory.json(RetMsg.success());
+	}
+
+	public View edit(String id) {
+		${tables.objectName+tables.modelast} ${strutil.toLowerCase(tables.objectName)+tables.modelast} = ${strutil.toLowerCase(tables.objectName)+tables.servicelast}.query(id);
+		MyBeetlView view = new MyBeetlView("/${tables.viewBasePag}/${strutil.toLowerCase(tables.objectName)}_edit${tables.fileNamefix}", "${strutil.toLowerCase(tables.objectName)+tables.modelast}", ${strutil.toLowerCase(tables.objectName)+tables.modelast});
+		return view;
+	}
+
+	@Mapping("/update")
+	public View update${tables.objectName}() {
+		${tables.objectName+tables.modelast} ${strutil.toLowerCase(tables.objectName)+tables.modelast} = PuffContext.getModel(${tables.objectName+tables.modelast}.class);
+		${tables.objectName+tables.modelast} ${strutil.toLowerCase(tables.objectName)+tables.modelast}new = ${strutil.toLowerCase(tables.objectName)+tables.servicelast}.query(${strutil.toLowerCase(tables.objectName)+tables.modelast}.getId());
+		try {
+			MyBeanUtils.copyBeanNotNull2Bean(${strutil.toLowerCase(tables.objectName)+tables.modelast}, ${strutil.toLowerCase(tables.objectName)+tables.modelast}new);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		${strutil.toLowerCase(tables.objectName)+tables.servicelast}.update(${strutil.toLowerCase(tables.objectName)+tables.modelast}new);
+		return ViewFactory.json(RetMsg.success());
+	}
+
+	@Mapping("/deleteWuli")
+	public View delete${tables.objectName}() {
+		${strutil.toLowerCase(tables.objectName)+tables.servicelast}.deleteIn(PuffContext.getParameterList("ids", ","));;
+		return ViewFactory.json(RetMsg.success());
+	}
+	@Mapping("/delete")
+	public View deleteEmstaffmessage() {
+		${strutil.toLowerCase(tables.objectName)+tables.servicelast}.deleteInSql(PuffContext.getParameterList("ids", ","),"delete_flag");
+		return ViewFactory.json(RetMsg.success());
+	}
+
+}

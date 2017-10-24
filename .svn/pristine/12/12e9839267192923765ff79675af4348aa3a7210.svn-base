@@ -1,0 +1,95 @@
+package com.fhcf.manager.controller.product;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import com.puff.framework.annotation.Controller;
+import com.puff.framework.annotation.Inject;
+import com.puff.jdbc.core.PageRecord;
+import com.puff.web.mvc.PuffContext;
+import com.puff.web.view.View;
+import com.puff.web.view.ViewFactory;
+
+import cn.aresoft.common.model.RetMsg;
+import cn.aresoft.fhcf.common.cache.ProductReportCache;
+import cn.aresoft.fhcf.common.model.product.ProductInfo;
+import cn.aresoft.fhcf.common.model.product.ProductReport;
+import cn.aresoft.fhcf.common.service.ProductInfoService;
+import cn.aresoft.fhcf.common.service.ProductReportService;
+import cn.aresoft.manager.controller.CommonController;
+import cn.aresoft.manager.plugin.MyBeetlView;
+@Controller(value = "/admin/report")
+public class ProductReportController extends CommonController{
+	@Inject 
+	private ProductReportService productReportService;
+	@Inject
+	private ProductInfoService productInfoService;
+	@Inject
+	private ProductReportCache productReportCache;
+	
+	public View index(){
+		MyBeetlView view =new  MyBeetlView("/report/report_list.html");
+		return view;
+	}
+	public View json() {
+		ProductReport  p= PuffContext.getModel(ProductReport.class);
+		PageRecord<ProductReport> data = productReportService.paging(p,getCommonParam());
+		return ViewFactory.json(data);
+	}
+	public View add() {
+		MyBeetlView view = new MyBeetlView("/report/report_add.html");
+		List<ProductInfo> products=productInfoService.queryList();
+		view.put("products", products);
+		return view;
+	}
+
+	public View insert() {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		ProductReport  p= PuffContext.getModel(ProductReport.class);
+		ProductInfo  pro = productInfoService.queryByCode(p.getPro_code());
+		p.setPro_name(pro.getPro_name());
+		p.setD_createtime(df.format(new Date()));
+		p.setD_lastmodtime(df.format(new Date()));
+		p.setI_createuser(getSysUser().getId());
+		p.setI_moduser(getSysUser().getId());
+		productReportService.insert(p);
+		productReportCache.clear();
+		return ViewFactory.json(RetMsg.success("新增成功！"));
+	}
+
+	// 查询单条数据
+	public View edit(String id) {
+		ProductReport  p =productReportService.query(id);
+		List<ProductInfo> products=productInfoService.queryList();
+		MyBeetlView view = new MyBeetlView("/report/report_edit.html");
+		view.put("products", products);
+		view.put("rep", p);
+		return view;
+	}
+
+	public View update() {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		ProductReport  p= PuffContext.getModel(ProductReport.class);
+		ProductInfo  pro = productInfoService.queryByCode(p.getPro_code());
+		ProductReport  rep =productReportService.query(p.getI_id());
+		p.setPro_name(pro.getPro_name());
+		p.setD_createtime(rep.getD_createtime());
+		p.setD_lastmodtime(df.format(new Date()));
+		p.setI_createuser(rep.getI_createuser());
+		p.setI_moduser(getSysUser().getId());
+		productReportService.update(p);
+		productReportCache.clear();
+		return ViewFactory.json(RetMsg.success("修改成功！"));
+	}
+
+	public View delete() {
+		List<String> ids = PuffContext.getParameterList("ids", ",");
+		for (String id : ids) {
+			productReportService.delete(id);
+		}
+		productReportCache.clear();
+		return ViewFactory.json(RetMsg.success("删除成功！"));
+	}
+
+}
+

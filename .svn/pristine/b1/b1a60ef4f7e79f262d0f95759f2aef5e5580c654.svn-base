@@ -1,0 +1,81 @@
+package com.fhcf.manager.controller.product;
+import java.util.List;
+
+import com.puff.framework.annotation.Controller;
+import com.puff.framework.annotation.Inject;
+import com.puff.jdbc.core.PageRecord;
+import com.puff.web.mvc.PuffContext;
+import com.puff.web.view.View;
+import com.puff.web.view.ViewFactory;
+
+import cn.aresoft.common.model.RetMsg;
+import cn.aresoft.fhcf.common.cache.FundNavCache;
+import cn.aresoft.fhcf.common.model.product.FundNav;
+import cn.aresoft.fhcf.common.model.product.ProductInfo;
+import cn.aresoft.fhcf.common.service.FundNavService;
+import cn.aresoft.fhcf.common.service.ProductInfoService;
+import cn.aresoft.manager.controller.CommonController;
+import cn.aresoft.manager.plugin.MyBeetlView;
+@Controller(value = "/admin/fundnav")
+public class FundNavController extends CommonController{
+	@Inject 
+	private FundNavService fundNavService;
+	@Inject
+	private ProductInfoService productInfoService;
+	@Inject
+	private FundNavCache fundNavCache;
+	public View index(){
+		MyBeetlView view =new  MyBeetlView("/nav/nav_list.html");
+		return view;
+	}
+	public View json() {
+		FundNav  f= PuffContext.getModel(FundNav.class);
+		PageRecord<FundNav> data = fundNavService.paging(f,getCommonParam());
+		return ViewFactory.json(data);
+	}
+	public View add() {
+		MyBeetlView view = new MyBeetlView("/nav/nav_add.html");
+		List<ProductInfo> products=productInfoService.queryList();
+		view.put("products", products);
+		return view;
+	}
+
+	public View insert() {
+		FundNav  f= PuffContext.getModel(FundNav.class);
+		ProductInfo  p = productInfoService.queryByCode(f.getFundInfoId());
+		f.setFundInfoName(p.getPro_name());
+		fundNavService.insert(f);
+		fundNavCache.clear();
+		return ViewFactory.json(RetMsg.success("新增成功！"));
+	}
+
+	// 查询单条数据
+	public View edit(String id) {
+		FundNav  f =fundNavService.query(id);
+		List<ProductInfo> products=productInfoService.queryList();
+		MyBeetlView view = new MyBeetlView("/nav/nav_edit.html");
+		view.put("products", products);
+		view.put("f", f);
+		return view;
+	}
+
+	public View update() {
+		FundNav  f= PuffContext.getModel(FundNav.class);
+		ProductInfo  p = productInfoService.queryByCode(f.getFundInfoId());
+		f.setFundInfoName(p.getPro_name());
+		fundNavService.update(f);
+		fundNavCache.clear();
+		return ViewFactory.json(RetMsg.success("修改成功！"));
+	}
+
+	public View delete() {
+		List<String> ids = PuffContext.getParameterList("ids", ",");
+		for (String id : ids) {
+			fundNavService.delete(id);
+		}
+		fundNavCache.clear();
+		return ViewFactory.json(RetMsg.success("删除成功！"));
+	}
+
+}
+

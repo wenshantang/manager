@@ -1,0 +1,75 @@
+  <div class="newwk">
+    <div class="newbanner">
+    <#topic_article topicCode="comingshow" page="${p!}" rows="4";pageRecord>
+    <%if(pageRecord.dataList.~size>2){%>
+     <%  for(article in pageRecord.dataList){%>
+	 <%if(articleLP.index==2){%>
+       <div class="newleft">
+                <#cms_banner type="活动与洞察banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==1){%>
+					             <img src="${pic}" >
+					            <%}%>
+					         <%}%>
+              		</#cms_banner>
+         <div class="newlsftzi"><h1>${article.title}</h1>
+         嘉宾：${article.guest}<br>时间：${strutil.subStringTo (article.publish_time,0,10)}<br>地点：${article.active_site}<br><br>
+          <input type="button" class="ljbm" value="立即报名" onclick="immediatelysign('${article.id}','${article.title}')">
+          <input type="button" value="查看详情" class="ckxq" onclick="window.location.href='${ctxPath}/articledetail?article_id=${article.id}&topicCode=comingshow'">
+         </div>
+       </div> 
+      <%}%>
+		<%}%> 
+		<%}%>  
+		</#topic_article>
+       <div class="newright"><img src="${static_ctx}/portal/images/we.JPG"></div>
+    </div>
+    
+    <div class="clear"></div>
+    
+   <div class="newsoon">
+       <div class="newtille"><h2>即将推出</h2><a href="#jjtc">More >></a></div>
+       <ul>
+        <#topic_article topicCode="comingshow" page="${p!}" rows="4";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					 <%if(articleLP.index>1){%>
+            <li><div class="newsoonimg"><img src="${article.small_picurl}"></div><p>
+            <a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=comingshow">${article.title}</a></p>${strutil.subStringTo (article.publish_time,0,10)}</li>
+					<%}%>
+					<%}%> 
+					 <%}%>  
+			</#topic_article>
+       </ul><div class="clear"></div>
+    </div>
+    
+    <div class="newsoon">
+       <div class="newtille"><h2>精彩回顾</h2><a href="#jchg">More >></a></div>
+       <ul> 
+       
+             <#topic_article topicCode="wonderfulreview" page="${p!}" rows="4";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					 <%if(articleLP.index>1){%>
+            <li><div class="newsoonimg"><img src="${article.small_picurl}"></div><p> 
+            <a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=wonderfulreview">${article.title}</a></p></li>
+					 <%}%>
+					<%}%>
+					<%}%> 
+			</#topic_article>
+       </ul><div class="clear"></div>
+    </div>
+     
+    <div class="clear"></div> 
+  </div>
+  
+  <script>
+  function immediatelysign(id,name){
+	  $("#id").val(id);
+	  $("#type").val("1");
+	  $("#name").val(name);
+	  $("#product_name").html("活动报名："+name+"</strong><br><span style='color:#e46c0a;'>参与富汇财富定期投资策略沙龙，掌握市场动态，行业观察第一手资讯！</span");
+	  window.location.href='#tab';
+  }
+ 
+  </script>

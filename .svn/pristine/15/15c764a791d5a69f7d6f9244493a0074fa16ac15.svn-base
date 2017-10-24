@@ -1,0 +1,68 @@
+<div class="activity">
+<h2>ACTIVITY 活动 <a href="${ctxPath}/new">More >></a></h2>
+   <ul>
+     <li class="activity_1">
+        <#topic_article topicCode="activity" page="${p!}" rows="1";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					   <#cms_banner type="首页活动banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==1){%>
+					            <div class="activityimg"><img src="${pic}"></div>
+					            <%}%>
+					         <%}%>
+              		</#cms_banner>
+                    <div class="activityspan"><h3 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/articledetail?article_id=${article.id}&topicCode=activity'">${article.title}<br><span>${article.active_site}  ${date( article.publish_time , "yyyy-MM-dd HH:mm:ss" ),dateFormat="M月dd日 HH:mm"}</span></h3><a href="javascript:void(0);" onclick="immediatelysign('${article.id}','${article.title}')">立即<br>报名</a></div>
+					<form action="${ctxPath}/new#tab"  id="submitActivity" method="post">
+					<input type="hidden" value="${article.id}"  name="id">
+					<input type="hidden" value="${article.title}"  name="name">
+					<input type="hidden" value="1"  name="type">
+					</form>
+					<%}%>
+					 <%}%>
+			</#topic_article>
+     </li>
+     <li class="activity_2">
+      <#topic_article topicCode="comingshow" page="${p!}" rows="1";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					  <div class="activityimg"><div class="activityjjtc">即将推出</div>
+					  <#cms_banner type="首页活动banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==2){%>
+					            <img src="${pic}" class="jjtcimg">
+					            <%}%>
+					         <%}%>
+              		</#cms_banner>
+					  </div>
+                    <div class="activityspan"><h3 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/articledetail?article_id=${article.id}&topicCode=comingshow'" ><%if(strutil.length(article.title)>10){%>${strutil.subStringTo (article.title,0,10)}...<%}else{%>${article.title}<%}%><br><span>${date( article.publish_time , "yyyy-MM-dd HH:mm:ss" ),dateFormat="M月dd日 HH:mm"}</span></h3></div>
+					<%}%>
+					 <%}%>
+	</#topic_article>
+     </li>
+     <li class="activity_3">
+   <#topic_article topicCode="wonderfulreview" page="${p!}" rows="1";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%> 
+					 <div class="activityimg"><div class="activityjjtc">精彩回顾</div>
+					  <#cms_banner type="首页活动banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==3){%>
+					            <img src="${pic}" class="jjtcimg">
+					            <%}%>
+					         <%}%>
+              		</#cms_banner>
+					 </div>
+                    <div class="activityspan"><h3 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/articledetail?article_id=${article.id}&topicCode=wonderfulreview'" ><%if(strutil.length(article.title)>10){%>${strutil.subStringTo (article.title,0,10)}...<%}else{%>${article.title}<%}%><br><span>${date( article.publish_time , "yyyy-MM-dd HH:mm:ss" ),dateFormat="M月dd日 HH:mm"}</span></h3></div>
+					<%}%>
+					 <%}%>
+	</#topic_article>
+     </li>
+   </ul>
+<div class="clear"></div>
+</div>
+<script>
+function immediatelysign(id,name){
+	    $("#submitActivity").submit();
+}
+</script>

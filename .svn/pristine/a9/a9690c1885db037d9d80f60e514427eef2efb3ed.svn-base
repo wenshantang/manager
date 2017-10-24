@@ -1,0 +1,19 @@
+<div class="theme-popover">
+<div class="themenr">
+   <div class="themenrleft"><a href="${ctxPath}/index">进入页面</a>已确认为合格投资者<br><span><label><input   name="checkbox" type="checkbox" value="" checked="checked">记住我的选择，不再提示</label></span></div>
+   <div class="theme-poptit"><a href="${ctxPath}/about?article_id=11" class="close">无法确认<br>暂时退出</a></div>
+</div>
+</div>
+<div class="theme-popover-mask"></div>
+<script>
+   $("input[name='checkbox']").click(function(){ 
+	   console.info($("input[name='checkbox']").is(":checked"));
+	   if($("input[name='checkbox']").is(":checked")){
+			$("input[name='checkbox']").attr("checked",'true');
+			setCookie("showthemenr","show");
+	   }else{
+		   $("input[name='checkbox']").attr("checked",'false');
+		   delCookie("showthemenr");
+	   }
+	}) 
+</script>

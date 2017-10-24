@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<%include("/pc/common/meta.html"){}%>
+<body>
+<%include("/pc/common/header.html",{nav:'new'}){}%>
+<article>
+<%include("/pc/include/new/newinfobody.html"){}%>
+<%include("/pc/include/product/indexactivity.html"){}%>
+   <div class="newwk">
+     <div class="jjtc" id="jjtc">
+     </div>
+     <script>
+     	$(function(){
+		 gopage("1");
+		 })
+      function gopage(p){
+		$("#jjtc").load("${ctxPath}/comingshowPage?p="+p);
+      }
+      </script>
+     <div class="jchg" id="jchg">
+      
+     </div>
+      <script>
+     	$(function(){
+		 gopage1("1");
+		 })
+       function gopage1(p){
+		$("#jchg").load("${ctxPath}/wonderfulreviewPage?p1="+p);
+       }
+      </script>
+   <div class="clear"></div>
+   </div>
+   
+</article>
+<%include("/pc/common/footer.html"){}%>
+</body>
+</html>

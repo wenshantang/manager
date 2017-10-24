@@ -1,0 +1,140 @@
+  <div class="newwk">
+    <div class="proview">
+      <h2><a href="${ctxPath}/product">富汇钱码头</a> > <a href="${ctxPath}/productlist">全部产品</a> > 人民币浮动收益产品</h2>
+      <div class="proviewnr">
+         <div class="proviewnrleft">
+          <h1>富汇衫利鑫富越1号投资基金</h1>
+          <div class="projz"><ul>
+          <li>单位净值<p>1.0060</p>(2016-2-29)</li>
+          <li>今年以来<p>+0.60%</p>(2016-2-29)</li>
+          <li style="margin-top:15px; background:none; line-height:30px;">基金类型：股票型<br>基金经理：王国卫</li>
+          </ul>
+          <div class="clear"></div>
+          </div>
+          
+          <div style="width:100%; height:96px;"><p class="projzp">开放状态：已售罄<br>相关产品：<a href="#">富汇衫利鑫富越2号投资基金</a></p></div>
+          
+          
+          
+    <div class="productviewnav">
+     <ul>
+       <li><a href="#pro1">基金业绩</a></li>
+       <li><a href="#pro2">基金简介</a></li>
+       <li><a href="#pro3">募集期/开放期</a></li>
+       <li><a href="#pro4">相关资讯</a></li>
+     </ul>
+    </div> 
+    <div class="productview">
+     <ul>
+      <li id="pro1">
+        <h2>累计收益率走势</h2>
+        <iframe src="${ctxPath}/echart" width="100%" height="400" frameborder=0>
+        
+        </iframe>
+        
+      </li>
+      <li>
+        <h2>历史净值数据</h2>
+        <table width="95%" style="margin:auto;" border="0" cellpadding="1" cellspacing="1">
+  <tr class="trbg">
+    <td>净值日期</td>
+    <td>单位净值（元）</td>
+    <td>累计净值（元）</td>
+    </tr>
+  <tr>
+    <td>2016-2-29</td>
+    <td>1.0060</td>
+    <td>1.0060</td>
+    </tr>
+  <tr>
+    <td>2016-2-29</td>
+    <td>1.0060</td>
+    <td>1.0060</td>
+    </tr>
+  <tr>
+    <td>2016-2-29</td>
+    <td>1.0060</td>
+    <td>1.0060</td>
+    </tr>
+    <tr>
+    <td>2016-2-29</td>
+    <td>1.0060</td>
+    <td>1.0060</td>
+    </tr>
+    <tr>
+    <td>2016-2-29</td>
+    <td>1.0060</td>
+    <td>1.0060</td>
+    </tr>
+    <tr>
+    <td>2016-2-29</td>
+    <td>1.0060</td>
+    <td>1.0060</td>
+    </tr>
+    <tr>
+    <td>2016-2-29</td>
+    <td>1.0060</td>
+    <td>1.0060</td>
+    </tr>
+</table>
+<div class="jjtcfy"><a href="#">上一页</a>&nbsp;&nbsp;&nbsp;<a href="#">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;1/6</div><div class="clear"></div>
+      </li>
+      <div class="banx"></div>
+      <li id="pro2">
+        <h2>基金简介</h2>
+        <table width="95%" style="margin:auto;" border="0" cellpadding="1" cellspacing="1" class="slzi">
+  <tr>
+    <td class="trbg" width="200">产品全称</td>
+    <td>富汇衫利鑫富越1号投资基金</td>
+    </tr>
+  <tr>
+    <td class="trbg">投资目标</td>
+    <td>A股证券市场</td>
+    </tr>
+  <tr>
+    <td class="trbg">投资策略</td>
+    <td>稳健、低调</td>
+    </tr>
+  <tr>
+    <td class="trbg">投资顾问</td>
+    <td>王国卫</td>
+    </tr>
+    <tr>
+    <td class="trbg">托管人</td>
+    <td>国金道富</td>
+    </tr>
+</table>
+      </li>
+      <div class="banx"></div>
+      <li id="pro3">
+        <h2>募集期/开放期</h2>
+        <table width="95%" style="margin:auto;" border="0" cellpadding="1" cellspacing="1" class="slzi">
+  <tr>
+    <td class="trbg" width="200">开放期</td>
+    <td>2016-2-22至2016-2-29</td>
+    <td width="130"><div class="wyzx"><a href="#">立即预约咨询</a></div></td>
+  </tr>
+  </table>
+      </li>
+      <div class="banx"></div>
+      <li id="pro4">
+      
+      </li>
+      <script>
+     	$(function(){
+		 gopage("1");
+		   })
+       function gopage(p){
+		$("#pro4").load("${ctxPath}/informationPage?p="+p);
+        }
+      </script>
+     </ul>
+    </div>
+          
+          
+        </div>
+        <%include("/pc/include/product/appointment.html"){}%>
+        </div>
+    </div>
+<div class="clear"></div>
+  </div>

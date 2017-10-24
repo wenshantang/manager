@@ -1,0 +1,33 @@
+package com.fhcf.manager.controller.umsg;
+
+import com.puff.framework.annotation.Controller;
+import com.puff.framework.annotation.Inject;
+import com.puff.jdbc.core.PageRecord;
+import com.puff.web.mvc.PuffContext;
+import com.puff.web.view.View;
+import com.puff.web.view.ViewFactory;
+import cn.aresoft.cms.common.cache.CmsPropertiesCache;
+import cn.aresoft.fhcf.common.model.msg.Umsg;
+import cn.aresoft.fhcf.common.service.UmsgService;
+import cn.aresoft.manager.controller.CommonController;
+import cn.aresoft.manager.plugin.MyBeetlView;
+
+@Controller(value = "/admin/umsg")
+public class UmsgController extends CommonController {
+	@Inject
+	private UmsgService umsgService;
+	@Inject
+	private CmsPropertiesCache cmsPropertiesCache;
+
+	public View index() {
+		MyBeetlView view = new MyBeetlView("/umsg/umsg_list.html");
+		return view;
+	}
+
+	public View json() {
+		Umsg umsg = PuffContext.getModel(Umsg.class);
+		PageRecord<Umsg> data = umsgService.paging(umsg, getCommonParam());
+		return ViewFactory.json(data);
+	}
+
+}

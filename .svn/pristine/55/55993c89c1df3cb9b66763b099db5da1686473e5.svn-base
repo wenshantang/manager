@@ -1,0 +1,70 @@
+  <div class="newwk">
+    <div class="newbanner">
+       <div class="newleft">
+         <img src="${static_ctx}/portal/images/bft.JPG" >
+         <div class="newlsftzi"><h1>85岁巴菲特最新投资心得都在这里</h1>
+         这是巴菲特的51封致股东信，澎湃新闻在数万字的信中梳理一下8大重点，以观“股神”2016年新动向。<br><br>发布于2小时前</div>
+       </div>
+       <div class="newright"><img src="${static_ctx}/portal/images/we.JPG"></div>
+    </div>
+    
+    <div class="clear"></div>
+    
+   <div class="newsoon">
+       <div class="newtille"><h2>市场洞见</h2><a href="#jjtc">More >></a></div>
+       <ul>
+       <#topic_article topicCode="marketinsight" page="${p!}" rows="4";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					 <%if(articleLP.index>1){%>
+            <li><img src="${article.small_picurl}"><p> 
+            <a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=marketinsight">${article.title}</a></p>时间：${strutil.subStringTo (article.publish_time,0,10)}<br>地点：${article.active_site}</li>
+					<%}else{%> <li>暂无相关数据</li><%}%>
+					<%}%> 
+					 <%}%>  
+			</#topic_article>
+       </ul><div class="clear"></div>
+    </div>
+    
+    <div class="newsoon">
+       <div class="newtille"><h2>行业观察</h2><a href="#jchg">More >></a></div>
+       <ul>
+       
+              <#topic_article topicCode="observation" page="${p!}" rows="4";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					 <%if(articleLP.index>1){%>
+            <li><img src="${article.small_picurl}"><p> 
+            <a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=observation">${article.title}</a></p>嘉宾：${article.guest}</li>
+					<%}else{%><li>暂无相关数据</li><%}%>
+					<%}%> 
+					 <%}%>  
+			</#topic_article>
+       </ul><div class="clear"></div>
+    </div>
+    
+
+     <div class="jjtc" id="jjtc">
+     </div>
+     
+      <script>
+     	$(function(){
+		 gopage("1");
+		 })
+      function gopage(p){
+		$("#jjtc").load("${ctxPath}/marketinsightPage?p="+p);
+      }
+      </script>
+     <div class="jchg" id="jchg">
+     </div>
+     
+      <script>
+     	$(function(){
+		 gopage1("1");
+		 })
+      function gopage1(p){
+		$("#jchg").load("${ctxPath}/observationPage?p1="+p);
+      }
+      </script>
+   <div class="clear"></div>
+   </div>

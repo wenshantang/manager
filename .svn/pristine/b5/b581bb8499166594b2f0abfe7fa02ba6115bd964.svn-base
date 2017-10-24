@@ -1,0 +1,9 @@
+<div class="products" id="pro">
+  <h2>PRODUCTS 富汇钱码头 <a href="#">More >></a></h2>
+  <ul>
+    <Li class="lihover"><img src="${static_ctx}/portal/images/fhq.jpg"><h1>资金灵活配置</h1><h3>富汇财富月月鑫</h3><span>上海住房抵押贷款金融项目，收益逐月递增。<br><br><center>100万起 | 封闭期3个月 | 每月开放</center></span><br><input type="button" value="查看详情"></Li>
+    <Li><img src="${static_ctx}/portal/images/fhq1.jpg"><h1>资金灵活配置</h1><h3>富汇财富月月鑫</h3><span>上海住房抵押贷款金融项目，收益逐月递增。<br><br><center>100万起 | 封闭期3个月 | 每月开放</center></span><br><input type="button" value="查看详情"></Li>
+    <Li><img src="${static_ctx}/portal/images/fhq2.jpg"><h1>资金灵活配置</h1><h3>富汇财富月月鑫</h3><span>上海住房抵押贷款金融项目，收益逐月递增。<br><br><center>100万起 | 封闭期3个月 | 每月开放</center></span><br><input type="button" value="查看详情"></Li>
+  </ul>
+  <div class="clear"></div>
+</div>

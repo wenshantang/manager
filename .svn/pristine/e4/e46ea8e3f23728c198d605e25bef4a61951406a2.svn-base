@@ -1,0 +1,10 @@
+package ${tables.serviceDir};
+
+import java.io.Serializable;
+import java.util.List;
+import ${tables.modelDir}.${tables.objectName+tables.modelast};
+import cn.aresoft.common.service.BaseService;
+
+public interface ${tables.objectName+tables.servicelast} extends BaseService<${tables.objectName}> {
+	public void deleteInSql(List<? extends Serializable> ids,String delFied);
+}

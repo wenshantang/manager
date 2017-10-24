@@ -1,0 +1,147 @@
+ <#token />   <#product pro_code="${pro_code!}"; product,p>
+     <input type="hidden" id="id" value="${product.pro_code!}">
+    <input type="hidden" id="type" value="2" >
+    <input type="hidden" id="name" value="${product.pro_name!}">
+  <div class="newwk">
+    <div class="proview">
+      <h2><a href="${ctxPath}/product">富汇钱码头</a> > <a href="${ctxPath}/productlist">全部产品</a> > <%if(product.pro_style=='1'){%>人民币固定收益产品<%}%><%if(product.pro_style=='2'){%>人民币浮动收益类产品<%}%><%if(product.pro_style=='3'){%>海外投资类产品<%}%></h2>
+      <div class="proviewnr">
+         <div class="proviewnrleft">
+          <h1>${product.pro_name}</h1>
+          <div class="projz"><ul>
+          <#navs pro_code="${product.pro_code}";list>
+          <%if(list.~size>0){%>
+          <%
+           var startNav="";
+           var endNav="";
+           var endDate="";
+           for(var i=0;i<list.~size;i++){ 
+           startNav=list[0].netvalue;
+           endNav=list[list.~size-1].netvalue;
+           endDate=list[list.~size-1].TradeDate;
+           }
+           var now = (endNav-startNav)/startNav*100;
+		  %> 
+          <li>单位净值<p>${endNav}</p>(${strutil.subStringTo (endDate,0,10)})</li>
+          <li>今年以来<p>${now,numberFormat="###,###,##0.00"}%</p>(${strutil.subStringTo (endDate,0,10)})</li>
+      <%}else{%>
+          <li>单位净值<p>--</p>(--)</li>
+          <li>今年以来<p>--</p>(--)</li>
+      <%}%>
+      </#navs>
+          <li style="margin-top:15px; background:none; line-height:30px;">基金类型：${product.fund_style}<br>投资顾问：${product.vc_fundadministrator}</li>
+          </ul>
+          <div class="clear"></div>
+          </div>
+          
+          <div style="width:100%; height:96px;"><p class="projzp">开放状态：<%if(product.i_prostatus=='1'){%>在售<%}%><%if(product.i_prostatus=='2'){%>即将开放<%}%><%if(product.i_prostatus=='3'){%>已售罄<%}%><br>相关产品：
+          <%if(p!=null){%>
+           <%if(p.pro_style=='1'){%> 
+          <a href="${ctxPath}/protwo_detail?pro_code=${p.pro_code}">${product.vc_pro_name}</a>
+         <%}%>
+          <%if(p.pro_style=='2'){%> 
+          <a href="${ctxPath}/proone_detail?pro_code=${p.pro_code}">${product.vc_pro_name}</a>
+         <%}%>
+      <%if(p.pro_style=='3'){%>
+     <%if(p.flag=='1'){%>
+       <a href="${ctxPath}/protwo_detail?pro_code=${p.pro_code}">${product.vc_pro_name}</a>
+    <%}else{%>
+      <a href="${ctxPath}/proone_detail?pro_code=${p.pro_code}">${product.vc_pro_name}</a>
+    <%}%>
+     <%}%><%}%>
+          </p></div>
+    <div class="productviewnav">
+     <ul>
+       <li><a href="#pro1">基金业绩</a></li>
+       <li><a href="#pro2">基金简介</a></li>
+       <li><a href="#pro3">募集期/开放期</a></li>
+       <li><a href="#pro4">相关资讯</a></li>
+       <li><a href="#pro5">产品公告</a></li>
+     </ul>
+    </div> 
+    <div class="productview">
+     <ul>
+      <li id="pro1">
+        <h2>基金净值走势</h2>
+        <iframe src="${ctxPath}/echart?id=${product.pro_code!}" width="100%" height="430" frameborder=0>
+        
+        </iframe>
+        
+      </li>
+      <li id="fundnav">
+      </li>
+
+      <div class="banx"></div>
+      <li id="pro2">
+        <h2>基金简介</h2>
+        <table width="95%" style="margin:auto;" border="0" cellpadding="1" cellspacing="1" class="slzi">
+  <tr>
+    <td class="trbg" width="200">产品全称</td>
+    <td>${product.pro_name}</td>
+    </tr>
+  <tr>
+    <td class="trbg">投资类型</td>
+    <td>${product.vc_pub1}</td>
+    </tr>
+  <tr>
+    <td class="trbg">投资策略</td>
+    <td>${product.vc_tactics}</td>
+    </tr>
+  <tr>
+    <td class="trbg">投资顾问</td>
+    <td>${product.vc_fundadministrator}</td>
+    </tr>
+    <tr>
+    <td class="trbg">托管人</td>
+    <td>${product.vc_fundtrustee}</td>
+    </tr>
+</table>
+      </li>
+      <div class="banx"></div>
+      <li id="pro3">
+        <h2>募集期/开放期</h2>
+        <table width="95%" style="margin:auto;" border="0" cellpadding="1" cellspacing="1" class="slzi">
+  <tr>
+    <td class="trbg" width="200">开放期</td>
+    <td>${strutil.subStringTo (product.d_startdate,0,10)}至${strutil.subStringTo (product.d_enddate,0,10)}</td>
+    <td width="130"><div class="wyzx"><a href="#pro1">立即预约咨询</a></div></td>
+  </tr>
+  </table>
+      </li>
+
+      <div class="banx"></div>
+      <li id="pro4">
+      
+      </li>
+       <div class="banx"></div>
+      <li id="pro5">
+      
+      </li>
+     </ul> 
+    </div>
+        </div>
+        <%include("/pc/include/product/appointment.html"){}%>
+        </div>
+    </div>
+<div class="clear"></div>
+  </div>
+    <script>
+       function gopage1(p){
+   		$("#fundnav").load("${ctxPath}/fundnavPage?p1="+p+"&pro_code="+"${product.pro_code}");
+           }
+       function gopage(p){
+        	$("#pro4").load("${ctxPath}/informationPage?p="+p+"&industry="+"${product.industry}");
+        }
+       function gopage1(p){
+         	$("#pro5").load("${ctxPath}/noticePage?p2="+p+"&pro_code="+"${product.pro_code}");
+       }
+      $(function(){
+    	 gopage1("1");
+    	 gopage("1");
+    	 gopage2("1");
+      });
+      </script>
+ </#product> 
+ 
+ 
+

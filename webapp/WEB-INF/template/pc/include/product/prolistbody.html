@@ -1,0 +1,111 @@
+  <div class="newwk"  id="proa">
+  <div class="prowk" id="proall">
+    <div class="productnav" id="sidebar">
+     <ul>
+      <li class="current"><a href="javascript:void(0)" onclick="selectallfund()">全部</a></li>
+      <li><a href="#proa">人民币固定收益类产品</a></li>
+      <li><a href="#prob">人民币浮动收益类产品</a></li>
+      <li><a href="#proc">海外投资类产品</a></li>
+    </ul>
+    </div> 
+     <div class="product">
+          <ul>
+     <div class="productnava">
+      <ul>
+        <li>按开放状态分类：</li>
+        <li id="product_1"><a href="javascript:void(0);" onclick="selectByStatus(this.id)" id="1">在售产品</a></li>
+        <li id="product_2"><a href="javascript:void(0);" onclick="selectByStatus(this.id)" id="2" >即将开放产品</a></li>
+        <li id="product_3"><a href="javascript:void(0);" onclick="selectByStatus(this.id)" id="3" >已售罄产品</a></li>
+      </ul>
+    </div>
+      <li id="fixedproduct">
+      </li>
+      <div class="productnava" >
+      <ul>
+        <li>按开放状态分类：</li>
+        <li id="product_4" ><a href="javascript:void(0);" onclick="selectByStatus1(this.id)" id="4_1" >在售产品</a></li>
+        <li id="product_5" ><a href="javascript:void(0);" onclick="selectByStatus1(this.id)" id="5_2" >即将开放产品</a></li>
+        <li id="product_6" ><a href="javascript:void(0);" onclick="selectByStatus1(this.id)" id="6_3" >已售罄产品</a></li>
+      </ul>
+    </div>
+      <li id="floatingproduct">
+      </li>
+     <div class="productnava" >
+      <ul>
+        <li>按开放状态分类：</li>
+        <li id="product_7" ><a href="javascript:void(0);" onclick="selectByStatus2(this.id)" id="7_1" >在售产品</a></li>
+        <li id="product_8" ><a href="javascript:void(0);" onclick="selectByStatus2(this.id)" id="8_2" >即将开放产品</a></li>
+        <li id="product_9" ><a href="javascript:void(0);" onclick="selectByStatus2(this.id)" id="9_3" >已售罄产品</a></li>
+      </ul>
+    </div>
+      <li id="overseasproduct">
+      </li>
+         <script>
+         var i_prostatus="";
+         $(function(){
+		 gopage("1");
+		 gopage1("1");
+		 gopage2("1");
+		   });
+       function gopage(p){
+		$("#fixedproduct").load("${ctxPath}/fixedproductPage?p="+p+"&i_prostatus="+i_prostatus);
+        }
+       function gopage1(p){
+        $("#floatingproduct").load("${ctxPath}/floatingproductPage?p1="+p+"&i_prostatus="+i_prostatus);
+        }
+       function gopage2(p){
+     	$("#overseasproduct").load("${ctxPath}/overseasproductPage?p2="+p+"&i_prostatus="+i_prostatus);
+       }
+       function selectByStatus(id){
+    	   for(var i=1;i<=3;i++){
+    		   $("#product_"+i).removeClass();
+    	   }
+    	   i_prostatus=id;
+    	   gopage("1");
+  		   $("#product_"+id).addClass("navalihover");
+       }
+       function selectByStatus1(id){
+    	   for(var i=4;i<=6;i++){
+    		   $("#product_"+i).removeClass();
+    	   }
+    	   if(id!=null||id!=""){
+    		   i_prostatus=id.substring(2,3);
+    	   }
+  		   gopage1("1");
+  		   $("#product_"+id.substring(0,1)).addClass("navalihover");
+       }
+       function selectByStatus2(id){
+    	   for(var i=7;i<=9;i++){
+    		   $("#product_"+i).removeClass();
+    	   }
+    	   if(id!=null||id!=""){
+    		   i_prostatus=id.substring(2,3);
+    	   }
+  		   gopage2("1");
+  		   $("#product_"+id.substring(0,1)).addClass("navalihover");
+       }
+       
+       function selectallfund(){
+    	   for(var i=1;i<=9;i++){
+    		   $("#product_"+i).removeClass();
+    	   }
+    	   i_prostatus="";
+    	   gopage("1");
+  		   gopage1("1");
+  		   gopage2("1");
+    	   window.location.href="#proall";
+       }
+      </script> 
+     </ul>
+    </div>
+    <div class="clear"></div> 
+        <script src="${static_ctx}/portal/js/jquery.nav.js?version=${version}"></script>
+    <script src="${static_ctx}/portal/js/portamento.js?version=${version}"></script>		
+<script>
+$(function(){
+	$('#sidebar').onePageNav();
+	$('#sidebar').portamento({disableWorkaround: true}); 
+});
+</script>
+    </div>
+  </div>

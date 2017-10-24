@@ -1,0 +1,29 @@
+   <#topic_article topicCode="${topicCode!}" page="${p!}" ;pageRecord> 
+ 	<%for (article in pageRecord.dataList){%>
+ 	<%if(article.id==article_id){%>
+  <div class="newwk">
+    <div class="newviewleft">
+      <h1><%if(topicCode=='activity'){%>活动文章<%}%>
+      <%if(topicCode=='comingshow'){%>即将推出<%}%>
+      <%if(topicCode=='wonderfulreview'){%>精彩回顾<%}%>
+      <%if(topicCode=='marketinsight'){%>市场洞见<%}%>
+      <%if(topicCode=='observation'){%>行业观察<%}%>
+      <%if(topicCode=='article'){%>相关资讯<%}%></h1>
+      <h2>${article.title}</h2>
+      <span>${article.short_title}</span><br>
+      <span class="uptime">${strutil.subStringTo (article.publish_time,0,10)} 发布</span>
+      <div class="clear"></div>
+      <div class="newview">
+        <!-- <img src="${article.big_picurl}" style="width:100%;"><br> -->
+       <#article_content id='${article_id!}';content>
+			${content}
+		</#article_content>
+      </div>
+    </div>
+    <div class="newviewright"><img src="${static_ctx}/portal/images/we.JPG"></div>
+   <div class="clear"></div>
+  </div>
+  
+  	<%}%>
+	<%}%>
+</#topic_article>

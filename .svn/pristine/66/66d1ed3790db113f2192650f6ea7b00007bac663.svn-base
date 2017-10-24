@@ -1,0 +1,159 @@
+  <div class="newwk">
+  <div class="prowk" id="proall">
+    <div class="productnav" id="sidebar">
+     <ul>
+      <li class="current"><a href="#proall">全部</a></li>
+      <li><a href="#proa">人民币固定收益类产品</a></li>
+      <li><a href="#prob">人民币浮动收益类产品</a></li>
+      <li><a href="#proc">海外投资类产品</a></li>
+    </ul>
+    </div> 
+    <div class="productnava" id="proa">
+      <ul>
+        <li>按开放状态分类：</li>
+        <li class="navalihover"><a href="#">在售产品</a></li>
+        <li><a href="#">即将开放产品</a></li>
+        <li><a href="#">已售罄产品</a></li>
+      </ul>
+    </div>
+    <div class="product">
+     <ul>
+      <li>
+        <h2><img src="${static_ctx}/portal/images/protb.JPG" width="15" height="15">&nbsp;人民币固定收益类产品</h2>
+        <table width="100%" border="0" cellpadding="1" cellspacing="1">
+  <tr class="trbg">
+    <td>产品简称</td>
+    <td>募集期/开放期</td>
+    <td width="80">运作期</td>
+    <td>资金投向</td>
+    <td width="100">开放状态</td>
+    <td width="250">操作</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>富汇财富月月鑫</td>
+    <td>2016/03/15至2016/03/25</td>
+    <td>3个月起</td>
+    <td>上海住房抵押贷款融资项目</td>
+    <td>开放中</td>
+    <td><div class="ljxq"><a href="${ctxPath}/protwo_detail">了解详情</a></div> <div class="wyzx"><a href="#">我要咨询</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>富汇财富月月鑫</td>
+    <td>2016/03/15至2016/03/25</td>
+    <td>3个月起</td>
+    <td>上海住房抵押贷款融资项目</td>
+    <td>开放中</td>
+    <td><div class="ljxq"><a href="${ctxPath}/protwo_detail">了解详情</a></div> <div class="wyzx"><a href="#">我要咨询</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>富汇财富月月鑫</td>
+    <td>2016/03/15至2016/03/25</td>
+    <td>3个月起</td>
+    <td>上海住房抵押贷款融资项目</td>
+    <td>开放中</td>
+    <td><div class="ljxq"><a href="${ctxPath}/protwo_detail">了解详情</a></div> <div class="wyzx"><a href="#">我要咨询</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<div class="jjtcfycp" id="prob"><a href="#">上一页</a>&nbsp;&nbsp;&nbsp;<a href="#">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;1/6</div>
+      </li>
+      <li>
+        <h2><img src="${static_ctx}/portal/images/protb.JPG" width="15" height="15">&nbsp;人民币浮动收益类产品</h2>
+        <table width="100%" border="0" cellpadding="1" cellspacing="1">
+  <tr class="trbg">
+    <td>产品简称</td>
+    <td>募集期/开放期</td>
+    <td width="80">运作期</td>
+    <td>资金投向</td>
+    <td width="100">开放状态</td>
+    <td width="250">操作</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>富汇财富月月鑫</td>
+    <td>2016/03/15至2016/03/25</td>
+    <td>3个月起</td>
+    <td>上海住房抵押贷款融资项目</td>
+    <td>开放中</td>
+    <td><div class="ljxq"><a href="${ctxPath}/proone_detail">了解详情</a></div> <div class="wyzx"><a href="#">我要咨询</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>富汇财富月月鑫</td>
+    <td>2016/03/15至2016/03/25</td>
+    <td>3个月起</td>
+    <td>上海住房抵押贷款融资项目</td>
+    <td>开放中</td>
+    <td><div class="ljxq"><a href="${ctxPath}/proone_detail">了解详情</a></div> <div class="wyzx"><a href="#">我要咨询</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>富汇财富月月鑫</td>
+    <td>2016/03/15至2016/03/25</td>
+    <td>3个月起</td>
+    <td>上海住房抵押贷款融资项目</td>
+    <td>开放中</td>
+    <td><div class="ljxq"><a href="${ctxPath}/proone_detail">了解详情</a></div> <div class="wyzx"><a href="#">我要咨询</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<div class="jjtcfycp" id="proc"><a href="#">上一页</a>&nbsp;&nbsp;&nbsp;<a href="#">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;1/6</div>
+      </li>
+      <li>
+        <h2><img src="${static_ctx}/portal/images/protb.JPG" width="15" height="15">&nbsp;海外投资类产品</h2>
+        <table width="100%" border="0" cellpadding="1" cellspacing="1">
+  <tr class="trbg">
+    <td>产品简称</td>
+    <td>募集期/开放期</td>
+    <td width="80">运作期</td>
+    <td>资金投向</td>
+    <td width="100">开放状态</td>
+    <td width="250">操作</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>富汇财富月月鑫</td>
+    <td>2016/03/15至2016/03/25</td>
+    <td>3个月起</td>
+    <td>上海住房抵押贷款融资项目</td>
+    <td>开放中</td>
+    <td><div class="ljxq"><a href="${ctxPath}/proone_detail">了解详情</a></div> <div class="wyzx"><a href="#">我要咨询</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>富汇财富月月鑫</td>
+    <td>2016/03/15至2016/03/25</td>
+    <td>3个月起</td>
+    <td>上海住房抵押贷款融资项目</td>
+    <td>开放中</td>
+    <td><div class="ljxq"><a href="${ctxPath}/proone_detail">了解详情</a></div> <div class="wyzx"><a href="#">我要咨询</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>富汇财富月月鑫</td>
+    <td>2016/03/15至2016/03/25</td>
+    <td>3个月起</td>
+    <td>上海住房抵押贷款融资项目</td>
+    <td>开放中</td>
+    <td><div class="ljxq"><a href="${ctxPath}/proone_detail">了解详情</a></div> <div class="wyzx"><a href="#">我要咨询</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<div class="jjtcfycp"><a href="#">上一页</a>&nbsp;&nbsp;&nbsp;<a href="#">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;1/6</div>
+      </li>
+     </ul>
+    </div>
+    <div class="clear"></div> 
+        <script src="${static_ctx}/portal/js/jquery.nav.js?version=${version}"></script>
+    <script src="${static_ctx}/portal/js/portamento.js?version=${version}"></script>		
+<script>
+$(function(){
+	$('#sidebar').onePageNav();
+	$('#sidebar').portamento({disableWorkaround: true}); 
+});
+</script>
+    </div>
+  </div>

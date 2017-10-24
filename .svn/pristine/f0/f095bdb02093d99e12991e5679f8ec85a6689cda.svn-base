@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html>
+<%include("/pc/common/meta.html"){}%>
+<body>
+<%include("/pc/common/header.html",{nav:'ab'}){}%>
+<article>
+<%include("/pc/include/aboutbody.html"){}%>
+</article>
+<%include("/pc/common/footer.html"){}%>
+</body>
+</html>

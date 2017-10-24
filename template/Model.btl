@@ -1,0 +1,30 @@
+package ${tables.modelDir};
+
+import com.puff.framework.annotation.Column;
+import com.puff.framework.annotation.PrimaryKey;
+import com.puff.framework.annotation.Table;
+import cn.aresoft.common.model.BaseModel;
+/**
+ * ${date()}
+ */
+@Table("${tables.selecedTable}")
+public class ${tables.objectName+tables.modelast} extends BaseModel {
+	private static final long serialVersionUID = 1L;
+<%if(tables.tableFields!=null&&tables.tableFields.~size>0){for(fild in tables.tableFields){%>
+
+	<%if(fild.ispramKey){if(tables.sequence==null||tables.sequence==""){%>@PrimaryKey.IDWORKER<%}else{%>@PrimaryKey(value = PKType.SEQUENCE,name = "${tables.sequence}")<%}}%>
+	@Column
+	private ${fild.objectType} ${strutil.toLowerCase(fild.objectName)};${fild.comment!=null&&strutil.length(fild.comment)>0?"//"+fild.comment+"  长度"+fild.objectLength:""}
+<%}}%>
+
+<%if(tables.tableFields!=null&&tables.tableFields.~size>0){for(fild in tables.tableFields){%>
+	
+	public ${fild.objectType} get${strutil.toUpperCase(strutil.subStringTo(fild.objectName,0,1))+strutil.toLowerCase(strutil.subString(fild.objectName,1))}() {
+		return this.${strutil.toLowerCase(fild.objectName)};
+	}
+
+	public void set${strutil.toUpperCase(strutil.subStringTo(fild.objectName,0,1))+strutil.toLowerCase(strutil.subString(fild.objectName,1))}(${fild.objectType} ${strutil.toUpperCase(strutil.subStringTo(fild.objectName,0,1))+strutil.toLowerCase(strutil.subString(fild.objectName,1))}) {
+		this.${strutil.toLowerCase(fild.objectName)} = ${strutil.toUpperCase(strutil.subStringTo(fild.objectName,0,1))+strutil.toLowerCase(strutil.subString(fild.objectName,1))};
+	}
+<%}}%>
+}

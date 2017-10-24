@@ -1,0 +1,44 @@
+<header>
+  <div class="top">
+    <ul>
+      <li class="weixin">官方微信</li>
+      <li class="tel">理财热线：021-68821316</li>
+      <li class="user"><a href="construction" title="快速开户">快速开户</a><a href="construction" title="一键登录" style=" background:#dacbb4;">一键登录</a></li>
+    </ul>
+  </div>
+  <div class="logo"  > <span onclick="window.open('http://gs.amac.org.cn/amac-infodisc/res/pof/manager/33615.html')" style="cursor: pointer;color: #E46C0A">私募投资基金管理人<br>登记编号：P1023825</span></div>
+  <nav>
+    <div class="navbox"> 
+  <div class="nav"> 
+      <li ><a ${nav =='sy'?'style="background:#e46c0a; color:#FFF;"':''} href="${ctxPath}/index">首页</a></li>
+      <li><a ${nav =='new'?'style="background:#e46c0a; color:#FFF;"':''} href="${ctxPath}/new">活动</a></li>
+      <li class="drop-menu-effect"><a ${nav =='pro'?'style="background:#e46c0a; color:#FFF;"':''} href="${ctxPath}/product">富汇钱码头</a>
+        <div class="submenu">
+          <div class="menu">
+            <span>富汇钱码头以“受信责任”为最高原则，在严谨风险管理下争取优异的投资表现，不断创新完善多元的产品系列<a href="${ctxPath}/productlist">查看全部产品</a></span>
+            <ul>
+              <li><a href="${ctxPath}/product?id=1#producttab1">先行布局</a></li>
+              <li><a href="${ctxPath}/product?id=2#producttab2">全球航线</a></li>
+              <li><a href="${ctxPath}/product?id=3#producttab3" >专业掌舵</a></li>
+              <li><a href="${ctxPath}/product?id=4#producttab4" >“小而美”领航</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+       <li><a ${nav =='in'?'style="background:#e46c0a; color:#FFF;"':''} href="${ctxPath}/insight">洞察</a></li>
+       
+       <#topic_article topicCode="aboutus" page="999" ;pageRecord> 
+       	<%if(pageRecord.dataList.~size>0){%>
+       	 <%  for(article in pageRecord.dataList){%>
+       	 	<%if(articleLP.index==1){%>
+      <li><a ${nav =='ab'?'style="background:#e46c0a; color:#FFF;"':''} href="${ctxPath}/about?article_id=${article.id}">关于我们</a></li>
+   <%}%>
+    <%}%>
+     <%}else{%>
+       <li><a ${nav =='ab'?'style="background:#e46c0a; color:#FFF;"':''} href="javascript:;">关于我们</a></li>
+     <%}%>
+      </#topic_article>
+    </div>
+</div>
+  </nav>
+</header>

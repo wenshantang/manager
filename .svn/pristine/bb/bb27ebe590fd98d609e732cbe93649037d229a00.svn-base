@@ -1,0 +1,15 @@
+<div class="prompt"><p>风险提示：<br>
+公司管理的私募投资基金、担任投资顾问的特定客户资产管理计划仅向符合相关法律法规规定的合格投资者进行募集。<br>
+投资产品的价格及其收益存在涨跌变动，而过往的产品业绩数据并不预示其未来的表现。本资料所含数据计算和排名仅供参考，并不构成广告或销售要约，或买入任何证券、基金或其它投资工具的建议。投资有风险，敬请投资者认真阅读投资产品的相关法律文件。<br>
+本资料仅向特定对象发送，可能包涵机密信息、版权专有信息或私人信息，未经授权，请勿对资料内容进行任何更改或以任何方式传播、复制或派发。</p>
+</div>
+<footer>
+  <ul>
+  <span class="ysbh">隐私保护</span><span class="jrwm">加入我们</span><span class="lxdh">理财热线：021-68821316</span><img src="${ctxPath}/portal/images/er.jpg">
+  <span class="copy">版权所有 &copy; 2015   上海富汇财富投资管理有限公司   沪ICP备15027235号-1 <br>
+COPYRIGHT &copy; 2015 SHANGHAI FULLWAY WEALTH MANAGEMENT CO., LTD. ALL RIGHTS RESERVED.
+</span>
+  <div class="clear"></div>
+  </ul>
+</footer>
+<script src="${static_ctx}/portal/js/fuhui.js?version=${version}"></script>

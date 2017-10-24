@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Puff>
+	<constant>
+		<!-- 是否使用Puff的开发模式。 正式上线后改成false -->
+		<property name="devMode" value="true" />
+		<!-- JSP页面放置路径 WebRoot下使用"/" WEB-INF下使用"/WEB-INF" -->
+		<property name="fileViewPath" value="/WEB-INF/jsp/" />
+	</constant>
+	
+	<monitor>
+		<property name="username" value="fhcf" />
+		<property name="password" value="fhcf" />
+	</monitor>
+
+	<scan>
+		<property name="bean" value="cn.aresoft.fhcf.common,cn.aresof.ftp,com.fhcf.manager" />
+		<property name="controller" value="com.fhcf.manager.controller" />
+	</scan>
+
+	<dispatcher class="com.puff.web.dispatcher.Zh_CN_GetDispatcher" />
+	
+	<!--定时任务 -->
+  <plugin name="quartzPlugin" class="com.puff.plugin.quartz.QuartzPlugin">
+        <property name="quartz.jobConfig" value="job.properties"/>
+  </plugin> 
+<!-- 测试环境 开始-->
+	<!-- redis缓存 -->
+	<plugin name="CachePlugin" class="com.puff.plugin.cache.CachePlugin">
+		<property name="cache.L1.provider" value="ehcache" />
+		<property name="cache.L2.provider" value="redis" />
+		<property name="cache.broadcast" value="true" />
+		<property name="cache.broadcast.channel" value="Redis" />
+		<property name="redis.host" value="127.0.0.1" />
+		<property name="redis.port" value="6379" />
+		<property name="redis.timeout" value="3000" />
+		<property name="redis.database" value="1" />
+		<property name="redis.maxIdle" value="3000" />
+		<property name="redis.maxWait" value="6000" />
+		<property name="redis.minEvictableIdleTimeMillis" value="864000000" />
+		<property name="redis.minIdle" value="1000" />
+		<property name="redis.numTestsPerEvictionRun" value="10" />
+		<property name="redis.softMinEvictableIdleTimeMillis" value="10" />
+		<property name="redis.timeBetweenEvictionRunsMillis" value="300000" />
+	</plugin>
+<!-- 测试环境 结束-->	
+<!-- 	<plugin name="TemplateSyncPlugin" class="cn.aresoft.cms.manager.synctemplate.TemplateSyncPlugin">
+		<property name="scanIntervalSeconds" value="1"></property>
+	</plugin> -->
+		<plugin name="TemplateSyncPlugin" class="cn.aresoft.cms.manager.synctemplate.TemplateSyncPlugin">
+		<property name="templatePath" value="D:/项目资料/My_Project/msth/fhcf.manager/webapp/WEB-INF/template"></property>
+	</plugin>
+</Puff>

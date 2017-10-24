@@ -1,0 +1,11 @@
+<h1>行<br>业<br>洞<br>察</h1>
+       <ul >
+          <#topic_article topicCode="observation" page="${p1!}" rows="6";pageRecord>
+       	<%if(pageRecord.dataList.~size>0){%>
+       	 <%  for(article in pageRecord.dataList){%>
+         <li><a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=observation">${article.title}</a><span>${date( article.publish_time , "yyyy-MM-dd HH:mm:ss" ),dateFormat="M月dd日"}</span><div class="clear"></div></li>
+       	<%}%> 
+         <%include("/pc/common/commonPage1.html",{pageRecord:pageRecord}){}%>
+         		<%}else{%>暂无相关信息<%}%>  
+      </#topic_article>
+       </ul>

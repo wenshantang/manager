@@ -1,0 +1,231 @@
+<div class="pro">
+    <h1><span>熙来攘往钱码头</span> <a href="${ctxPath}/productlist">查看全部产品 >  </a></h1>
+<div class="protab">
+     <div class="protu">
+      <a href="javascript:;" <%if(has(id)){if(id=='1'){%>class="on"<%}}else{%> class="on" <%}%>  id="producttab1" ><img src="${static_ctx}/portal/images/pro1.JPG">先行布局</a>
+      <a href="javascript:;"  <%if(has(id)){if(id=='2'){%>class="on"<%}}%>  id="producttab2"><img src="${static_ctx}/portal/images/pro2.JPG">全球航线</a>
+      <a href="javascript:;"  <%if(has(id)){if(id=='3'){%>class="on"<%}}%>  id="producttab3"><img src="${static_ctx}/portal/images/pro3.JPG">专业掌舵</a>
+      <a href="javascript:;"  <%if(has(id)){if(id=='4'){%>class="on"<%}}%>  id="producttab4"><img src="${static_ctx}/portal/images/pro4.JPG">“小而美”领航</a>
+      </div>
+    <div class="content">
+       <dl style="width: 4160px; ">
+         <dt><div class="prolist">
+      <div class="prolisttu"><#cms_banner type="富汇钱码头banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==1){%>
+					            <img src="${pic}">
+					            <%}%>
+					         <%}%>
+              		</#cms_banner></div>
+      <ul style="width:500px;">
+        <#pro_Lists pro_direction="1" rows="3";pros>
+        <%for(pro in pros.dataList){%>
+                <Li>
+           <%if(pro.pro_style=='1'){%> 
+           <h2 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+         <%}%>
+          <%if(pro.pro_style=='2'){%>
+            <%if(pro.flag=='1'){%>
+        <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}else{%>
+       <h2 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}%> 
+         <%}%>
+      <%if(pro.pro_style=='3'){%>
+     <%if(pro.flag=='1'){%>
+        <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}else{%>
+       <h2 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}%>
+     <%}%>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td  width="46" align="left" valign="top"><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td  width="434" >${pro.i_prostyle}</td>
+		  </tr>
+		  <tr>
+		    <td><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td>投资期限：${pro.pro_term}</td>
+		  </tr>
+		  <tr>
+		    <td><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td>适合：${pro.pro_fit}</td>
+		  </tr>
+		</table><a href="javascript:void(0);" onclick="immediatelysign('${pro.pro_code}','${pro.pro_name}')" class="tzgw">咨询投资顾问</a>
+            </Li><div class="clear"></div>
+        <%}%>
+        </#pro_Lists>
+      </ul>
+    </div>
+    </dt>
+    <dt>
+         <div class="prolist">
+      <div class="prolisttu"><#cms_banner type="富汇钱码头banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==2){%>
+					            <img src="${pic}">
+					            <%}%>
+					         <%}%>
+              		</#cms_banner></div>
+      <ul>
+ <#pro_Lists pro_direction="2" rows="3";pros>
+        <%for(pro in pros.dataList){%>
+                <Li> <%if(pro.pro_style=='1'){%> 
+           <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+         <%}%>
+          <%if(pro.pro_style=='2'){%>
+            <%if(pro.flag=='1'){%>
+        <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}else{%>
+       <h2 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}%> 
+         <%}%>
+      <%if(pro.pro_style=='3'){%>
+     <%if(pro.flag=='1'){%>
+        <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}else{%>
+       <h2 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}%>
+     <%}%>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td  width="46" align="left" valign="top"><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td width="434" >${pro.i_prostyle}</td>
+		  </tr>
+		  <tr>
+		    <td><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td>投资期限：${pro.pro_term}</td>
+		  </tr>
+		  <tr>
+		    <td><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td>适合：${pro.pro_fit}</td>
+		  </tr>
+		</table><a href="javascript:void(0);" onclick="immediatelysign('${pro.pro_code}','${pro.pro_name}')" class="tzgw">咨询投资顾问</a>
+            </Li><div class="clear"></div>
+        <%}%>
+        </#pro_Lists>
+      </ul>
+    </div>
+    </dt>
+         <dt>
+         <div class="prolist">
+      <div class="prolisttu"><#cms_banner type="富汇钱码头banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==3){%>
+					            <img src="${pic}">
+					            <%}%>
+					         <%}%>
+              		</#cms_banner></div>
+      <ul>
+    <#pro_Lists pro_direction="3" rows="3";pros>
+        <%for(pro in pros.dataList){%>
+                <Li><%if(pro.pro_style=='1'){%> 
+           <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+         <%}%>
+          <%if(pro.pro_style=='2'){%> 
+          <%if(pro.flag=='1'){%>
+        <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}else{%>
+       <h2 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+      <%}%>
+         <%}%>
+      <%if(pro.pro_style=='3'){%>
+     <%if(pro.flag=='1'){%>
+        <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}else{%>
+       <h2 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+      <%}%>
+     <%}%>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td align="left" valign="top" width="46"><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td width="434" >${pro.i_prostyle}</td>
+		  </tr>
+		  <tr>
+		    <td><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td>投资期限：${pro.pro_term}</td>
+		  </tr>
+		  <tr>
+		    <td><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td>适合：${pro.pro_fit}</td>
+		  </tr>
+		</table><a href="javascript:void(0);" onclick="immediatelysign('${pro.pro_code}','${pro.pro_name}')" class="tzgw">咨询投资顾问</a>
+            </Li><div class="clear"></div>
+        <%}%>
+        </#pro_Lists>
+      </ul>
+    </div></dt>
+    
+         <dt><div class="prolist">
+      <div class="prolisttu"><#cms_banner type="富汇钱码头banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==4){%>
+					            <img src="${pic}">
+					            <%}%>
+					         <%}%>
+              		</#cms_banner></div>
+      <ul>
+     <#pro_Lists pro_direction="4" rows="3";pros>
+        <%for(pro in pros.dataList){%>
+                <Li><%if(pro.pro_style=='1'){%> 
+           <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+         <%}%>
+          <%if(pro.pro_style=='2'){%> 
+            <%if(pro.flag=='1'){%>
+        <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}else{%>
+       <h2 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+      <%}%>
+         <%}%>
+      <%if(pro.pro_style=='3'){%>
+     <%if(pro.flag=='1'){%>
+        <h2 style="cursor: pointer;"  onclick="window.location.href='${ctxPath}/protwo_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+    <%}else{%>
+       <h2 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/proone_detail?pro_code=${pro.pro_code}'">${pro.pro_name}</h2>
+      <%}%>
+     <%}%>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td align="left" valign="top" width="46" ><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td  width="434" >${pro.i_prostyle}</td>
+		  </tr>
+		  <tr>
+		    <td><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td>投资期限：${pro.pro_term}</td>
+		  </tr>
+		  <tr>
+		    <td><img src="${static_ctx}/portal/images/probt.JPG"></td>
+		    <td>适合：${pro.pro_fit}</td>
+		  </tr>
+		</table><a href="javascript:void(0);" onclick="immediatelysign('${pro.pro_code}','${pro.pro_name}')"  class="tzgw">咨询投资顾问</a>
+            </Li><div class="clear"></div>
+        <%}%>
+        </#pro_Lists>
+      </ul>
+    </div></dt>
+       </dl>
+    </div>
+</div>
+    <div class="clear"></div>
+  </div>
+<div class="pro">
+    <h1><span>钱码头开市之路</span></h1> 
+    <#cms_banner type="富汇钱码头banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==5){%>
+					             <img src="${pic}" width="1120" height="471">
+					            <%}%>
+					         <%}%>
+              		</#cms_banner>
+    
+  </div>
+  
+  <script>
+  function immediatelysign(id,name){
+	  $("#id").val(id);
+	  $("#type").val("2");
+	  $("#name").val(name);
+	  $("#product_name").html("预约咨询服务："+name+"</strong><br><span style='color:#e46c0a;'>预约成功后，您将获取富汇钱码头行业关注，投资调研报告等资讯服务！</span");
+	  window.location.href='#tab';
+  }
+  </script>

@@ -1,0 +1,18 @@
+  <div class="tab" id="tab">
+    <p>活动报名：富汇财富茶文化周末沙龙</strong><br>
+    <span style="color:#e46c0a;">参与富汇财富定期投资策略沙龙，掌握市场动态，行业观察第一手资讯！</span></p>
+    您的姓名：<input type="text" size="30">*&nbsp;&nbsp;&nbsp;您的电话：<input type="text" size="30">*<br>
+    您的邮箱：<input type="text" size="30"> ( * 为必填项目)<br>
+    您对哪类产品更感兴趣：
+        <label>
+          <input type="radio" name="RadioGroup1" value="固定收益类" id="RadioGroup1_0">
+          固定收益类</label>
+        <label>
+          <input type="radio" name="RadioGroup1" value="股票类" id="RadioGroup1_1">
+          股票类</label>
+<label>
+          <input type="radio" name="RadioGroup1" value="海外产品" id="RadioGroup1_2">
+          海外产品</label>
+      <input name="" type="button" class="an" value="预约咨询">
+   </div>
+   <div class="lcdh">理财热线：021-68821316</div>

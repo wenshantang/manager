@@ -1,0 +1,23 @@
+<ehcache updateCheck="false" dynamicConfig="false">
+    <diskStore path="java.io.tmpdir"/>
+	<cacheManagerEventListenerFactory class="" properties=""/>
+    <defaultCache
+        maxElementsInMemory="2000"
+        eternal="true"
+        overflowToDisk="true">
+    </defaultCache>
+
+    <cache name="AccessToken"
+        maxElementsInMemory="5000"
+        eternal="false"
+        timeToLiveSeconds="7230"
+        overflowToDisk="true"
+        />
+        
+	<cache name="ClientInvoker"
+        maxElementsInMemory="5000"
+        timeToLiveSeconds="7230"
+        eternal="true"
+        overflowToDisk="true"
+        />
+</ehcache>

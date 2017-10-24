@@ -1,0 +1,43 @@
+<div class="insights">
+  <h2>INSIGHTS 洞察 <a href="${ctxPath}/insight">More >></a></h2>
+  <ul>
+    <Li>
+      <div class="insightsbt">市场洞见</div>
+         <#topic_article topicCode="marketinsight" page="${p!}" rows="1";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+			<div class="insightsnr">
+                   <h3 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/articledetail?article_id=${article.id}&topicCode=marketinsight'" >${article.title}</h3>
+                   <span>${strutil.subStringTo (article.publish_time,0,10)}</span><br>${article.digest}
+           </div>
+					<%}%>
+					 <%}%>
+			</#topic_article>
+    
+    </Li>
+    <Li>
+      <div class="insightsbt">行业观察</div>
+      <#topic_article topicCode="observation" page="${p!}" rows="1";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+			<div class="insightsnr">
+                   <h3 style="cursor: pointer;" onclick="window.location.href='${ctxPath}/articledetail?article_id=${article.id}&topicCode=marketinsight'" >${article.title}</h3>
+                   <span>${strutil.subStringTo (article.publish_time,0,10)}</span><br>${article.digest}
+           </div>
+					<%}%>
+					 <%}%>
+			</#topic_article>
+    </Li>
+    <Li style="width:34%;">
+    <#cms_banner type="首页活动banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==4){%>
+					             <img src="${pic}" >
+					            <%}%>
+					         <%}%>
+      </#cms_banner>
+     
+    </Li>
+  </ul>
+  <div class="clear"></div>
+</div>

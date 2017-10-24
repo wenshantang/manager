@@ -1,0 +1,53 @@
+  <#product pro_code="${pro_code!}"; product>
+  <div class="newwk">
+    <input type="hidden" id="id" value="${product.pro_code!}">
+    <input type="hidden" id="type" value="2" >
+    <input type="hidden" id="name" value="${product.pro_name!}">
+    <div class="proview">
+      <h2><a href="${ctxPath}/product">富汇钱码头</a> > <a href="${ctxPath}/productlist">全部产品</a> > <%if(product.pro_style=='1'){%>人民币固定收益产品<%}%><%if(product.pro_style=='2'){%>人民币浮动收益类产品<%}%><%if(product.pro_style=='3'){%>海外投资类产品<%}%></h2>
+      <div class="proviewnr">
+         <div class="proviewnrleft">
+          <h1>${product.pro_name}</h1>
+          <div style="width:100%; height:96px;"><p class="projzp">开放状态：<%if(product.i_prostatus=='1'){%>在售<%}%><%if(product.i_prostatus=='2'){%>即将开放<%}%><%if(product.i_prostatus=='3'){%>已售罄<%}%><br>相关产品：<a href="#">${product.vc_pro_name}</a></p>
+          <p class="projzp">募集期/开放期：${product.d_startdate}至${product.d_enddate}<br>运作期：${product.pro_due}</p>
+          </div>
+          
+    <div class="productviewnav">
+     <ul>
+       <li><a href="#pro1">资金投向</a></li>
+       <li><a href="#pro2">风险控制</a></li>
+       <li><a href="#pro3">相关资讯</a></li>
+     </ul>
+    </div> 
+    <div class="productview">
+     <ul>
+      <li id="pro1">
+        <img src="${product.vc_pub2}" style="margin:20px 5%; width:90%;">
+      </li>
+      <div class="banx"></div>
+      <li id="pro2">
+        <h2>风险控制</h2>
+        <img src="${product.risk}" style="margin:20px 5%; width:90%;">
+      </li>
+     
+ <div class="banx"></div>
+      <li id="pro3">
+      
+      </li>
+      <script>
+     	$(function(){
+		 gopage("1");
+		   })
+       function gopage(p){
+		$("#pro3").load("${ctxPath}/informationPage?p="+p+"&industry="+ ${product.industry});
+        }
+      </script>
+     </ul>
+    </div>
+        </div>
+         <%include("/pc/include/product/appointment.html"){}%>
+        </div>
+    </div>
+<div class="clear"></div>
+  </div>
+   </#product>

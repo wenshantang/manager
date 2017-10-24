@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>编辑操作员信息</title>
+<%include("resource/template/common/resource.html"){}%>
+<script type="text/javascript" src="${ctx}/resource-injar/script?t=/plugin/datepicker/WdatePicker.js&version=2016011513"></script>
+<script src="${ctx}/resource-injar/script?t=/plugin/kindeditor-4.1.10/kindeditor.js&version=2016011513"></script>
+<script src="${ctx}/resource-injar/script?t=/plugin/kindeditor-4.1.10/lang/zh_CN.js&version=2016011513"></script>
+<link rel="stylesheet" href="${ctx}/resource-injar/css?t=/plugin/kindeditor-4.1.10/themes/default/default.css&version=2016011513" />
+</head>
+<script>
+var CTX = '${ctx}';
+String.prototype.startWith=function(s){
+	if(s==null||s==""||this.length==0||s.length>this.length)
+		return false;
+	if(this.substr(0,s.length)==s)
+		return true;
+	else
+		return false;
+	return true;
+}
+var editor = null;
+var KS = null;
+KindEditor.ready(function(K) {
+	KS = K;
+	editor = K.editor({
+		allowFileManager : true,
+		themeType: "simple",
+		uploadJson : '${ctx}/admin/sys/file/upload',
+		fileManagerJson : '${ctx}/admin/sys/file/list'
+	});
+	bindClick();
+});
+function addFile(){
+	var mTypeVal = $("#m_type").val();
+	if(mTypeVal==""){
+		alert("请选择资料类型");
+		return ;
+	}
+	var selectImageName = "#select_image"+mTypeVal;
+	var imageShowName = "#image_show"+mTypeVal;
+	var picUrl = "picurl"+mTypeVal;
+	var picurlids = $("#picurlids");
+	if(picurlids.val()==""){
+		picurlids.val(",");
+	}
+	if(picurlids.val().indexOf(","+picUrl+",")!=-1){
+		alert($("#m_type").children("option:selected").text()+"资料已存在");
+		return;
+	}
+	picurlids.val(picurlids.val()+picUrl+",")
+	var html = $("#fileareatemplate").children().html();
+	html = html.replace('#{0}',mTypeVal).replace('#{0}',mTypeVal)
+		 		.replace('#{0}',mTypeVal).replace('#{0}',mTypeVal)
+		 		.replace('#{0}',mTypeVal).replace('#{0}',mTypeVal).replace('#{0}',mTypeVal);
+	html = html.replace('#{1}',$("#m_type").children("option:selected").text());
+	$("#filearea").append(html);
+	KS(selectImageName).click(function() {
+		editor.loadPlugin('smimage', function() {
+			editor.plugin.imageDialog({
+				clickFn : function(url, title, width, height, border, align) {
+					if (KS(imageShowName)) {
+						if(url.startWith("http://")||url.startWith("https://")){
+							 KS(imageShowName).attr('src', url);
+							 KS("#"+picUrl).val(url);
+						}else{
+							 KS(imageShowName).attr('src', CTX+url);
+							 KS("#"+picUrl).val(CTX+url);
+						}
+						 KS(imageShowName).show();
+					}
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+}
+function delFile(that,picurl){
+	 $("#picurlids").val($("#picurlids").val().replace(picurl,","));
+	 $(that).parent().parent().parent().parent().parent().parent().parent().remove();
+}
+</script>
+<script>
+function bindClick(){
+	<%for(file in files!){%>
+	KS("#select_image${file.title}").click(function() {
+		editor.loadPlugin('smimage', function() {
+			editor.plugin.imageDialog({
+				clickFn : function(url, title, width, height, border, align) {
+					if (KS("#image_show${file.title}")) {
+						if(url.startWith("http://")||url.startWith("https://")){
+							 KS("#image_show${file.title}").attr('src', url);
+							 KS("#picurl${file.title}").val(url);
+						}else{
+							 KS("#image_show${file.title}").attr('src', CTX+url);
+							 KS("##picurl${file.title}").val(CTX+url);
+						}
+						 KS("#image_show${file.title}").show();
+					}
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+	<%}%>
+}
+</script>
+<body class="mainbody">
+	<div class="content-tab-wrap">
+		<div id="floatHead" class="content-tab">
+			<div class="content-tab-ul-wrap">
+				<ul>
+					<li><a href="javascript:;" onclick="tabs(this);"class="selected">操作员信息</a></li>
+					<li><a href="javascript:;" onclick="tabs(this);">添加文件资料</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<form id="data_form">
+		<div class="tab-content">
+		<input type="hidden" name="id" id="id" value="${msg.id}">
+			<dl>
+				<dt>姓名</dt>
+				<dd>
+					<input type="text" class="input normal" name="real_name" id="real_name" value="${msg.real_name}"/>
+					<span id="Validform_checktip">*</span>
+				</dd>
+			</dl>
+			<dl>
+				<dt>性别</dt>
+				<dd>
+					<select class="input middle" name="gender" id="gender">
+						<option value="男" ${msg.gender=='男' ?'selected':''}>男</option>
+						<option value="女" ${msg.gender=='女' ?'selected':''}>女</option>
+					</select>
+					<span id="Validform_checktip">*</span>
+				</dd>
+			</dl>
+			<dl>
+				<dt>手机号</dt>
+				<dd>
+					<input class="input normal" name="mobile" id="mobile" value="${msg.mobile}"/>
+					<span id="Validform_checktip">*</span>
+				</dd>
+			</dl>
+			<dl>
+				<dt>证件类别</dt>
+				<dd>
+					<select class="input middle" name="card_type" id="card_type">
+						<#dictforEach key="card_type";dict>
+							<option value="${dict.name}" ${msg.card_type==dict.name ?'selected':''}>${dict.value}</option>
+						</#dictforEach>
+					</select>
+					<span id="Validform_checktip">*</span>
+				</dd>
+			</dl>
+			<dl>
+				<dt>证件号</dt>
+				<dd>
+					<input class="input normal" name="card_code" id="card_code" value="${msg.card_code}"/>
+				    <span id="Validform_checktip">*</span>
+				</dd>
+			</dl>
+			<dl>
+				<dt>证件有效期</dt>
+				<dd>
+					<input class="input normal" type="text" onclick='WdatePicker({dateFmt:"yyyyMMdd"})' readonly="readonly"
+					name="card_time" id="card_time" value="${msg.card_time}"/>
+					<span id="Validform_checktip">*</span>
+				</dd>
+				
+			</dl>
+			<dl>
+				<dt>归属机构ID</dt>
+				<dd>
+					<%if(msg.check_status=='0'){%>
+					<select class="input middle" name="o_id" id="o_id">
+						<option value="">请选择</option>
+						<%for(geneId in generIds!){%>
+							<option value="${geneId.id}" ${msg.gener_id==geneId.gener_id?"":"selected"}>${geneId.full_name}</option>
+	   					<%}%>
+	   				</select>
+	   				<%}else{%>
+	   				<select class="input middle" name="o_id" id="o_id" disabled="disabled">
+						<option value="">请选择</option>
+						<%for(geneId in generIds!){%>
+							<option value="${geneId.id}" ${msg.gener_id==geneId.gener_id?"":"selected"}>${geneId.full_name}</option>
+	   					<%}%>
+	   				</select>
+	   				<%}%>
+	   				<span id="Validform_checktip">*</span>
+	   				
+				</dd>
+			</dl>
+			<dl>
+				<dt>岗位</dt>
+				<dd>
+					<input class="input normal" name="position" id="position" value="${msg.position}"/>
+				</dd>
+			</dl>
+			<dl>
+				<dt>Email邮箱</dt>
+				<dd>
+					<input class="input normal" name="email" id="email" value="${msg.email}"/>
+				    <span id="Validform_checktip">*</span>
+				</dd>
+			</dl>
+			<dl>
+				<dt>办公电话</dt>
+				<dd>
+					<input class="input normal" name="tel_phone" id="tel_phone" value="${msg.tel_phone}"/>
+				</dd>
+			</dl>
+			<dl>
+				<dt>传真号码</dt>
+				<dd>
+					<input class="input normal" name="fax_num" id="fax_num" value="${msg.fax_num}"/>
+				</dd>
+			</dl>
+			<dl>
+				<dt>通讯地址</dt>
+				<dd>
+					<input class="input normal" name="address" id="address" value="${msg.address}"/>
+				</dd>
+			</dl>
+			<dl>
+				<dt>邮政编码</dt>
+				<dd>
+					<input class="input normal" name="post_card" id="post_card" value="${msg.post_card}"/>
+				</dd>
+			</dl>
+		</div>
+		<div class="tab-content" style="display: none">
+			<dl>
+				<dt>添加资料</dt>
+				<dd>
+					<select name="m_type" id="m_type" style="width: 100px;"  class="input normal big">
+	                    <option value="">请选择</option>
+	                    <#dictforEach key="userbasic_material_type";dict>
+							<option value="${dict.name}" >${dict.value}</option>
+						</#dictforEach>
+					</select>
+					<span class="help-inline"><a id="add_btn" class="icon-btn add" href="javascript:;" onclick="addFile()"><i></i><span>添加资料</span></a></span>
+				</dd>
+			</dl>
+			<dl>
+				<dt>资料信息</dt>
+				<dd>
+					<table id="fileareatemplate" style="display: none;">
+						<tr>
+							<td>
+								<table>
+								<tr>
+									<td>#{1}</td>
+								</tr>
+								<tr>
+									<td><img id="image_show#{0}" src="" style="width:200px;height:200px;display: none" /><br/>
+						 			<input id="picurl#{0}" type="hidden" name="picurl#{0}" /></td>
+								</tr>
+								<tr>
+									<td><span class="help-inline"><a id="select_image#{0}" class="icon-btn add" href="javascript:;"><i></i><span>选择图片</span></a>
+									<a class="icon-btn del" href="javascript:;" onclick="delFile(this,',picurl#{0},')"><i></i><span>删除图片</span></a>
+									</span></td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table id = "filearea">
+						<input id="picurlids" type="hidden" name="picurlids" value="${picurlids}"/></td>
+						<%for(file in files!){%>
+						<tr>
+							<td>
+								<table>
+								<tr>
+									<td>${file.remark}</td>
+								</tr>
+								<tr>
+									<td><img id="image_show${file.title}" src="${file.url}" style="width:200px;height:200px" />
+									<input id="fileId${file.title}" type="hidden" name="fileId${file.title}" value="${file.id}"/>
+						 			<input id="picurl${file.title}" type="hidden" name="picurl${file.title}" value="${file.url}"/></td>
+								</tr>
+								<tr>
+									<td><span class="help-inline"><a id="select_image${file.title}" class="icon-btn add" href="javascript:;"><i></i><span>选择图片</span></a>
+										<a class="icon-btn del" href="javascript:;" onclick="delFile(this,',picurl${file.title},')"><i></i><span>删除图片</span></a>
+									</span></td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						<%}%>
+					</table>
+					<input type="hidden" id="small_picurl_tip"/><span id="Validform_checktip"></span>
+				</dd>
+			</dl>
+		</div>
+	</form>
+	<div class="page-footer">
+		<div class="btn-list">
+			<#permission url="/admin/user/userbasic/update">
+				<input type="button" class="btn" name="btnSubmit" id="btnSubmit" value="确定" onclick="Public.ajaxUpdate('${ctx}/admin/user/userbasic/update')"/>
+			</#permission>
+			<input type="button" class="btn yellow" name="btnReturn" value="取消" onclick="Public.closeDialog();"/>
+		</div>
+	</div>
+</body>
+</html>

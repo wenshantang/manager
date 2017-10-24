@@ -1,0 +1,12 @@
+ <h1>精<br>彩<br>回<br>顾</h1>
+       <ul style="min-height: 487px;">
+          <#topic_article topicCode="wonderfulreview" page="${p1!}" rows="5";pageRecord>
+       	<%if(pageRecord.dataList.~size>0){%>
+       	 <%  for(article in pageRecord.dataList){%>
+       	 <li><a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=wonderfulreview">${article.title}</a><br>嘉宾：${article.author}<span>${strutil.subStringTo (article.publish_time,0,10)}</span></li>
+		<%}%> 
+		
+         <%include("/pc/common/commonPage1.html",{pageRecord:pageRecord}){}%>
+         <%}else{%>暂无相关信息  <%}%>
+      </#topic_article>
+       </ul>

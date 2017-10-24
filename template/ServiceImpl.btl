@@ -1,0 +1,31 @@
+package ${tables.serviceImplDir};
+
+import ${tables.modelDir}.${tables.objectName+tables.modelast};
+import ${tables.serviceDir}.${tables.objectName+tables.servicelast};
+import java.io.Serializable;
+import java.util.List;
+import cn.aresoft.common.model.CommonParam;
+import cn.aresoft.common.service.impl.CenterServiceImpl;
+import com.puff.framework.annotation.Bean;
+import java.util.ArrayList;
+import java.util.List;
+import com.puff.jdbc.core.PageRecord;
+import com.puff.jdbc.core.SqlBuilder;
+import com.puff.framework.container.DBInfoContainer;
+
+@Bean(id = "${strutil.toLowerCase(tables.objectName)+tables.servicelast}")
+public class ${tables.objectName+tables.serviceImplast} extends CenterServiceImpl<${tables.objectName}>implements ${tables.objectName+tables.servicelast} {
+
+	@Override
+	public PageRecord<${tables.objectName+tables.modelast}> paging(${tables.objectName+tables.modelast} ${strutil.toLowerCase(tables.objectName)+tables.modelast}, CommonParam param) {
+		String sql = SqlBuilder.buildQuerySQL(${tables.objectName+tables.modelast}.class);
+		StringBuilder sb = new StringBuilder();
+		sb.append(sql).append(" where 1=1 ");
+		List<Object> condition = new ArrayList<Object>();
+		return paging(sb.toString(), condition, param);
+	}
+	public void deleteInSql(List<? extends Serializable> ids,String delFied){
+		super.deleteInSql("update "+DBInfoContainer.getTableName(${tables.objectName+tables.modelast}.class)+" set "+delFied+"='1' where "+DBInfoContainer.getPkName(${tables.objectName+tables.modelast}.class), ids);
+	}
+
+}

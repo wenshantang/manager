@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>操作员列表</title>
+<%include("resource/template/common/resource.html"){}%> 
+</head>
+<script type="text/javascript">
+function push(url){
+	$.layer({
+	    shade: [0.5, '#888'],
+	    border: [0.2, 0.1, '#000'],
+	    area: ['auto','auto'],
+    	title:'提交复核',
+	    dialog: {
+	        msg: '确定要提交吗？',
+	        btns: 2,                    
+	        type: 4,
+	        btn: ['确定','取消'],
+	        yes: function(index){
+	        	layer.close(index);
+	        	var v = loading("提交中！");
+	        	jQuery.ajax({
+	        		url : url,
+	        		type : "POST",
+	        		success : function(result) {
+	        			   /*  layer.close(v);
+	        				pagination();
+	        				popStatus(1, '提交成功！！！', 1); */
+	        				
+	        			    if (result.code == '0000') {
+	        			    	pagination();
+		        				popStatus(1, '提交成功！！！', 1);
+	        				}else{
+	        					popStatus(4, result.msg, 2);
+	        				}	
+	        		}
+	        	});
+	        }, no: function(){
+	            
+	        }
+	    }
+	});
+}
+</script>
+<script id="tableContent" type="text/html">
+	{{each dataList as row}}
+		<tr>
+			<td>{{row.real_name}}</td>
+			<td>{{row.mobile}}</td>
+			<td>{{row.card_type | dictVal:'card_type'}}</td>
+			<td>{{row.card_code}}</td>
+			<td>{{row.gener_id}}</td>
+			<td>{{row.position}}</td>
+			<td>{{row.check_status | dictVal:'check_status'}}</td>
+			<td>{{row.status | dictVal:'userbasic_status'}}</td>
+			<td>
+               
+                {{ if row.check_status=='0'}}	
+                <a href="javascript:;" onclick="push('${ctx}/admin/user/userbasic/submitStatus/{{row.id}}')" >{{row.check_status | decode:'0','提交','1','','2','','3',''}}</a>
+			    {{/if}}  
+
+				<a id="edit{{row.id}}" href="javascript:;" onclick="edit('${ctx}/admin/user/userbasic/edit/{{row.id}}')">编辑</a>				
+				<a href="javascript:;" onclick="edit('${ctx}/admin/user/userbasic/check/{{row.id}}')" style="display:{{row.create_code | per: row.id}}" >{{row.check_status | decode:'1','复核','2','','3','',0,''}}</a>
+				<a href="javascript:;" onclick="edit('${ctx}/admin/user/userbasic/editStatus/{{row.id}},{{row.real_name}},{{row.status}}')">修改状态</a>
+			</td>
+		</tr>
+	{{/each}}
+</script>
+<body class="mainbody">
+	<div class="toolbar-wrap">
+		<div id="floatHead" class="toolbar">
+			<div class="l-list">
+				<ul class="icon-list">
+					<#permission url="/admin/user/userbasic/add">
+						<li>
+							<a class="add" onclick="fullWithBar('${ctx}/admin/user/userbasic/add')" href="javascript:;">
+								<i></i><span>新增</span>
+							</a>
+						</li>
+					</#permission>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="searchbar">
+		<div class="searchForm">
+			<form id="search_form">
+				<dl>
+					<dt>姓名：</dt>
+					<dd>
+						<input class="input middle" type="text" name="real_name" id="real_name"/>
+					</dd>
+				</dl>
+				<dl>
+					<dt>手机号：</dt>
+					<dd>
+						<input class="input middle" type="text" name="mobile" id="mobile"/>
+					</dd>
+				</dl>
+				<dl>
+					<dt style="width: 80px;">归属机构ID：</dt>
+					<dd style="margin-left: 100px;">
+						<select class="js-example-basic-single" name="o_id" id="o_id">
+						<option value="">请选择</option>
+						<%for(geneId in generIds!){%>
+							<option value="${geneId.id}">${geneId.full_name}</option>
+	   					<%}%>
+	   				</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt style="width: 80px;">复核状态：</dt>
+					<dd style="margin-left: 100px;">
+						<select name="check_status" id="check_status" class="js-example-basic-single"  style="width: 80px;">
+							<option value="">请选择</option>
+							<#dictforEach key="check_status";dict>
+								<option value="${dict.name}">${dict.value}</option>
+							</#dictforEach>
+						</select>									
+					</dd>
+				</dl>
+				<dl>
+					<dt style="width: 80px;">状态：</dt>
+					<dd style="margin-left: 100px;">
+						<select name="status" id="status" class="js-example-basic-single"  style="width: 80px;">
+							<option value="">请选择</option>
+							<#dictforEach key="userbasic_status";dict>
+								<option value="${dict.name}">${dict.value}</option>
+							</#dictforEach>
+						</select>
+					</dd>
+				</dl>
+			</form>
+		</div>
+		<div class="searchButton">
+			<input id="searchBtn" class="btn" type="button" value="搜索"/>
+			<input id="clearBtn" class="btn yellow" type="button" value="重置"/>
+		</div>
+	</div>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ltable" url="${ctx}/admin/user/userbasic/json">
+		<tr>
+			<th>姓名</th>
+			<th>手机号</th>
+			<th>证件类型</th>
+			<th>证件号</th>
+			<th>归属机构ID</th>
+			<th>岗位</th>
+			<th>复核状态</th>
+			<th>状态</th>
+			<th>操作</th>
+		</tr>
+		<tbody id="tablelist"></tbody>
+	</table>
+	<div class="pagelist"></div>
+</body>
+<script type="text/javascript">
+template.helper('per', function (key,value) {
+	 if(key=='${session.user.id}'){
+		 return"none";
+	 }else{
+		 
+		 return "display";
+	 }
+});
+
+
+</script>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="${static_ctx}/portal/js/echarts.min.js?version=${version}"></script>
+<script src="${static_ctx}/portal/js/jquery.min.js?version=${version}"></script>
+</head>
+
+<body style="margin:0px;">
+<div id="main" style="width:100%;height:400px;"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        function highcharts(categoriesData,navData,fundtotalnetval,date_condition){
+        var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        var option = {
+    title: {
+        text: ' '
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['单位净值','沪深300']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data:categoriesData
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name:'单位净值',
+            type:'line',
+            data:fundtotalnetval
+        },
+        {
+            name:'沪深300',
+            type:'line',
+            data:navData 
+        }
+
+    ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+ }
+        function fundechart(date_condition){
+        	var procode = "${id!}";
+       	 $.ajax({
+     		url :"${ctxPath}/fundnav/fundchart",
+     		type : "POST",
+     		dataType:"json",
+     		data:{date_condition:date_condition,procode:procode},
+     		success : function(result) {
+     			if(result.code!="0000"){ 
+     				alert(result.msg);
+     			}else{
+     				var categoriesData = [],navData=[];fundtotalnetval=[];
+     				var data = result.data;
+     				if(data.length==0){
+     					$("#main").html("<div style='margin-left:350px;font-size:20px;color: #666;'><br><br>暂无相关数据</div>");
+     				}else{
+     					$(data).each(function(i){
+     						var date = data[i].TradeDate.substring(0,10);
+     						categoriesData.push(date); 
+     						var ndata = data[i].hs300historymrm.toFixed(4); //沪深指数
+     						var tdata = data[i].netvalue.toFixed(4);//单位净值
+     						navData.push(ndata);
+     						fundtotalnetval.push(tdata);
+     					});
+     					highcharts(categoriesData,navData,fundtotalnetval,date_condition);
+     				}
+     			
+     			}
+     		},
+     		error:function(){
+     			//$("#container").html("<br><br><br><br><br><br>显示错误！");
+//     			Popbox.error("初始化走势图异常，请联系管理员");
+     		}
+     	});
+        }  
+        
+        $(function(){
+        	fundechart("");
+        })
+    </script>
+</body>
+</html>

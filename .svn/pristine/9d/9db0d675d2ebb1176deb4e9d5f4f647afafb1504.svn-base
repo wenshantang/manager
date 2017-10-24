@@ -1,0 +1,12 @@
+       <h1>即<br>将<br>推<br>出</h1>
+       <ul style="min-height: 487px;">
+       <#topic_article topicCode="comingshow" page="${p!}" rows="5";pageRecord>
+       	<%if(pageRecord.dataList.~size>0){%>
+       	 <%  for(article in pageRecord.dataList){%>
+       	 <li><a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=comingshow">${article.title}</a><br>嘉宾：${article.author}<span>${strutil.subStringTo (article.publish_time,0,10)}</span></li>
+		<%}%> 
+
+         <%include("/pc/common/commonPage.html",{pageRecord:pageRecord}){}%>
+         		<%}else{%>暂无相关信息<%}%>  
+      </#topic_article>
+       </ul>

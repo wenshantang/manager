@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>${tables.titleName}</title>
+\<%include("resource/template/common/resource.html"){}%>
+</head>
+<script type="text/javascript">
+</script>
+<script id="tableContent" type="text/html">
+	{{each dataList as row}}
+		<tr>
+			<td>
+            	<span class="checkall" style="vertical-align:middle;">
+                	<input id="id_{{row.${tables.primkey}}}" type="checkbox" name="_ckid" value="{{row.${tables.primkey}}}"/>
+               	</span>
+            </td>
+            <%if(tables.tableFields!=null&&tables.tableFields.~size>0){for(fild in tables.tableFields){%>
+			<td>{{row.${strutil.toLowerCase(fild.objectName)}}}</td>
+			<%}}%>
+            <td>
+				<a href="javascript:;" class="img-btn edit operator" onclick="edit('\${ctx}${tables.callPath}/edit/{{row.${tables.primkey}}}')">修改</a>
+            </td>
+         </tr>
+	{{/each}}
+</script>
+<body class="mainbody">
+ 		<div class="toolbar-wrap">
+              <div id="floatHead" class="toolbar">   
+                <div class="l-list">
+                    <ul class="icon-list">
+                        <li><a class="add" onclick="fullWithBar('\${ctx}${tables.callPath}/add')" href="javascript:;"><i></i><span>新增</span></a></li>
+                       <li><a class="all" href="javascript:;" onclick="checkAll(this);"><i></i><span>全选</span></a></li>
+                       <li><a onclick="del('\${ctx}${tables.callPath}/delete')" id="btnDelete" class="del" href="javascript:;"><i></i><span>删除</span></a></li>
+                    </ul>
+                 </div>
+               </div>
+          </div>
+          <div class="searchbar">
+          <div class="searchForm">
+          <form id="search_form">
+		  </form>
+          </div>
+          <div class="searchButton" style="float: right;margin-right: 60px;">
+             <input id="searchBtn" class="btn" type="button" value="搜索" />
+             <input id="clearBtn" class="btn yellow" type="button" value="重置" />
+   		  </div>
+		</div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ltable" url="\${ctx}${tables.callPath}/json">
+            <tr>
+                <th>选择</th>
+            	<%if(tables.tableFields!=null&&tables.tableFields.~size>0){for(fild in tables.tableFields){%>
+				<th sort="${strutil.toLowerCase(fild.objectName)}">${fild.objectName}</th>
+				<%}}%>
+				<th>操作</th>
+            </tr>
+            <tbody id="tablelist"></tbody>
+        </table>
+        <div class="pagelist"></div>
+</body>
+</html>

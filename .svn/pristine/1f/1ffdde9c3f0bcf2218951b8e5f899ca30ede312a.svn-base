@@ -1,0 +1,36 @@
+<div class="activity">
+<h2>ACTIVITY 活动 <a href="${ctxPath}/new">More >></a></h2>
+   <ul>
+     <li class="activity_1">
+        <#topic_article topicCode="activity" page="${p!}" rows="1";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					   <div class="activityimg"><img src="${article.small_picurl}"></div>
+                    <div class="activityspan"><h3>${article.title}<br><span>${article.author}  ${strutil.subStringTo (article.publish_time,0,10)}</span></h3><a href="new.html#tab">立即<br>报名</a></div>
+					<%}%>
+					 <%}%>
+			</#topic_article>
+     </li>
+     <li class="activity_2">
+      <#topic_article topicCode="comingshow" page="${p!}" rows="1";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					   <div class="activityimg"><img src="${article.small_picurl}"></div>
+                    <div class="activityspan"><h3>${article.title}<br><span>${article.author}  ${strutil.subStringTo (article.publish_time,0,10)}</span></h3></div>
+					<%}%>
+					 <%}%>
+	</#topic_article>
+     </li>
+     <li class="activity_3">
+   <#topic_article topicCode="wonderfulreview" page="${p!}" rows="1";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					   <div class="activityimg"><img src="${article.small_picurl}"></div>
+                    <div class="activityspan"><h3>${article.title}<br><span>${article.author}  ${strutil.subStringTo (article.publish_time,0,10)}</span></h3></div>
+					<%}%>
+					 <%}%>
+	</#topic_article>
+     </li>
+   </ul>
+<div class="clear"></div>
+</div>

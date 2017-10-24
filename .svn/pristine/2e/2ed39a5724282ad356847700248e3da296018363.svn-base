@@ -1,0 +1,2 @@
+  <div class="proviewnrright"><img src="${static_ctx}/portal/images/we.JPG" ><img src="${static_ctx}/portal/images/lcdht.jpg" style="margin-top:20px;"><div class="massage"><p>您亦可留下联系方式<br>专业投资顾问为您服务</p>您的姓名：<input name="" type="text"><br><br>您的电话：<input name="" type="text"><br><input type="button" value="开通预约咨询" class="ljyym"></div></div>
+     

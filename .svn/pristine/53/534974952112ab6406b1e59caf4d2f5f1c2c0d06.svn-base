@@ -1,0 +1,12 @@
+       <h1>即<br>将<br>推<br>出</h1>
+       <ul >
+       <#topic_article topicCode="comingshow" page="${p!}" rows="5";pageRecord>
+       	<%if(pageRecord.dataList.~size>0){%>
+       	 <%  for(article in pageRecord.dataList){%>
+       	 <li><a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=comingshow">${article.title}</a><span>${date( article.publish_time , "yyyy-MM-dd HH:mm:ss" ),dateFormat="M月dd日"}</span><div class="clear"></div></li>
+		<%}%> 
+
+         <%include("/pc/common/commonPage.html",{pageRecord:pageRecord}){}%>
+         		<%}else{%>暂无相关信息<%}%>  
+      </#topic_article>
+       </ul>

@@ -1,0 +1,82 @@
+  <div class="newwk">
+    <div class="newbanner">
+       <div class="newleft">
+        <#cms_banner type="活动与洞察banner" rows="10";bans>
+					         <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+					         <%if(banLP.index==2){%>
+					             <img src="${pic}" >
+					            <%}%>
+					         <%}%>
+              		</#cms_banner>
+              		  <#topic_article topicCode="marketinsight" page="${p!}" rows="1";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+         <div class="newlsftzi"><h1>${article.title}</h1>
+${article.digest}<br><br>发布于2小时前</div>
+         		<%}%>
+		     <%}%>
+			</#topic_article>
+       </div>
+       <div class="newright"><img src="${static_ctx}/portal/images/we.JPG"></div>
+    </div>
+    
+    <div class="clear"></div>
+    
+   <div class="newsoon">
+       <div class="newtille"><h2>市场洞见</h2><a href="#jjtc">More >></a></div>
+       <ul>
+       <#topic_article topicCode="marketinsight" page="${p!}" rows="4";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					 <%if(articleLP.index>1){%>
+            <li><div class="newsoonimg"><img src="${article.small_picurl}"></div><p> 
+            <a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=marketinsight">${article.title}</a></p>时间：${date( article.publish_time , "yyyy-MM-dd HH:mm:ss" ),dateFormat="yyyy年MM月dd日"}<br>地点：${article.active_site}</li>
+					<%}%>
+					<%}%> 
+					 <%}%>  
+			</#topic_article>
+       </ul><div class="clear"></div>
+    </div>
+    
+    <div class="newsoon">
+       <div class="newtille"><h2>行业观察</h2><a href="#jchg">More >></a></div>
+       <ul>
+       
+              <#topic_article topicCode="observation" page="${p!}" rows="4";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					 <%if(articleLP.index>1){%>
+            <li><div class="newsoonimg"><img src="${article.small_picurl}"></div><p> 
+            <a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=observation">${article.title}</a></p></li>
+					<%}%>
+					<%}%> 
+					 <%}%>  
+			</#topic_article>
+       </ul><div class="clear"></div>
+    </div>
+    
+
+     <div class="jjtc" id="jjtc">
+     </div>
+     
+      <script>
+     	$(function(){
+		 gopage("1");
+		 })
+      function gopage(p){
+		$("#jjtc").load("${ctxPath}/marketinsightPage?p="+p);
+      }
+      </script>
+     <div class="jchg" id="jchg">
+     </div>
+     
+      <script>
+     	$(function(){
+		 gopage1("1");
+		 })
+      function gopage1(p){
+		$("#jchg").load("${ctxPath}/observationPage?p1="+p);
+      }
+      </script>
+   <div class="clear"></div>
+   </div>

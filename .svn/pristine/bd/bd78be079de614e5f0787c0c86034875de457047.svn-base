@@ -1,0 +1,52 @@
+  <div class="newwk">
+    <div class="newbanner">
+       <div class="newleft">
+         <img src="${static_ctx}/portal/images/we1.JPG">
+         <div class="newlsftzi"><h1>《选一条人少的路走》读书沙龙I期</h1>
+         嘉宾：王鸿滨女士<br>时间：2016年3月12日<br>地点：国和路346号九州书院<br><br>
+          <input type="button" class="ljbm" value="立即报名" onclick="javascript:location='#tab'">
+          <input type="button" value="查看详情" class="ckxq">
+         </div>
+       </div>
+       <div class="newright"><img src="${static_ctx}/portal/images/we.JPG"></div>
+    </div>
+    
+    <div class="clear"></div>
+    
+   <div class="newsoon">
+       <div class="newtille"><h2>即将推出</h2><a href="#jjtc">More >></a></div>
+       <ul>
+        <#topic_article topicCode="comingshow" page="${p!}" rows="4";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					 <%if(articleLP.index>1){%>
+            <li><img src="${article.small_picurl}"><p> 
+            <a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=comingshow">${article.title}</a></p>${strutil.subStringTo (article.publish_time,0,10)}<br>地点：${article.centre_tip}</li>
+					<%}%>
+					<%}%> 
+					 <%}%>  
+			</#topic_article>
+       </ul><div class="clear"></div>
+    </div>
+    
+    <div class="newsoon">
+       <div class="newtille"><h2>精彩回顾</h2><a href="#jchg">More >></a></div>
+       <ul> 
+       
+             <#topic_article topicCode="wonderfulreview" page="${p!}" rows="4";pageRecord>
+				<%if(pageRecord.dataList.~size>0){%>
+					 <%  for(article in pageRecord.dataList){%>
+					 <%if(articleLP.index>1){%>
+            <li><img src="${article.small_picurl}"><p> 
+            <a href="${ctxPath}/articledetail?article_id=${article.id}&topicCode=wonderfulreview">${article.title}</a></p><br>嘉宾：${article.author}</li>
+					<%}else{%>
+					 <li>暂无相关信息</li>
+					 <%}%>
+					<%}%>
+					<%}%> 
+			</#topic_article>
+       </ul><div class="clear"></div>
+    </div>
+     
+    <div class="clear"></div> 
+  </div>
