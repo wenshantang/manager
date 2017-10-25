@@ -1,4 +1,4 @@
-<div class="banner">
+<!-- <div class="banner">
 <div class="swiper-container">
   <div class="swiper-wrapper">
   <#cms_banner type="首页banner" rows="3";bans>
@@ -9,4 +9,66 @@
   </div>
   <div class="swiper-pagination"></div>
 </div>
+</div> -->
+<!-- banner -->
+<div id="box_top_sub3">
+	<div class="columnSpace"
+		id="elem-FrontPublic_slideShow01-1441866455619">
+		<script language="javascript">
+	//<![CDATA[
+		FrontPublic_slideShow01['FrontPublic_slideShow01-1441866455619_init'] = function (){
+		 FrontPublic_slideShow01['FrontPublic_slideShow01-1441866455619_init'] = new FrontPublic_slideShow01();
+		 FrontPublic_slideShow01['FrontPublic_slideShow01-1441866455619_init'].d5_slide("960","");
+		}
+		$( FrontPublic_slideShow01['FrontPublic_slideShow01-1441866455619_init']);
+	// ]]>
+</script>
+		<script type="text/javascript" src="${ctxPath}/portal/js/superslide.2.1_1.js"></script>
+		<div id="FrontPublic_slideShow01-1441866455619"
+			class="FrontPublic_slideShow01-d6_c1">
+			<div class="fullSlide">
+				<div class="bd">
+					<ul>
+						<li>
+						<a href="javascript:void(0)" class="f_pic"> <img src="${ctxPath}/portal/picture/408015b4-d497-4359-89cc-2756ef542263_1.jpg" /></a> 
+						<a href="javascript:void(0)" class="f_title"> </a>
+						</li>
+						<li><a href="javascript:void(0)" class="f_pic"> <img
+								src="${ctxPath}/portal/picture/d387012f-7c07-4e63-9656-60050f40e55f_1.jpg" />
+						</a> <a href="javascript:void(0)" class="f_title"> </a></li>
+						<li><a href="javascript:void(0)" class="f_pic"> <img
+								src="${ctxPath}/portal/picture/4791577c-d2ea-4c90-b688-b2b0a2178eec_1.jpg" />
+						</a> <a href="javascript:void(0)" class="f_title"> </a></li>
+					</ul>
+				</div>
+				<div class="hd">
+					<ul></ul>
+				</div>
+				<span class="prev"></span> <span class="next"></span>
+			</div>
+			<script type="text/javascript">
+$(".fullSlide").hover(function(){
+    $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+},
+function(){
+    $(this).find(".prev,.next").fadeOut()
+});
+$(".fullSlide").slide({
+    titCell: ".hd ul",
+    mainCell: ".bd ul",
+    effect: "fold",
+    autoPlay: true,
+    autoPage: true,
+    trigger: "click",
+	interTime:"5"*1000,
+    startFun: function(i) {
+        var curLi = jQuery(".fullSlide .bd li").eq(i);
+        if ( !! curLi.attr("_src")) {
+            curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+        }
+    }
+});
+</script>
+		</div>
+	</div>
 </div>

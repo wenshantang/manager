@@ -1,44 +1,165 @@
-<header>
-  <div class="top"> 
-    <ul>
-      <li class="weixin"><a href="javascript:" id="ahover" tooltips="<img src='${static_ctx}/portal/images/er.jpg'>">官方微信</a></li>
-      <li class="tel">理财热线：021-68821316</li>
-      <li class="user"><a href="construction" title="快速开户">快速开户</a><a href="construction" title="一键登录" style=" background:#dacbb4;">一键登录</a></li>
-    </ul>
-  </div>
-  <div class="logo"  > <span >私募投资基金管理人<br>登记编号：<a href="http://gs.amac.org.cn/amac-infodisc/res/pof/manager/33615.html" target="_blank">P1023825</a></span></div>
-  <nav>
-    <div class="navbox"> 
-  <div class="nav"> 
-      <li ><a ${nav =='sy'?'style="background:#e46c0a; color:#FFF;"':''} href="${ctxPath}/index">首页</a></li>
-      <li><a ${nav =='new'?'style="background:#e46c0a; color:#FFF;"':''} href="${ctxPath}/new">活动</a></li>
-      <li class="drop-menu-effect"><a ${nav =='pro'?'style="background:#e46c0a; color:#FFF;"':''} href="${ctxPath}/product">富汇钱码头</a>
-        <div class="submenu">
-          <div class="menu">
-            <span>富汇钱码头以“受信责任”为最高原则，在严谨风险管理下争取优异的投资表现，不断创新完善多元的产品系列<a href="${ctxPath}/productlist">查看全部产品</a></span>
-            <ul>
-              <li><a href="${ctxPath}/product?id=1#producttab1">先行布局</a></li>
-              <li><a href="${ctxPath}/product?id=2#producttab2">全球航线</a></li>
-              <li><a href="${ctxPath}/product?id=3#producttab3" >专业掌舵</a></li>
-              <li><a href="${ctxPath}/product?id=4#producttab4" >“小而美”领航</a></li>
-            </ul>
-          </div> 
-        </div>
-      </li>
-       <li><a ${nav =='in'?'style="background:#e46c0a; color:#FFF;"':''} href="${ctxPath}/insight">洞察</a></li>
-       
-       <#topic_article topicCode="aboutus" page="999" ;pageRecord> 
-       	<%if(pageRecord.dataList.~size>0){%>
-       	 <%  for(article in pageRecord.dataList){%>
-       	 	<%if(articleLP.index==1){%>
-      <li><a ${nav =='ab'?'style="background:#e46c0a; color:#FFF;"':''} href="${ctxPath}/about?article_id=${article.id}">关于我们</a></li>
-   <%}%>
-    <%}%>
-     <%}else{%>
-       <li><a ${nav =='ab'?'style="background:#e46c0a; color:#FFF;"':''} href="javascript:;">关于我们</a></li>
-     <%}%>
-      </#topic_article>
-    </div>
+<!-- head -->
+<div id="box_top_sub1">
+	<div id="box_top_sub1_sub1">
+		<div  class="columnSpace" id="elem-FrontSpecifies_show01-1441786752928">
+			<div id="FrontSpecifies_show01-1441786752928"
+				class="FrontSpecifies_show01-d3_c1">
+				<div class="describe htmledit">
+					<p>
+						<a href="index.html"><img alt=""
+							src="${ctxPath}/portal/picture/logo_big.jpg" /></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="box_top_sub1_sub2">
+		<p style="line-height: 90px; float: right; font-size: 16px;">联系电话：021-37820669
+		</p>
+
+	</div>
+	<div class="clearBoth"></div>
 </div>
-  </nav>
-</header>
+<!-- nav -->
+<div id="box_top_sub2">
+	<div class="columnSpace" id="elem-FrontColumns_navigation01-1441856203384" >
+		<script type="text/javascript" src="${ctxPath}/portal/js/cn_global_1.js"></script>
+		<div id="FrontColumns_navigation01-1441856203384"
+			class="FrontColumns_navigation01-d9_c1">
+			<div id="menu">
+				<div class="bound">
+					<ul>
+						<li class="columns0"><a href="${ctxPath}/index" title="首 页" class="hover"> 首 页</a></li>
+						<li class="columns1"><a href="${ctxPath}/productlist" title="产品及解决方案">产品及解决方案</a></li>
+						<li class="columns2"><a href="${ctxPath}/new" title="新闻中心"> 新闻中心</a></li>
+						<li class="columns3"><a href="${ctxPath}/consult" title="招聘咨询">招聘咨询</a></li>
+						<li class="columns4"><a href="${ctxPath}/about" title="关于我们">关于我们</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="menu-popup">
+				<div class="popup columns0 navigation" style="display: none;">
+					<div class="menu_content">
+						<div>
+							<span class="line"></span>
+							<ul class="subcolumns0">
+								<li class="img"><a
+									href="/comcontent_detail/i=2&comContentId=2.html"
+									title="企业简介"> <img class="ejtp" alt="企业简介"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">企业简介</span>
+								</a></li>
+							</ul>
+							<span class="line"></span>
+							<ul class="subcolumns1">
+								<li class="img"><a
+									href="/comcontent_detail/i=3&comContentId=3.html"
+									title="企业文化"> <img class="ejtp" alt="企业文化"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">企业文化</span>
+								</a></li>
+							</ul>
+							<span class="line"></span>
+							<ul class="subcolumns2">
+								<li class="img"><a
+									href="/ryzz/FrontColumns_navigation01-1442996227449FirstColumnId=119.html"
+									title="公司资质"> <img class="ejtp" alt="公司资质"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">公司资质</span>
+								</a></li>
+							</ul>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="popup columns1 navigation" style="display: none;">
+					<div class="menu_content">
+						<div>
+							<ul class="subcolumns0">
+								<li class="img"><a
+									href="/comcontent_detail/i=2&comContentId=2.html"
+									title="自组网产品"> <img class="ejtp" alt="自组网产品"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">自组网产品</span>
+								</a></li>
+							</ul>
+							<span class="line"></span>
+							<ul class="subcolumns1">
+								<li class="img"><a
+									href="/comcontent_detail/i=3&comContentId=3.html"
+									title="有中心产品"> <img class="ejtp" alt="有中心产品"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">有中心产品</span>
+								</a></li>
+							</ul>
+							<span class="line"></span>
+							<ul class="subcolumns2">
+								<li class="img"><a
+									href="/ryzz/FrontColumns_navigation01-1442996227449FirstColumnId=119.html"
+									title="自组网+有中心双网合一产品"> <img class="ejtp"
+										alt="自组网+有中心双网合一产品" src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span
+										class="ejwz">自组网+有中心双网合一产品</span>
+								</a></li>
+							</ul>
+							<span class="line"></span>
+							<ul class="subcolumns3">
+								<li class="img"><a
+									href="/ryzz/FrontColumns_navigation01-1442996227449FirstColumnId=119.html"
+									title="解决方案"> <img class="ejtp" alt="解决方案"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">解决方案</span>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="popup columns2 navigation" style="display: none;">
+					<div class="menu_content">
+						<div>
+							<ul class="subcolumns0">
+								<li class="img"><a
+									href="/qywhtyy/c=4&i=12&comContentId=12.html"
+									title="公司新闻"> <img class="ejtp" alt="公司新闻"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">公司新闻</span>
+								</a></li>
+							</ul>
+							<span class="line"></span>
+							<ul class="subcolumns1">
+								<li class="img"><a href="/qywh_list/newsCategoryId=13.html"
+									title="行业新闻"> <img class="ejtp" alt="行业新闻"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">行业新闻</span>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="popup columns3 navigation" style="display: none;">
+					<div class="menu_content">
+						<div>
+							<ul class="subcolumns0">
+								<li class="img"><a href="/news_list/newsCategoryId=2.html"
+									title="招聘信息"> <img class="ejtp" alt="招聘信息"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">招聘信息</span>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="popup columns4 navigation" style="display: none;">
+					<div class="menu_content">
+						<div>
+							<ul class="subcolumns0">
+								<li class="img"><a href="/news_list/newsCategoryId=2.html"
+									title="联系方式"> <img class="ejtp" alt="联系方式"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">联系方式</span>
+								</a></li>
+							</ul>
+							<span class="line"></span>
+							<ul class="subcolumns1">
+								<li class="img"><a href="/news_list/newsCategoryId=4.html"
+									title="公司地址"> <img class="ejtp" alt="公司地址"
+										src="${ctxPath}/portal/picture/noimage_1.jpg" /> <span class="ejwz">公司地址</span>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
