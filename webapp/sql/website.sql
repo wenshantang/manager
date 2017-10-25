@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50610
 File Encoding         : 65001
 
-Date: 2017-10-25 10:17:42
+Date: 2017-10-25 18:22:11
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -230,6 +230,9 @@ CREATE TABLE `cms_banner` (
 -- ----------------------------
 -- Records of cms_banner
 -- ----------------------------
+INSERT INTO `cms_banner` VALUES ('923110549159153664', 'banner1', 'banner1', '', '0', '1', 'http://localhost:8080//upload/image/20171025/QxDSKk3khgJy4mxA.jpg', 'http://localhost:8080//upload/image/20171025/n7wZoKqa8vaaYoQc.jpg', '', '', 'indexbanner', '2', '1', '2017-10-25 17:13:33', 'admin1');
+INSERT INTO `cms_banner` VALUES ('923115605592944640', 'banner2', 'banner2', '', '0', '1', 'http://localhost:8080//upload/image/20171025/Kxxq1TtLm9uaRC3B.jpg', 'http://localhost:8080//upload/image/20171025/jR1hWB13q82q8fiY.jpg', '', '', 'indexbanner', '1', '1', '2017-10-25 17:14:45', 'admin1');
+INSERT INTO `cms_banner` VALUES ('923115898050244608', 'banner3', 'banner3', '', '0', '1', 'http://localhost:8080//upload/image/20171025/zSyMZE0m7HOZWrGh.jpg', 'http://localhost:8080//upload/image/20171025/J2lBoMO19ok3PeXk.jpg', '', '', 'indexbanner', '1', '1', '2017-10-25 17:15:55', 'admin1');
 
 -- ----------------------------
 -- Table structure for cms_model
@@ -341,7 +344,7 @@ CREATE TABLE `cms_template` (
 -- ----------------------------
 INSERT INTO `cms_template` VALUES ('710666086053040128', null, 'pc', '/pc', '888888888888888888', null, null, '2017-10-23 11:29:20', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('710666272982585344', null, 'template', '/pc/template', '710666086053040128', null, null, '2017-10-23 11:29:20', 'admin1', null, null);
-INSERT INTO `cms_template` VALUES ('710666446266572800', 'pc首页', null, '/pc/template/pc首页.html', '710666272982585344', '1', '<!DOCTYPE HTML>\r\n<html>\r\n<%include(\"/pc/common/meta.html\"){}%>\r\n<link href=\"${static_ctx}/portal/css/page_index.min_1.css?version=${version}\" rel=\"stylesheet\" type=\"text/css\" />\r\n<body id=\"index\">\r\n	<div class=\"pageWidth\" id=\"box_root\">\r\n		<div id=\"box_top\" style=\"background: #e3e5e4;\">\r\n			<%include(\"/pc/common/header.html\"){}%>\r\n			<%include(\"/pc/include/index/banner.html\"){}%>\r\n			<!--head,nav,banner -->\r\n		</div>\r\n		<!-- new -->\r\n		<%include(\"/pc/include/index/news.html\"){}%> \r\n		\r\n		<%include(\"/pc/common/footer.html\"){}%>\r\n		<!--footed-->\r\n	</div>\r\n	<div id=\"elem-FrontPublic_wisher01-2014\"></div>\r\n	<script  src=\'${static_ctx}/portal/js/visittrack_1.js\' type=\'text/javascript\'></script>\r\n</body>\r\n</html>\r\n', '2017-10-23 11:29:20', 'admin1', '2016-03-18 11:28:30', 'admin1');
+INSERT INTO `cms_template` VALUES ('710666446266572800', 'pc首页', null, '/pc/template/pc首页.html', '710666272982585344', '1', '<!DOCTYPE HTML>\r\n<html>\r\n<%include(\"/pc/common/meta.html\"){}%>\r\n<link href=\"${static_ctx}/portal/css/page_index.min_1.css?version=${version}\" rel=\"stylesheet\" type=\"text/css\" />\r\n<body id=\"index\">\r\n	<div class=\"pageWidth\" id=\"box_root\">\r\n		<div id=\"box_top\" style=\"background: #e3e5e4;\">\r\n			<%include(\"/pc/common/header.html\"){}%>\r\n			<%include(\"/pc/include/index/banner.html\"){}%>\r\n			<!--head,nav,banner -->\r\n		</div>\r\n		<!-- new -->\r\n		<%include(\"/pc/include/index/news.html\"){}%> \r\n		\r\n		<%include(\"/pc/common/footer.html\"){}%>\r\n		<!--footed-->\r\n	</div>\r\n	<div id=\"elem-FrontPublic_wisher01-2014\"></div>\r\n	<script  src=\'${static_ctx}/portal/js/visittrack_1.js\' type=\'text/javascript\'></script>\r\n</body>\r\n</html>\r\n', '2017-10-23 11:29:20', 'admin1', '2017-10-25 14:48:08', 'admin1');
 INSERT INTO `cms_template` VALUES ('710667515850956800', null, 'common', '/pc/common', '710666086053040128', null, null, '2017-10-23 11:29:20', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('710667584770686976', null, 'include', '/pc/include', '710666086053040128', null, null, '2017-10-23 11:29:20', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('710668353422606336', 'meta', null, '/pc/common/meta.html', '710667515850956800', '2', '<head>\r\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\r\n<title>上海金网通信技术发展有限公司</title>\r\n<meta name=\"keywords\" content=\"${topic.meta_keywords}\" />\r\n<meta name=\"description\" content=\"${topic.meta_desc}\"/>  \r\n<link href=\"${static_ctx}/portal/css/lib.min_1.css?version=${version}\" rel=\"stylesheet\" type=\"text/css\" />\r\n<script type=\"text/javascript\" src=\"${static_ctx}/portal/js/jquery_1.js?version=${version}\"></script>\r\n<script type=\"text/javascript\" src=\"${static_ctx}/portal/js/lib.min_1.js?version=${version}\"></script>\r\n<script src=\"${static_ctx}/portal/js/b2c161405da047d0be00fc1fede6abbe.js?version=${version}\"></script>\r\n<script src=\"${static_ctx}/portal/js/ac281114df77474888e38b4a23d1dd95.js?version=${version}\"></script>\r\n</head>  ', '2017-10-23 11:29:20', 'admin1', '2017-10-24 13:34:06', 'admin1');
@@ -1731,6 +1734,14 @@ CREATE TABLE `sys_file` (
 -- ----------------------------
 -- Records of sys_file
 -- ----------------------------
+INSERT INTO `sys_file` VALUES ('923108726141681664', '408015b4-d497-4359-89cc-2756ef542263_1.jpg', 'wLtX1VUZ0FgPFaY3.jpg', '/upload/image/20171025', 'image', 'http://121.43.71.81/static/upload/image/20171025/wLtX1VUZ0FgPFaY3.jpg', '292476', 'admin1', '2017-10-25 16:47:25', '0');
+INSERT INTO `sys_file` VALUES ('923110544892903424', '408015b4-d497-4359-89cc-2756ef542263_1.jpg', 'qidznZShQYnmOot5.jpg', '/upload/image/20171025', 'image', 'http://121.43.71.81/static/upload/image/20171025/qidznZShQYnmOot5.jpg', '292476', 'admin1', '2017-10-25 16:54:39', '0');
+INSERT INTO `sys_file` VALUES ('923115271180369920', '408015b4-d497-4359-89cc-2756ef542263_1.jpg', 'QxDSKk3khgJy4mxA.jpg', '/upload/image/20171025', 'image', 'http://localhost:8080//upload/image/20171025/QxDSKk3khgJy4mxA.jpg', '292476', 'admin1', '2017-10-25 17:13:25', '0');
+INSERT INTO `sys_file` VALUES ('923115296604524544', '408015b4-d497-4359-89cc-2756ef542263_1.jpg', 'n7wZoKqa8vaaYoQc.jpg', '/upload/image/20171025', 'image', 'http://localhost:8080//upload/image/20171025/n7wZoKqa8vaaYoQc.jpg', '292476', 'admin1', '2017-10-25 17:13:32', '0');
+INSERT INTO `sys_file` VALUES ('923115565034872832', '4791577c-d2ea-4c90-b688-b2b0a2178eec_1.jpg', 'Kxxq1TtLm9uaRC3B.jpg', '/upload/image/20171025', 'image', 'http://localhost:8080//upload/image/20171025/Kxxq1TtLm9uaRC3B.jpg', '365422', 'admin1', '2017-10-25 17:14:36', '0');
+INSERT INTO `sys_file` VALUES ('923115591640121344', '4791577c-d2ea-4c90-b688-b2b0a2178eec_1.jpg', 'jR1hWB13q82q8fiY.jpg', '/upload/image/20171025', 'image', 'http://localhost:8080//upload/image/20171025/jR1hWB13q82q8fiY.jpg', '365422', 'admin1', '2017-10-25 17:14:42', '0');
+INSERT INTO `sys_file` VALUES ('923115834255413248', 'd387012f-7c07-4e63-9656-60050f40e55f_1.jpg', 'zSyMZE0m7HOZWrGh.jpg', '/upload/image/20171025', 'image', 'http://localhost:8080//upload/image/20171025/zSyMZE0m7HOZWrGh.jpg', '346724', 'admin1', '2017-10-25 17:15:40', '0');
+INSERT INTO `sys_file` VALUES ('923115892457648128', 'd387012f-7c07-4e63-9656-60050f40e55f_1.jpg', 'J2lBoMO19ok3PeXk.jpg', '/upload/image/20171025', 'image', 'http://localhost:8080//upload/image/20171025/J2lBoMO19ok3PeXk.jpg', '346724', 'admin1', '2017-10-25 17:15:54', '0');
 
 -- ----------------------------
 -- Table structure for sys_ftpserver
@@ -1757,7 +1768,7 @@ CREATE TABLE `sys_ftpserver` (
 -- ----------------------------
 -- Records of sys_ftpserver
 -- ----------------------------
-INSERT INTO `sys_ftpserver` VALUES ('636042257339510784', '120.55.176.70', 'static', '5021', 'aresoft', 'aresoft', '1', '1', 'http://121.43.71.81/static', '1', '', '/', 'UTF-8', '0');
+INSERT INTO `sys_ftpserver` VALUES ('636042257339510784', '127.0.0.1', 'static', '21', '123', '123', '1', '1', 'http://localhost:8080/', '1', '', '/', 'UTF-8', '0');
 
 -- ----------------------------
 -- Table structure for sys_left_menu
