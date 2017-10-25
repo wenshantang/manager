@@ -1,15 +1,3 @@
-<!-- <div class="banner">
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-  <#cms_banner type="首页banner" rows="3";bans>
-   <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
-    <div class="swiper-slide"><img src="${pic}"  onclick="window.location.href='${ban.href_url}'" style="cursor: pointer;"></div>
-     <%}%>
- </#cms_banner>
-  </div>
-  <div class="swiper-pagination"></div>
-</div>
-</div> -->
 <!-- banner -->
 <div id="box_top_sub3">
 	<div class="columnSpace"
@@ -29,16 +17,14 @@
 			<div class="fullSlide">
 				<div class="bd">
 					<ul>
+					<#cms_banner type="indexbanner" rows="3";bans>
+  						 <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
 						<li>
-						<a href="javascript:void(0)" class="f_pic"> <img src="${ctxPath}/portal/picture/408015b4-d497-4359-89cc-2756ef542263_1.jpg" /></a> 
+						<a href="javascript:void(0)" class="f_pic"> <img src="${pic}" /></a> 
 						<a href="javascript:void(0)" class="f_title"> </a>
 						</li>
-						<li><a href="javascript:void(0)" class="f_pic"> <img
-								src="${ctxPath}/portal/picture/d387012f-7c07-4e63-9656-60050f40e55f_1.jpg" />
-						</a> <a href="javascript:void(0)" class="f_title"> </a></li>
-						<li><a href="javascript:void(0)" class="f_pic"> <img
-								src="${ctxPath}/portal/picture/4791577c-d2ea-4c90-b688-b2b0a2178eec_1.jpg" />
-						</a> <a href="javascript:void(0)" class="f_title"> </a></li>
+    					 <%}%>
+ 					</#cms_banner>
 					</ul>
 				</div>
 				<div class="hd">
