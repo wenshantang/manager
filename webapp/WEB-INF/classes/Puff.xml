@@ -47,6 +47,6 @@
 		<property name="scanIntervalSeconds" value="1"></property>
 	</plugin> -->
 		<plugin name="TemplateSyncPlugin" class="cn.aresoft.cms.manager.synctemplate.TemplateSyncPlugin">
-		<property name="templatePath" value="D:/项目资料/My_Project/msth/fhcf.manager/webapp/WEB-INF/template"></property>
+		<property name="templatePath" value="G:/gitMaven/manager/webapp/WEB-INF/template"></property>
 	</plugin>
 </Puff>

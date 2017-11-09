@@ -6,93 +6,6 @@
 			<div id="box_main_sub1_sub1_sub1">
 				<div class="clearBoth"></div>
 				<div  class="columnSpace" id="elem-FrontNewsCategory_tree01-1443059485775" >
-					<script type="text/javascript">
-						//<![CDATA[
-						FrontNewsCategory_tree01['FrontNewsCategory_tree01-1443059485775_init'] = function() {
-							$(
-									"div[class^=FrontNewsCategory_tree01-d1] > div.menu-first > ul > li")
-									.hover(
-											function() {
-												$(this).children(
-														"div.menu-second")
-														.show();
-												$(this)
-														.children(
-																"div.menu-second > a.menu-text1")
-														.addClass("current");
-											},
-											function() {
-												$(this).children(
-														"div.menu-second")
-														.hide();
-												$(this)
-														.children(
-																"div.menu-second > a.menu-text1")
-														.removeClass("current");
-											});
-							$(
-									"div[class^=FrontNewsCategory_tree01-d1] > div.menu-first > ul > li > div.menu-second > ul > li ")
-									.hover(
-											function() {
-												$(this).children(
-														"div.menu-third")
-														.show();
-												$(this)
-														.children(
-																"div.menu-third > a.menu-text2")
-														.addClass("current");
-											},
-											function() {
-												$(this).children(
-														"div.menu-third")
-														.hide();
-												$(this)
-														.children(
-																"div.menu-third > a.menu-text2")
-														.removeClass("current");
-											});
-							$(
-									"div[class^=FrontNewsCategory_tree01-d1] > div.menu-first > ul > li > div.menu-second > ul > li > div.menu-third > ul > li ")
-									.hover(
-											function() {
-												$(this).children(
-														"div.menu-four").show();
-												$(this)
-														.children(
-																"div.menu-four > a.menu-text2")
-														.addClass("current");
-											},
-											function() {
-												$(this).children(
-														"div.menu-four").hide();
-												$(this)
-														.children(
-																"div.menu-four > a.menu-text2")
-														.removeClass("current");
-											});
-							$(
-									"div[class^=FrontNewsCategory_tree01-d1] > div.menu-first > ul > li > div.menu-second > ul > li > div.menu-third > ul > li  > div.menu-four > ul > li ")
-									.hover(
-											function() {
-												$(this).children(
-														"div.menu-five").show();
-												$(this)
-														.children(
-																"div.menu-five > a.menu-text2")
-														.addClass("current");
-											},
-											function() {
-												$(this).children(
-														"div.menu-five").hide();
-												$(this)
-														.children(
-																"div.menu-five > a.menu-text2")
-														.removeClass("current");
-											});
-						}
-						$(FrontNewsCategory_tree01['FrontNewsCategory_tree01-1443059485775_init']);
-						//]]>
-					</script>
 					<!-- 装饰器样式开始 -->
 					<%include("/pc/include/new/newnav.html"){}%> 
 					<!-- 装饰器样式结束 -->
@@ -111,142 +24,26 @@
 		</div>
 		<div id="box_main_sub1_sub2">
 			<div  class="columnSpace" id="elem-FrontNews_list01-1443144624302" >
-				<script type="text/javascript">
-					// <![CDATA[
-					FrontNews_list01['FrontNews_list01-1443144624302_init'] = function() {
-						var showDegree = 0;
-						var showQuestionTag = 0;
-						var showMessageCount = 0;
-						var otherShowDegree = 0;
-						var otherShowMessageCount = 0;
-						var otherShowQuestionTag = 0;
-						if (showDegree == '1' || showQuestionTag == '1'
-								|| showMessageCount == '1') {
-							FrontNews_list01
-									.getAjaxValueByNewsId(
-											"447",
-											"false",
-											showDegree,
-											showMessageCount,
-											showQuestionTag,
-											"FrontNews_list01-1443144624302_VisitedCount_1",
-											"FrontNews_list01-1443144624302_CommentCount_1",
-											"FrontNews_list01-1443144624302_showQuestionTag_1");
-							FrontNews_list01
-									.getAjaxValueByNewsId(
-											"446",
-											"false",
-											showDegree,
-											showMessageCount,
-											showQuestionTag,
-											"FrontNews_list01-1443144624302_VisitedCount_2",
-											"FrontNews_list01-1443144624302_CommentCount_2",
-											"FrontNews_list01-1443144624302_showQuestionTag_2");
-							FrontNews_list01
-									.getAjaxValueByNewsId(
-											"445",
-											"false",
-											showDegree,
-											showMessageCount,
-											showQuestionTag,
-											"FrontNews_list01-1443144624302_VisitedCount_3",
-											"FrontNews_list01-1443144624302_CommentCount_3",
-											"FrontNews_list01-1443144624302_showQuestionTag_3");
-							FrontNews_list01
-									.getAjaxValueByNewsId(
-											"444",
-											"false",
-											showDegree,
-											showMessageCount,
-											showQuestionTag,
-											"FrontNews_list01-1443144624302_VisitedCount_4",
-											"FrontNews_list01-1443144624302_CommentCount_4",
-											"FrontNews_list01-1443144624302_showQuestionTag_4");
-							FrontNews_list01
-									.getAjaxValueByNewsId(
-											"443",
-											"false",
-											showDegree,
-											showMessageCount,
-											showQuestionTag,
-											"FrontNews_list01-1443144624302_VisitedCount_5",
-											"FrontNews_list01-1443144624302_CommentCount_5",
-											"FrontNews_list01-1443144624302_showQuestionTag_5");
-							FrontNews_list01
-									.getAjaxValueByNewsId(
-											"442",
-											"false",
-											showDegree,
-											showMessageCount,
-											showQuestionTag,
-											"FrontNews_list01-1443144624302_VisitedCount_6",
-											"FrontNews_list01-1443144624302_CommentCount_6",
-											"FrontNews_list01-1443144624302_showQuestionTag_6");
-							FrontNews_list01
-									.getAjaxValueByNewsId(
-											"441",
-											"false",
-											showDegree,
-											showMessageCount,
-											showQuestionTag,
-											"FrontNews_list01-1443144624302_VisitedCount_7",
-											"FrontNews_list01-1443144624302_CommentCount_7",
-											"FrontNews_list01-1443144624302_showQuestionTag_7");
-							FrontNews_list01
-									.getAjaxValueByNewsId(
-											"440",
-											"false",
-											showDegree,
-											showMessageCount,
-											showQuestionTag,
-											"FrontNews_list01-1443144624302_VisitedCount_8",
-											"FrontNews_list01-1443144624302_CommentCount_8",
-											"FrontNews_list01-1443144624302_showQuestionTag_8");
-							FrontNews_list01
-									.getAjaxValueByNewsId(
-											"435",
-											"false",
-											showDegree,
-											showMessageCount,
-											showQuestionTag,
-											"FrontNews_list01-1443144624302_VisitedCount_9",
-											"FrontNews_list01-1443144624302_CommentCount_9",
-											"FrontNews_list01-1443144624302_showQuestionTag_9");
-							FrontNews_list01
-									.getAjaxValueByNewsId(
-											"433",
-											"false",
-											showDegree,
-											showMessageCount,
-											showQuestionTag,
-											"FrontNews_list01-1443144624302_VisitedCount_10",
-											"FrontNews_list01-1443144624302_CommentCount_10",
-											"FrontNews_list01-1443144624302_showQuestionTag_10");
-						}
-					}
-					function setVisited(id, linkUrl, detailOpenStyle) {
-						$
-								.get(
-										"/FrontNews.do",
-										"method=getVisitedCountByAjax&newsId="
-												+ id,
-										function(data) {
-											var linkUrl1 = linkUrl;
-											var OpenStyle = detailOpenStyle
-											var url = '/FrontNews.do?method=setVisitedCountByAjax&newsId='
-													+ id + '&times=' + data;
-											$.post(url, function(data) {
-												window
-														.open(linkUrl1,
-																OpenStyle);
-											});
-										}, 'html');
-					}
-					$(FrontNews_list01['FrontNews_list01-1443144624302_init']);
-					// ]]>
-				</script>
 				<!-- 装饰器样式开始 -->
-				<div class="border_03">
+				<div class="border_03" id="qiyexinwen" >
+					<div class="border_03-topr">
+						<div class="border_03-topl"></div>
+					</div>
+					<div class="border_03-mid">
+						<div class="borderContent">
+							<div id="FrontNews_list01-1443144624301"
+								class="FrontNews_list01-d1_c1_01">
+							</div>
+							<div class="clearBoth"></div>
+						</div>
+					</div>
+					<div class="border_03-footerr">
+						<div class="border_03-footerl"></div>
+					</div>
+				</div>
+				
+				
+				<div class="border_03" id="hanyexinwen" style="display: none;">
 					<div class="border_03-topr">
 						<div class="border_03-topl"></div>
 					</div>
@@ -254,88 +51,6 @@
 						<div class="borderContent">
 							<div id="FrontNews_list01-1443144624302"
 								class="FrontNews_list01-d1_c1_01">
-								<div class="comptitle_03">
-									<strong class="titlestyle_03">新闻中心</strong>
-								</div>
-								<ul class="comstyle newslist-01">
-									<li class="content column-num1">
-										<div class="newstitle">
-											<ul>
-												<li class="title">
-													<h3>
-														<a href="/news_detail/newsId=433.html"
-															title="华力创通荣获“中国通信学会科学技术进步奖一等奖”" target="_self">
-															华力创通荣获“中国通信学会科学技术进步奖一等奖”</a>
-													</h3>
-												</li>
-												<li class="date"><span>发布时间：</span>2017-04-17</li>
-											</ul>
-										</div>
-									</li>
-									<li class="clearBoth"></li>
-								</ul>
-								<div class="pageJump">
-									<div class="pageJump">
-										<div class="totalcount">当前显示1-10条共148条</div>
-										<div class="number">
-											<span class="disabled">首页</span><span class="disabled">上一页</span><span
-												class="current">1</span><a href="#"
-												onclick="return jump_ffb7c501f6164c328b0a39e84c75cfd6(2,10);">2</a><a
-												href="#"
-												onclick="return jump_ffb7c501f6164c328b0a39e84c75cfd6(3,10);">3</a><span
-												class="omit">...</span><a href="#"
-												onclick="return jump_ffb7c501f6164c328b0a39e84c75cfd6(14,10);">14</a><a
-												href="#"
-												onclick="return jump_ffb7c501f6164c328b0a39e84c75cfd6(15,10);">15</a><a
-												href="#"
-												onclick="return jump_ffb7c501f6164c328b0a39e84c75cfd6(2,10);">下一页</a><a
-												href="#"
-												onclick="return jump_ffb7c501f6164c328b0a39e84c75cfd6(15,10);">末页</a>
-										</div>
-										<div class="total">当前为第1页/共15页</div>
-										<script language="javascript" type="text/JavaScript">
-											//<![CDATA[
-											var locatonffb7c501f6164c328b0a39e84c75cfd6 = window.location.href;
-											function scriptFunctionffb7c501f6164c328b0a39e84c75cfd6() {
-												var hrefTemp = document
-														.getElementById("hrefTempIdffb7c501f6164c328b0a39e84c75cfd6").value;
-												var hrefPageNo = document
-														.getElementById("pageNoIdffb7c501f6164c328b0a39e84c75cfd6");
-												var hrefPageNoValue = hrefPageNo.value;
-												var pattern = /^\d+(\.\d+)?$/;
-												if (pattern
-														.test(hrefPageNoValue)
-														&& hrefPageNoValue > 0
-														&& hrefPageNoValue <= 15) {
-													window.location.href = hrefTemp
-															.replace(
-																	"ffb7c501f6164c328b0a39e84c75cfd6",
-																	hrefPageNoValue);
-												} else {
-													alert("页数输入不合法");
-													hrefPageNo.focus();
-												}
-											}
-											function jumpbutton_ffb7c501f6164c328b0a39e84c75cfd6() {
-												var hrefPageNo = document
-														.getElementById("pageNoIdffb7c501f6164c328b0a39e84c75cfd6");
-												var hrefPageNoValue = hrefPageNo.value;
-												var pattern = /^\d+$/;
-												if (pattern
-														.test(hrefPageNoValue)
-														&& hrefPageNoValue > 0
-														&& hrefPageNoValue <= 15) {
-													jump_ffb7c501f6164c328b0a39e84c75cfd6(
-															hrefPageNoValue, 10)
-												} else {
-													alert("页数输入不合法");
-													hrefPageNo.focus();
-												}
-											}
-											//]]>
-										</script>
-									</div>
-								</div>
 							</div>
 							<div class="clearBoth"></div>
 						</div>
@@ -352,3 +67,15 @@
 	<div id="box_main_sub2"></div>
 	<!--InstanceEndEditable-->
 </div>
+<script type="text/javascript">
+$(function(){
+	gotoPage("1","qyxw");
+	gotoPage1("1","gszx");
+});
+ function gotoPage(p){ 
+	$("#FrontNews_list01-1443144624301").load("${ctxPath}/newsPage?topicCode=qyxw&p="+p);
+ }
+function gotoPage1(p1,topicCode){ 
+	$("#FrontNews_list01-1443144624302").load("${ctxPath}/newsPage2?topicCode=gszx&p="+p1);
+}
+</script>

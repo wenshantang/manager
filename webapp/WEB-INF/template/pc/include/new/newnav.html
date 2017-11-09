@@ -7,16 +7,16 @@
 								<div id="FrontNewsCategory_tree01-1443059485775"
 									class="FrontNewsCategory_tree01-d1_c1">
 									<div class="comptitle_02">
-										<strong class="titlestyle_02">新闻资讯</strong>
+										<strong class="titlestyle_02">新闻中心</strong>
 									</div>
 									<div class="menu-first">
 										<ul>
+											<li class="menu-none"><a  
+												onclick="getnewsinfo('qiyexinwen')"
+												class="menu-text1 hover" > 公司新闻</a>
 											<li class="menu-none"><a
-												href="/news_list/newsCategoryId=2.html" target="_self"
-												class="menu-text1"> 企业新闻</a>
-											<li class="menu-none"><a
-												href="/news_list/newsCategoryId=4.html" target="_self"
-												class="menu-text1"> 行业新闻</a>
+												onclick="getnewsinfo('hanyexinwen')"
+												class="menu-text1" > 行业新闻</a>
 										</ul>
 									</div>
 								</div>
@@ -24,3 +24,19 @@
 							</div>
 						</div>
 					</div>
+					<script>
+						function getnewsinfo(id){
+							
+							$("#qiyexinwen").hide();
+							$("#hanyexinwen").hide();
+							$("#"+id).show();
+							if(id="qiyexinwen"){
+								$(".menu-text1 hover").removeClass(); 
+								$(".menu-text1 hover").addClass("hover");
+							}
+							if(id="hanyexinwen"){
+								$(".menu-text1 hover").removeClass(); 
+								$(".menu-text1 hover").addClass("hover");
+							}	
+						}
+					</script>

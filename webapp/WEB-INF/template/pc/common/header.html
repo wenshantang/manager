@@ -29,11 +29,11 @@
 			<div id="menu">
 				<div class="bound">
 					<ul>
-						<li class="columns0"><a href="${ctxPath}/index" title="首 页" class="hover"> 首 页</a></li>
-						<li class="columns1"><a href="${ctxPath}/productlist" title="产品及解决方案">产品及解决方案</a></li>
-						<li class="columns2"><a href="${ctxPath}/new" title="新闻中心"> 新闻中心</a></li>
-						<li class="columns3"><a href="${ctxPath}/consult" title="招聘咨询">招聘咨询</a></li>
-						<li class="columns4"><a href="${ctxPath}/about" title="关于我们">关于我们</a></li>
+						<li class="columns0"><a href="${ctxPath}/index" title="首 页" ${flag =="index"?'class="hover"':''}> 首 页</a></li>
+						<li class="columns1"><a href="${ctxPath}/productlist" title="产品及解决方案"  ${flag =="product"?'class="hover"':''} >产品及解决方案</a></li>
+						<li class="columns2"><a href="${ctxPath}/new" title="新闻中心"  ${flag =="new"?'class="hover"':''} > 新闻中心</a></li>
+						<li class="columns3"><a href="${ctxPath}/consult" title="招聘咨询"  ${flag =="consult"?'class="hover"':''} >招聘咨询</a></li>
+						<li class="columns4"><a href="${ctxPath}/about" title="关于我们"  ${flag =="about"?'class="hover"':''}>关于我们</a></li>
 					</ul>
 				</div>
 			</div>

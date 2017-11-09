@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
 encoding//conf/weixin.properties=UTF-8
 encoding//webapp/WEB-INF/jsp/common/meta.jsp=UTF-8
+encoding//webapp/WEB-INF/template/pc/common/commonPage.html=UTF-8
+encoding//webapp/WEB-INF/template/pc/common/commonPage1.html=UTF-8
 encoding/<project>=UTF-8
+separateDerivedEncodings=true

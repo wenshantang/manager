@@ -18,7 +18,7 @@
 			<div id="box_main_sub1_sub1_sub2">
 				<div  class="columnSpace"
 					id="elem-FrontPublic_slideShow01-1441868103021" >
-					<script type="text/javascript">
+					<script type="text/javascript"> 
 						//<![CDATA[
 						FrontPublic_slideShow01['FrontPublic_slideShow01-1441868103021_init'] = function() {
 							FrontPublic_slideShow01['FrontPublic_slideShow01-1441868103021_init'] = new FrontPublic_slideShow01();
@@ -28,49 +28,17 @@
 											"slideCategoryId=2&interceptSlideTitle=&maxSlideTitle=10&interceptSlideContent=&maxSlideContent=20&productCategoryLink=/products_list.html&productLink=/products_detail.html&newsCategoryLink=/news_list.html&newsLink=/news_detail.html&downloadCategoryLink=/download_list.html&downloadLink=/download_detail.html&galleryCategoryLink=/gallery_list.html&galleryLink=/gallery_detail.html&jobLink=/job_detail.html&comcontentLink=/comcontent_detail.html",
 											{
 												"contents" : [
-														{
-															"descriPtion" : "华力创通助力天地一体化信息网络论坛在京成...",
-															"smallPicPath" : "http://www.hwacreate.com.cn/imageRepository/medium/3a7ca2a5-cd72-49b3-aca0-4a9386b0cb47.jpg",
-															"plink" : "http://www.hwacreate.com.cn/news_detail/newsId=441.html",
-															"slideName" : "华力创通助力天地一体...",
-															"bigPicPath" : "imageRepository/58aa1a58-900f-44df-ae56-a233b4f58fe9.jpg"
+													 <#topic_article topicCode="qyxw" page="1" rows="5" ;pageRecord> 
+					 									<%for (article in pageRecord.dataList){%>
+					 									{
+															"descriPtion" : "${article.meta_desc}",
+															"smallPicPath" : "${article.small_picurl}",
+															"plink" : "${article.big_picurl}",
+															"slideName" : "${article.big_picurl}",
+															"bigPicPath" : "${article.big_picurl}"
 														},
-														{
-															"smallPicPath" : "/imageRepository/medium/00e793df-b9a0-4253-ac79-809b1a26053f.jpg",
-															"description" : "",
-															"plink" : "http://www.hwacreate.com.cn/news_detail/newsId=435.html",
-															"slideName" : "北斗星耀中东，华力创...",
-															"bigPicPath" : "imageRepository/199e7b69-7364-4120-9a05-1df71358e433.jpg"
-														},
-														{
-															"descriPtion" : "云南华力昆明市政广福立交在线健康监测项目...",
-															"smallPicPath" : "http://www.hwacreate.com.cn/imageRepository/medium/b4b7aa98-7bc1-4a50-a5a7-64b88d0e163f.jpg",
-															"plink" : "http://www.hwacreate.com.cn/news_detail/newsId=434.html",
-															"slideName" : "云南华力昆明市政广福...",
-															"bigPicPath" : "imageRepository/560a280a-6be1-4c9f-9f53-e70ee0a4dc36.jpg"
-														},
-														{
-															"descriPtion" : "华力创通荣获“中国通信学会科学技术进步奖...",
-															"smallPicPath" : "/imageRepository/thumbnail/5611cbef-24ec-45d3-ab12-65eba5e6a37b.jpg",
-															"plink" : "http://www.hwacreate.com.cn/news_detail/newsId=433.html",
-															"slideName" : "华力创通荣获“中国通...",
-															"bigPicPath" : "imageRepository/560a280a-6be1-4c9f-9f53-e70ee0a4dc36.jpg"
-														},
-														{
-															"descriPtion" : "为落实习主席“研究北斗卫星导航系统落地阿...",
-															"smallPicPath" : "/manager/image/content/spinner3-bluey.gif",
-															"plink" : "http://www.hwacreate.com.cn/news_detail/newsId=425.html",
-															"slideName" : "阿盟国家驻华使节团应...",
-															"bigPicPath" : "imageRepository/24df4669-011b-45d7-8776-70ff56722127.jpg"
-														},
-														{
-															"descriPtion" : "华力方元成为中国卫星应用产业协会 轨道交...",
-															"smallPicPath" : "imageRepository/medium/24df4669-011b-45d7-8776-70ff56722127.jpg",
-															"plink" : "http://www.hwacreate.com.cn/news_detail/newsId=421.html",
-															"slideName" : "华力方元成为中国卫星...",
-															"bigPicPath" : "imageRepository/24df4669-011b-45d7-8776-70ff56722127.jpg"
-														} ],
-												"setData" : {
+					 									<%}%></#topic_article> ],
+												"setData" : { 
 													"isPlaysSet" : 1,
 													"changeStyle" : 1
 												}
@@ -109,10 +77,34 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+		function changenews(id){
+			var tab = "box_main_sub1_sub2_tab";
+			var liHideTab = "";
+			var hideTab
+			if(id == "1") {
+				liHideTab = "#new_" + tab + "2";
+				hideTab = "#" + tab + "2";
+			} else {
+				liHideTab = "#new_" + tab + "1";
+				hideTab = "#" + tab + "1";
+			}
+			var liTab = "#new_" + tab + id;
+			tab = "#" + tab + id;
+			$(liHideTab).removeClass(); 
+			$(liTab).removeClass(); 
+			
+			$(liHideTab).addClass("MultiPageTab_link");
+			$(liTab).addClass("MultiPageTab_hover");
+			
+			$(hideTab).hide()
+			$(tab).show()
+		}
+		</script>
 		<div class="ebiztabs_top_left_4_click" id="box_main_sub1_sub2">
 			<ul>
-				<li class="MultiPageTab_hover"><a href="#box_main_sub1_sub2_tab1">企业新闻</a></li>
-				<li class="MultiPageTab_hover"><a href="#box_main_sub1_sub2_tab2">公司咨询</a></li>
+				<li class="MultiPageTab_hover" id="new_box_main_sub1_sub2_tab1" onclick="changenews('1')"  ><a style="cursor: pointer;" >企业新闻</a></li>
+				<li class="MultiPageTab_link" id="new_box_main_sub1_sub2_tab2" onclick="changenews('2')" ><a style="cursor: pointer;">公司咨询</a></li>
 
 			</ul>
 			<div class="clear"></div>
@@ -121,79 +113,25 @@
 					<div id="FrontNews_list01-1441870094128"  class="FrontNews_list01-d1_c1_01">
 						<div>
 							<ul class="comstyle newslist-01">
-								<li class="content column-num1">
+							   <#topic_article topicCode="qyxw" page="1" rows="5" ;pageRecord> 
+ 									<%for (article in pageRecord.dataList){%>
+ 									<li class="content column-num1">
 									<div class="newstitle">
 										<ul>
 											<li class="title">
 												<h3>
 													<a href="/news_detail/newsId=447.html"
-														title="华力方元成功获得北京中小创专项课题经费支持" target="_self">
-														华力方元成功获得北京中小创专项课题经费支持</a>
+														title="${article.title}" target="_self">
+														${article.title}</a>
 												</h3>
 											</li>
-											<li class="date"><span>发布时间：</span>2017-10-10</li>
+											<li class="date"><span>发布时间：</span>${strutil.subStringTo (article.publish_time,0,10)}</li>
 										</ul>
 									</div>
-								</li>
-								<li class="clearBoth"></li>
-								<li class="content column-num1">
-									<div class="newstitle">
-										<ul>
-											<li class="title">
-												<h3>
-													<a href="/news_detail/newsId=446.html"
-														title="最新自研天通船载终端助力第三届军民融合成果展" target="_self">
-														最新自研天通船载终端助力第三届军民融合成果展</a>
-												</h3>
-											</li>
-											<li class="date"><span>发布时间：</span>2017-09-26</li>
-										</ul>
-									</div>
-								</li>
-								<li class="clearBoth"></li>
-								<li class="content column-num1">
-									<div class="newstitle">
-										<ul>
-											<li class="title">
-												<h3>
-													<a href="/news_detail/newsId=445.html" title="桥梁监测，24小时不间断"
-														target="_self"> 桥梁监测，24小时不间断</a>
-												</h3>
-											</li>
-											<li class="date"><span>发布时间：</span>2017-09-18</li>
-										</ul>
-									</div>
-								</li>
-								<li class="clearBoth"></li>
-								<li class="content column-num1">
-									<div class="newstitle">
-										<ul>
-											<li class="title">
-												<h3>
-													<a href="/news_detail/newsId=444.html"
-														title="华力创通 亮相第三届军博会|出彩卫星应用展" target="_self"> 华力创通
-														亮相第三届军博会|出彩卫星应用展</a>
-												</h3>
-											</li>
-											<li class="date"><span>发布时间：</span>2017-07-06</li>
-										</ul>
-									</div>
-								</li>
-								<li class="clearBoth"></li>
-								<li class="content column-num1">
-									<div class="newstitle">
-										<ul>
-											<li class="title">
-												<h3>
-													<a href="/news_detail/newsId=443.html"
-														title="华力创通诚邀莅临展位参观指导" target="_self"> 华力创通诚邀莅临展位参观指导</a>
-												</h3>
-											</li>
-											<li class="date"><span>发布时间：</span>2017-06-30</li>
-										</ul>
-									</div>
-								</li>
-								<li class="clearBoth"></li>
+									</li>
+									<li class="clearBoth"></li>
+ 									<%}%>
+ 							   </#topic_article>
 							</ul>
 						</div>
 					</div>
@@ -204,80 +142,25 @@
 					<div id="FrontNews_list01-10337963938" class="FrontNews_list01-d1_c1_01">
 						<div>
 							<ul class="comstyle newslist-01">
-								<li class="content column-num1">
+							  <#topic_article topicCode="gszx" page="1" rows="5" ;pageRecord> 
+ 									<%for (article in pageRecord.dataList){%>
+ 									<li class="content column-num1">
 									<div class="newstitle">
 										<ul>
 											<li class="title">
 												<h3>
-													<a href="/news_detail/newsId=430.html"
-														title="广西推进北斗卫星导航产业发展" target="_self"> 广西推进北斗卫星导航产业发展</a>
+													<a href="/news_detail/newsId=447.html"
+														title="${article.title}" target="_self">
+														${article.title}</a>
 												</h3>
 											</li>
-											<li class="date"><span>发布时间：</span>2017-03-17</li>
+											<li class="date"><span>发布时间：</span>${strutil.subStringTo (article.publish_time,0,10)}</li>
 										</ul>
 									</div>
-								</li>
-								<li class="clearBoth"></li>
-								<li class="content column-num1">
-									<div class="newstitle">
-										<ul>
-											<li class="title">
-												<h3>
-													<a href="/news_detail/newsId=429.html"
-														title="我国北斗卫星导航进入米级定位时代" target="_self">
-														我国北斗卫星导航进入米级定位时代</a>
-												</h3>
-											</li>
-											<li class="date"><span>发布时间：</span>2017-03-01</li>
-										</ul>
-									</div>
-								</li>
-								<li class="clearBoth"></li>
-								<li class="content column-num1">
-									<div class="newstitle">
-										<ul>
-											<li class="title">
-												<h3>
-													<a href="/news_detail/newsId=416.html"
-														title="我国成功发射世界首颗量子科学实验卫星“墨子号”" target="_self">
-														我国成功发射世界首颗量子科学实验卫星“墨子号”</a>
-												</h3>
-											</li>
-											<li class="date"><span>发布时间：</span>2016-08-16</li>
-										</ul>
-									</div>
-								</li>
-								<li class="clearBoth"></li>
-								<li class="content column-num1">
-									<div class="newstitle">
-										<ul>
-											<li class="title">
-												<h3>
-													<a href="/news_detail/newsId=414.html"
-														title="祝贺我国卫星移动通信系统首发星天通一号０１星发射成功" target="_self">
-														祝贺我国卫星移动通信系统首发星天通一号０１星发射...</a>
-												</h3>
-											</li>
-											<li class="date"><span>发布时间：</span>2016-08-06</li>
-										</ul>
-									</div>
-								</li>
-								<li class="clearBoth"></li>
-								<li class="content column-num1">
-									<div class="newstitle">
-										<ul>
-											<li class="title">
-												<h3>
-													<a href="/news_detail/newsId=409.html"
-														title="长征七号返回舱成功着陆 呈倒锥形像一颗“子弹”" target="_self">
-														长征七号返回舱成功着陆 呈倒锥形像一颗“子弹”</a>
-												</h3>
-											</li>
-											<li class="date"><span>发布时间：</span>2016-06-27</li>
-										</ul>
-									</div>
-								</li>
-								<li class="clearBoth"></li>
+									</li>
+									<li class="clearBoth"></li>
+ 									<%}%>
+ 							   </#topic_article>
 							</ul>
 						</div>
 					</div>
@@ -483,48 +366,27 @@
 			</div>
 		</div>
 		<div id="box_main_sub2_sub2">
-			<div id="box_main_sub2_sub2_sub1">
-				<div  class="columnSpace"
-					id="elem-FrontSpecifies_show01-1442304832575" >
-					<div id="FrontSpecifies_show01-1442304832575"
-						class="FrontSpecifies_show01-d3_c1">
-						<div class="describe htmledit">
-							<p style="text-align: center;">
-								<a
-									href="http://www.hwacreate.com.cn/jjfa_detail/newsId=424.html"><img
-									alt="" src="${ctxPath}/portal/picture/d7c16143-d5c4-43f6-a8c8-798aaf042d59_1.jpg"
-									style="width: 364px; height: 215px;" /></a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="box_main_sub2_sub2_sub2">
-				<div class="columnSpace" id="elem-FrontSpecifies_show01-1442304898706" >
-					<div id="FrontSpecifies_show01-1442304898706"
-						class="FrontSpecifies_show01-d3_c1">
-						<div class="describe htmledit">
-							<p>
-								<a href="http://www.hwacreate.com.cn/jjfa_detail/newsId=424.html"><img
-									alt="" src="${ctxPath}/portal/picture/d7c16143-d5c4-43f6-a8c8-798aaf042d59_1.jpg"
-									style="width: 364px; height: 215px;" /></a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="box_main_sub2_sub2_sub3">
-				<div  class="columnSpace" id="elem-FrontSpecifies_show01-1442304958968" >
-					<div id="FrontSpecifies_show01-1442304958968"
-						class="FrontSpecifies_show01-d3_c1">
-						<div class="describe htmledit">
-							<p>
-								<a href="/lxwm.html"><img alt="" src="${ctxPath}/portal/picture/12eecb79-dc26-433a-8b1c-49cdf235e186_1.jpg" /></a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+		
+		<#cms_banner type="wonderfulrecommend" rows="3";bans>
+  						 <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,'\\','/');%>
+									<div id="box_main_sub2_sub2_sub${banLP.index}">
+										<div  class="columnSpace"
+											id="elem-FrontSpecifies_show01-1442304832575" >
+											<div id="FrontSpecifies_show01-1442304832575" 
+												class="FrontSpecifies_show01-d3_c1">
+												<div class="describe htmledit">
+													<p style="text-align: center;">
+														<a
+															href="http://www.hwacreate.com.cn/jjfa_detail/newsId=424.html"><img
+															alt="" src="${pic}"
+															style="width: 364px; height: 215px;" /></a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+    					 <%}%>
+ 		</#cms_banner>
 			<div class="clearBoth"></div>
 		</div>
 	</div>
