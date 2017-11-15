@@ -1,22 +1,22 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : MYROOT
-Source Server Version : 50519
+Source Server         : myroot
+Source Server Version : 50610
 Source Host           : localhost:3306
 Source Database       : website
 
 Target Server Type    : MYSQL
-Target Server Version : 50519
+Target Server Version : 50610
 File Encoding         : 65001
 
-Date: 2017-11-09 21:20:29
+Date: 2017-11-15 18:12:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for `answer`
+-- Table structure for answer
 -- ----------------------------
 DROP TABLE IF EXISTS `answer`;
 CREATE TABLE `answer` (
@@ -56,7 +56,7 @@ INSERT INTO `answer` VALUES ('709620814895067136', '699847647941697536', '0', '0
 INSERT INTO `answer` VALUES ('709620885810724864', '699847647941697536', '0', '0', '有明确方向', 'c', null);
 
 -- ----------------------------
--- Table structure for `bank`
+-- Table structure for bank
 -- ----------------------------
 DROP TABLE IF EXISTS `bank`;
 CREATE TABLE `bank` (
@@ -73,7 +73,7 @@ CREATE TABLE `bank` (
 INSERT INTO `bank` VALUES ('1', '1', '1', '1');
 
 -- ----------------------------
--- Table structure for `browse_history`
+-- Table structure for browse_history
 -- ----------------------------
 DROP TABLE IF EXISTS `browse_history`;
 CREATE TABLE `browse_history` (
@@ -91,7 +91,7 @@ CREATE TABLE `browse_history` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `care`
+-- Table structure for care
 -- ----------------------------
 DROP TABLE IF EXISTS `care`;
 CREATE TABLE `care` (
@@ -110,7 +110,7 @@ CREATE TABLE `care` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cms_access_permission`
+-- Table structure for cms_access_permission
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_access_permission`;
 CREATE TABLE `cms_access_permission` (
@@ -128,7 +128,7 @@ CREATE TABLE `cms_access_permission` (
 INSERT INTO `cms_access_permission` VALUES ('605982104892469248', '必须登录才能访问', 'com.hnrich.portal.interceptor.AccountLoginAccessIntercept', '1', '必须登录才能访问');
 
 -- ----------------------------
--- Table structure for `cms_article`
+-- Table structure for cms_article
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_article`;
 CREATE TABLE `cms_article` (
@@ -167,7 +167,7 @@ CREATE TABLE `cms_article` (
   `guest` varchar(60) DEFAULT NULL,
   `active_site` varchar(70) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of cms_article
@@ -183,9 +183,10 @@ INSERT INTO `cms_article` VALUES ('8', '923536178997026816', '0', '/gszx/8', 'ht
 INSERT INTO `cms_article` VALUES ('9', '923536178997026816', '0', '/gszx/9', 'http://localhost:8080//upload/image/20171028/wfel6VheIrET902H.jpg', 'http://localhost:8080//upload/image/20171028/wfel6VheIrET902H.jpg', '9', '9', null, null, '9', '9', '9', '9', '9', '0', '9', null, null, null, '', 'news', '1', '2017-10-28 19:11:10', 'admin1', null, null, null, 'admin1', '2017-10-28 19:10:55', '0', '', '9', '9');
 INSERT INTO `cms_article` VALUES ('10', '923536178997026816', '0', '/gszx/10', 'http://localhost:8080//upload/image/20171028/ugdKcbPRDTkHRDbc.png', 'http://localhost:8080//upload/image/20171028/ugdKcbPRDTkHRDbc.png', '11', '11', null, null, '11', '11', '11', '11', '11', '0', '11', null, null, null, '', 'news', '1', '2017-10-28 19:11:46', 'admin1', null, null, null, 'admin1', '2017-10-28 19:11:30', '0', '', '11', '11');
 INSERT INTO `cms_article` VALUES ('11', '923536178997026816', '0', '/gszx/11', 'http://localhost:8080//upload/image/20171028/ugdKcbPRDTkHRDbc.png', 'http://localhost:8080//upload/image/20171028/ugdKcbPRDTkHRDbc.png', '22', '22', null, null, '22', '22', '22', '222', '222', '0', '22', null, null, null, '', 'news', '1', '2017-10-28 19:12:30', 'admin1', null, null, null, 'admin1', '2017-10-28 19:12:18', '0', '', '22', '22');
+INSERT INTO `cms_article` VALUES ('12', '930716899278155776', '0', '/jjfa/12', '', '', '解决方案', '解决方案', null, null, '解决方案', '解决方案', '解决方案', '解决方案', '解决方案', '0', '解决方案', null, null, null, '', 'news', '1', '2017-11-15 16:40:37', 'admin1', null, null, null, 'admin1', '2017-11-15 16:40:35', '0', '', '解决方案', '解决方案');
 
 -- ----------------------------
--- Table structure for `cms_article_pic`
+-- Table structure for cms_article_pic
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_article_pic`;
 CREATE TABLE `cms_article_pic` (
@@ -200,7 +201,7 @@ CREATE TABLE `cms_article_pic` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cms_article_txt`
+-- Table structure for cms_article_txt
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_article_txt`;
 CREATE TABLE `cms_article_txt` (
@@ -225,9 +226,10 @@ INSERT INTO `cms_article_txt` VALUES ('8', '', null, null, null);
 INSERT INTO `cms_article_txt` VALUES ('9', '', null, null, null);
 INSERT INTO `cms_article_txt` VALUES ('10', '', null, null, null);
 INSERT INTO `cms_article_txt` VALUES ('11', '', null, null, null);
+INSERT INTO `cms_article_txt` VALUES ('12', '', null, null, null);
 
 -- ----------------------------
--- Table structure for `cms_banner`
+-- Table structure for cms_banner
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_banner`;
 CREATE TABLE `cms_banner` (
@@ -260,7 +262,7 @@ INSERT INTO `cms_banner` VALUES ('924228450188222464', 'banner2', 'banner2', '',
 INSERT INTO `cms_banner` VALUES ('924228752583131136', 'banner3', 'banner3', '', '0', '1', 'http://localhost:8080//upload/image/20171028/wfel6VheIrET902H.jpg', 'http://localhost:8080//upload/image/20171028/wfel6VheIrET902H.jpg', '', '', 'wonderfulrecommend', '1', '1', '2017-10-28 19:05:55', 'admin1');
 
 -- ----------------------------
--- Table structure for `cms_model`
+-- Table structure for cms_model
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_model`;
 CREATE TABLE `cms_model` (
@@ -289,7 +291,7 @@ CREATE TABLE `cms_model` (
 INSERT INTO `cms_model` VALUES ('news', '新闻', '0', '0', '0', '0', '1', null, '1', null, null, null, '新闻模板', '710727459744325632', '710727459744325632', null);
 
 -- ----------------------------
--- Table structure for `cms_model_attr`
+-- Table structure for cms_model_attr
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_model_attr`;
 CREATE TABLE `cms_model_attr` (
@@ -306,7 +308,7 @@ CREATE TABLE `cms_model_attr` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cms_properties`
+-- Table structure for cms_properties
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_properties`;
 CREATE TABLE `cms_properties` (
@@ -325,7 +327,7 @@ CREATE TABLE `cms_properties` (
 INSERT INTO `cms_properties` VALUES ('708903237258301440', 'openAccount', 'openAccount', 'openacco_folder', '开户文件目录', '1', '1');
 
 -- ----------------------------
--- Table structure for `cms_site_config`
+-- Table structure for cms_site_config
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_site_config`;
 CREATE TABLE `cms_site_config` (
@@ -346,7 +348,7 @@ CREATE TABLE `cms_site_config` (
 INSERT INTO `cms_site_config` VALUES ('888888888', '{\"html_meta_description\":\"基煜基金\",\"html_meta_keywords\":\"基煜基金\",\"html_meta_title\":\"基煜基金\",\"location\":\"\",\"simple_name\":\"基煜基金\",\"site_domain\":\"www.51huoniu.com\",\"site_name\":\"基煜基金\",\"visit_protocol\":\"https://\"}', '{\"fail_lock\":5,\"fail_show_authcode\":3,\"fail_time\":5,\"lock_time\":30,\"send_sms\":true,\"sms_content\":\"你的账户连续登录失败。【火牛高端理财】\"}', '{\"allow_reg\":true,\"email_activate\":false,\"email_content\":\"<div style=\\\"text-align:center;\\\">\\r\\n\\t<strong><span style=\\\"font-size:32px;background-color:#99BB00;\\\">感谢你注册火牛财富</span></strong> \\r\\n</div>\",\"email_subject\":\"感谢您注册火牛财富\",\"max_username\":20,\"min_username\":8,\"send_smscode\":true,\"sms_content\":\"\",\"smscode_format\":3}', '{\"email\":\"service@51huoniu.com\",\"encoding\":\"UTF-8\",\"memo\":\"火牛财富\",\"nick_name\":\"火牛财富\",\"originator\":\"火牛财富\",\"password\":\"110119120\",\"smtp_port\":\"25\",\"smtp_server\":\"mail.51huoniu.com\"}', '{\"realize_class_name\":\"com.hnrich.common.constant.ToOfficeSmsSender\"}', '{}', '0');
 
 -- ----------------------------
--- Table structure for `cms_template`
+-- Table structure for cms_template
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_template`;
 CREATE TABLE `cms_template` (
@@ -388,7 +390,7 @@ INSERT INTO `cms_template` VALUES ('710697100515479552', 'aboutbody', null, '/pc
 INSERT INTO `cms_template` VALUES ('710700518146945024', 'insight首页', null, '/pc/template/insight首页.html', '710666272982585344', '1', '<!DOCTYPE HTML>\r\n<html>\r\n<%include(\"/pc/common/meta.html\"){}%>\r\n<body>\r\n<%include(\"/pc/common/header.html\"){}%>\r\n<article>\r\n<%include(\"/pc/include/insightbody.html\"){}%>\r\n</article>\r\n<%include(\"/pc/common/footer.html\"){}%>\r\n</body>\r\n</html>', '2017-10-23 11:29:20', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('710701245649616896', 'insightbody', null, '/pc/include/insightbody.html', '710667584770686976', '1', '  <div class=\"newwk\">\r\n    <div class=\"newbanner\">\r\n       <div class=\"newleft\">\r\n         <img src=\"${ctxPath}/portal/images/bft.JPG\" >\r\n         <div class=\"newlsftzi\"><h1>85岁巴菲特最新投资心得都在这里</h1>\r\n         这是巴菲特的51封致股东信，澎湃新闻在数万字的信中梳理一下8大重点，以观“股神”2016年新动向。<br><br>发布于2小时前</div>\r\n       </div>\r\n       <div class=\"newright\"><img src=\"${ctxPath}/portal/images/we.JPG\"></div>\r\n    </div>\r\n    \r\n    <div class=\"clear\"></div>\r\n    \r\n   <div class=\"newsoon\">\r\n       <div class=\"newtille\"><h2>市场洞见</h2><a href=\"#jjtc\">More >></a></div>\r\n       <ul>\r\n          <li><img src=\"${ctxPath}/portal/images/tu.jpg\"><p><a href=\"new_view.html\">富汇财富茶文化周末沙龙</a></p>时间：2016年3月15日<br>地点：世纪大道210号二十一世纪大厦</li>\r\n          <li><img src=\"${ctxPath}/portal/images/tu1.jpg\"><p><a href=\"new_view.html\">富汇财富茶文化周末沙龙</a></p>时间：2016年3月15日<br>地点：世纪大道210号二十一世纪大厦</li>\r\n         <li><img src=\"${ctxPath}/portal/images/tu2.jpg\"><p><a href=\"new_view.html\">富汇财富茶文化周末沙龙</a></p>时间：2016年3月15日<br>地点：世纪大道210号二十一世纪大厦</li>\r\n       </ul><div class=\"clear\"></div>\r\n    </div>\r\n    \r\n    <div class=\"newsoon\">\r\n       <div class=\"newtille\"><h2>行业观察</h2><a href=\"#jchg\">More >></a></div>\r\n       <ul>\r\n          <li><img src=\"${ctxPath}/portal/images/tu3.jpg\"><p><a href=\"new_view.html\">寻找下一个百倍股：找到未来的投资机会——2月20日活动纪实</a></p>嘉宾：王鸿斌</li>\r\n          <li><img src=\"${ctxPath}/portal/images/tu5.jpg\"><p>寻找下一个百倍股：找到未来的投资机会——2月20日活动纪实</p>嘉宾：王鸿斌</li>\r\n         <li><img src=\"${ctxPath}/portal/images/tu6.jpg\"><p>寻找下一个百倍股：找到未来的投资机会——2月20日活动纪实</p>嘉宾：王鸿斌</li>\r\n       </ul><div class=\"clear\"></div>\r\n    </div>\r\n    \r\n\r\n     <div class=\"jjtc\" id=\"jjtc\">\r\n       <h1>市<br>场<br>洞<br>见</h1>\r\n       <ul>\r\n         <li><a href=\"#\">富汇财富茶文化周末沙龙</a><br>嘉宾：王鸿斌<span>3月15日</span></li>\r\n         <li>富汇财富茶文化周末沙龙<br>嘉宾：王鸿斌<span>3月15日</span></li>\r\n         <li>富汇财富茶文化周末沙龙<br>嘉宾：王鸿斌<span>3月15日</span></li>\r\n         <li>富汇财富茶文化周末沙龙<br>嘉宾：王鸿斌<span>3月15日</span></li>\r\n         <li>富汇财富茶文化周末沙龙<br>嘉宾：王鸿斌<span>3月15日</span></li>\r\n         <div class=\"jjtcfy\"><a href=\"#\">上一页</a>&nbsp;&nbsp;&nbsp;<a href=\"#\">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;1/6</div>\r\n       </ul>\r\n     </div>\r\n     <div class=\"jchg\" id=\"jchg\">\r\n       <h1>行<br>业<br>洞<br>察</h1>\r\n       <ul>\r\n         <li>富汇财富茶文化周末沙龙<br>嘉宾：王鸿斌<span>3月15日</span></li>\r\n         <li>富汇财富茶文化周末沙龙<br>嘉宾：王鸿斌<span>3月15日</span></li>\r\n         <li>富汇财富茶文化周末沙龙<br>嘉宾：王鸿斌<span>3月15日</span></li>\r\n         <li>富汇财富茶文化周末沙龙<br>嘉宾：王鸿斌<span>3月15日</span></li>\r\n         <li>富汇财富茶文化周末沙龙<br>嘉宾：王鸿斌<span>3月15日</span></li>\r\n         <div class=\"jjtcfy\"><a href=\"#\">上一页</a>&nbsp;&nbsp;&nbsp;<a href=\"#\">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;1/6</div>\r\n       </ul>\r\n     </div>\r\n   <div class=\"clear\"></div>\r\n   </div>', '2017-10-23 11:29:20', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('710722609934610432', 'construction首页', null, '/pc/template/construction首页.html', '710666272982585344', '1', '<!DOCTYPE HTML>\r\n<html>\r\n<%include(\"/pc/common/meta.html\"){}%>\r\n<body>\r\n<%include(\"/pc/common/header.html\"){}%>\r\n<article>\r\n<%include(\"/pc/include/constructionbody.html\"){}%>\r\n</article>\r\n<%include(\"/pc/common/footer.html\"){}%>\r\n</body>\r\n</html>', '2017-10-23 11:29:20', 'admin1', null, null);
-INSERT INTO `cms_template` VALUES ('710724008252628992', 'constructionbody', null, '/pc/include/constructionbody.html', '710667584770686976', '2', '<div class=\"banner\">\r\n<div class=\"swiper-container\">\r\n  <div class=\"swiper-wrapper\">\r\n    <div class=\"swiper-slide\"><img src=\"${ctxPath}/portal/images/jqqd.jpg\"></div>\r\n  </div>\r\n  <div class=\"swiper-pagination\"></div>\r\n</div>\r\n</div>\r\n<div style=\" height:50px;\"></div>', '2017-10-23 11:29:20', 'admin1', null, null);
+INSERT INTO `cms_template` VALUES ('710724008252628992', 'constructionbody', null, '/pc/include/constructionbody.html', '710667584770686976', '2', '\r\n<div id=\"box_main\">\r\n	<!--InstanceBeginEditable name=\"box_main\"-->\r\n	<div id=\"box_main_sub1\">\r\n		<div id=\"box_main_sub1_sub1\">\r\n			<div id=\"box_main_sub1_sub1_sub1\">\r\n				<div class=\"clearBoth\"></div>\r\n				<div class=\"columnSpace\"\r\n					id=\"elem-FrontNewsCategory_tree01-1443059485775\">\r\n					<!-- 装饰器样式开始 -->\r\n										<div class=\"border_02\">\r\n						<div class=\"border_02-topr\">\r\n							<div class=\"border_02-topl\"></div>\r\n						</div>\r\n						<div class=\"border_02-mid\">\r\n							<div class=\"borderContent\">\r\n								<div id=\"FrontNewsCategory_tree01-1443059485775\"\r\n									class=\"FrontNewsCategory_tree01-d1_c1\">\r\n									<div class=\"comptitle_02\">\r\n										<strong class=\"titlestyle_02\">招聘咨询</strong>\r\n									</div>\r\n									<div class=\"menu-first\">\r\n										<ul>\r\n											<li class=\"menu-none\"><a  \r\n												onclick=\"getnewsinfo(\'qiyexinwen\')\"\r\n												class=\"menu-text1 hover\" > 招聘信息</a>\r\n											<li class=\"menu-none\"><a\r\n												onclick=\"getnewsinfo(\'hanyexinwen\')\"\r\n												class=\"menu-text1\" > 我要咨询</a>\r\n										</ul>\r\n									</div>\r\n								</div>\r\n								<div class=\"clearBoth\"></div>\r\n							</div>\r\n						</div>\r\n					</div>\r\n					<script>\r\n						function getnewsinfo(id){\r\n							\r\n							$(\"#qiyexinwen\").hide();\r\n							$(\"#hanyexinwen\").hide();\r\n							$(\"#\"+id).show();\r\n							if(id=\"qiyexinwen\"){\r\n								$(\".menu-text1 hover\").removeClass(); \r\n								$(\".menu-text1 hover\").addClass(\"hover\");\r\n							}\r\n							if(id=\"hanyexinwen\"){\r\n								$(\".menu-text1 hover\").removeClass(); \r\n								$(\".menu-text1 hover\").addClass(\"hover\");\r\n							}	\r\n						}\r\n					</script>\r\n					<!-- 装饰器样式结束 -->\r\n				</div>\r\n			</div>\r\n			<div id=\"box_main_sub1_sub1_sub2\">\r\n				<div class=\"columnSpace\"\r\n					id=\"elem-FrontSpecifies_show01-1442222513547\">\r\n					<div id=\"FrontSpecifies_show01-1442222513547\"\r\n						class=\"FrontSpecifies_show01-d3_c1\">\r\n						<div class=\"describe htmledit\">\r\n							<p></p>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n		<div id=\"box_main_sub1_sub2\">\r\n			<div class=\"columnSpace\" id=\"elem-FrontNews_list01-1443144624302\">\r\n				<!-- 装饰器样式开始 -->\r\n				<div class=\"border_03\" id=\"qiyexinwen\">\r\n					<div class=\"border_03-topr\">\r\n						<div class=\"border_03-topl\"></div>\r\n					</div>\r\n					<div class=\"border_03-mid\">\r\n						<div class=\"borderContent\">\r\n							<div id=\"FrontNews_list01-1443144624301\"\r\n								class=\"FrontNews_list01-d1_c1_01\"></div>\r\n							<div class=\"clearBoth\"></div>\r\n						</div>\r\n					</div>\r\n					<div class=\"border_03-footerr\">\r\n						<div class=\"border_03-footerl\"></div>\r\n					</div>\r\n				</div>\r\n\r\n\r\n				<div class=\"border_03\" id=\"hanyexinwen\" style=\"display: none;\">\r\n					<div class=\"border_03-topr\">\r\n						<div class=\"border_03-topl\"></div>\r\n					</div>\r\n					<div class=\"border_03-mid\">\r\n						<div class=\"borderContent\">\r\n							<div id=\"FrontNews_list01-1443144624302\"\r\n								class=\"FrontNews_list01-d1_c1_01\"></div>\r\n							<div class=\"clearBoth\"></div>\r\n						</div>\r\n					</div>\r\n					<div class=\"border_03-footerr\">\r\n						<div class=\"border_03-footerl\"></div>\r\n					</div>\r\n				</div>\r\n				<!-- 装饰器样式结束 -->\r\n			</div>\r\n		</div>\r\n		<div class=\"clearBoth\"></div>\r\n	</div>\r\n	<div id=\"box_main_sub2\"></div>\r\n	<!--InstanceEndEditable-->\r\n</div>\r\n<script type=\"text/javascript\">\r\n$(function(){\r\n	gotoPage(\"1\",\"qyxw\");\r\n	gotoPage1(\"1\",\"gszx\");\r\n});\r\n function gotoPage(p){ \r\n	$(\"#FrontNews_list01-1443144624301\").load(\"${ctxPath}/newsPage?topicCode=qyxw&p=\"+p);\r\n }\r\nfunction gotoPage1(p1,topicCode){ \r\n	$(\"#FrontNews_list01-1443144624302\").load(\"${ctxPath}/newsPage2?topicCode=gszx&p=\"+p1);\r\n}\r\n</script>', '2017-10-23 11:29:20', 'admin1', '2017-11-15 16:57:50', 'admin1');
 INSERT INTO `cms_template` VALUES ('710724718029250560', 'new首页', null, '/pc/template/new首页.html', '710666272982585344', '1', '<!DOCTYPE HTML>\r\n<html>\r\n<%include(\"/pc/common/meta.html\"){}%>\r\n<link href=\"${static_ctx}/portal/css/page_news_list.min.css\"\r\n	rel=\"stylesheet\" type=\"text/css\" />\r\n<body id=\"index\">\r\n	<div class=\"pageWidth\" id=\"box_root\">\r\n		<div id=\"box_top\">\r\n			<%include(\"/pc/common/header.html\",{flag:\"new\"}){}%>\r\n			<div id=\"box_top_sub3\">\r\n				<div  class=\"columnSpace\"\r\n					id=\"elem-FrontPublic_slideShow01-1441866455619yeneiban\" >\r\n				</div>\r\n			</div>\r\n		</div>\r\n		<%include(\"/pc/include/new/newinfobody.html\"){}%>\r\n		<%include(\"/pc/common/footer.html\"){}%>\r\n	</div>\r\n	<script  src=\'${static_ctx}/portal/js/visittrack_1.js\' type=\'text/javascript\'></script>\r\n</body>\r\n</html>', '2017-10-23 11:29:20', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('710725777148190720', null, 'new', '/pc/include/new', '710667584770686976', null, null, '2017-10-23 11:29:20', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('710726103620079616', 'newinfobody', null, '/pc/include/new/newinfobody.html', '710725777148190720', '2', '\r\n<div id=\"box_main\">\r\n	<!--InstanceBeginEditable name=\"box_main\"-->\r\n	<div id=\"box_main_sub1\">\r\n		<div id=\"box_main_sub1_sub1\">\r\n			<div id=\"box_main_sub1_sub1_sub1\">\r\n				<div class=\"clearBoth\"></div>\r\n				<div  class=\"columnSpace\" id=\"elem-FrontNewsCategory_tree01-1443059485775\" >\r\n					<!-- 装饰器样式开始 -->\r\n					<%include(\"/pc/include/new/newnav.html\"){}%> \r\n					<!-- 装饰器样式结束 -->\r\n				</div>\r\n			</div>\r\n			<div id=\"box_main_sub1_sub1_sub2\">\r\n				<div  class=\"columnSpace\" id=\"elem-FrontSpecifies_show01-1442222513547\">\r\n					<div id=\"FrontSpecifies_show01-1442222513547\"\r\n						class=\"FrontSpecifies_show01-d3_c1\">\r\n						<div class=\"describe htmledit\">\r\n							<p></p>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n		<div id=\"box_main_sub1_sub2\">\r\n			<div  class=\"columnSpace\" id=\"elem-FrontNews_list01-1443144624302\" >\r\n				<!-- 装饰器样式开始 -->\r\n				<div class=\"border_03\" id=\"qiyexinwen\" >\r\n					<div class=\"border_03-topr\">\r\n						<div class=\"border_03-topl\"></div>\r\n					</div>\r\n					<div class=\"border_03-mid\">\r\n						<div class=\"borderContent\">\r\n							<div id=\"FrontNews_list01-1443144624301\"\r\n								class=\"FrontNews_list01-d1_c1_01\">\r\n							</div>\r\n							<div class=\"clearBoth\"></div>\r\n						</div>\r\n					</div>\r\n					<div class=\"border_03-footerr\">\r\n						<div class=\"border_03-footerl\"></div>\r\n					</div>\r\n				</div>\r\n				\r\n				\r\n				<div class=\"border_03\" id=\"hanyexinwen\" style=\"display: none;\">\r\n					<div class=\"border_03-topr\">\r\n						<div class=\"border_03-topl\"></div>\r\n					</div>\r\n					<div class=\"border_03-mid\">\r\n						<div class=\"borderContent\">\r\n							<div id=\"FrontNews_list01-1443144624302\"\r\n								class=\"FrontNews_list01-d1_c1_01\">\r\n							</div>\r\n							<div class=\"clearBoth\"></div>\r\n						</div>\r\n					</div>\r\n					<div class=\"border_03-footerr\">\r\n						<div class=\"border_03-footerl\"></div>\r\n					</div>\r\n				</div>\r\n				<!-- 装饰器样式结束 -->\r\n			</div>\r\n		</div>\r\n		<div class=\"clearBoth\"></div>\r\n	</div>\r\n	<div id=\"box_main_sub2\"></div>\r\n	<!--InstanceEndEditable-->\r\n</div>\r\n<script type=\"text/javascript\">\r\n$(function(){\r\n	gotoPage(\"1\",\"qyxw\");\r\n	gotoPage1(\"1\",\"gszx\");\r\n});\r\n function gotoPage(p){ \r\n	$(\"#FrontNews_list01-1443144624301\").load(\"${ctxPath}/newsPage?topicCode=qyxw&p=\"+p);\r\n }\r\nfunction gotoPage1(p1,topicCode){ \r\n	$(\"#FrontNews_list01-1443144624302\").load(\"${ctxPath}/newsPage2?topicCode=gszx&p=\"+p1);\r\n}\r\n</script>', '2017-10-23 11:29:20', 'admin1', null, null);
@@ -398,14 +400,16 @@ INSERT INTO `cms_template` VALUES ('710728917029335040', 'productlist首页', nu
 INSERT INTO `cms_template` VALUES ('710730948535865344', 'proone_detail', null, '/pc/template/proone_detail.html', '710666272982585344', '1', '<!DOCTYPE HTML>\r\n<html>\r\n<%include(\"/pc/common/meta.html\"){}%>\r\n<body>\r\n<%include(\"/pc/common/header.html\"){}%>\r\n<article>\r\n<%include(\"/pc/include/product/funddetailbody.html\"){}%>\r\n</article>\r\n<%include(\"/pc/common/footer.html\"){}%>\r\n</body>\r\n</html>', '2017-10-23 11:29:20', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('710731112299261952', 'protwo_detail', null, '/pc/template/protwo_detail.html', '710666272982585344', '1', '<!DOCTYPE HTML>\r\n<html>\r\n<%include(\"/pc/common/meta.html\"){}%>\r\n<body>\r\n<%include(\"/pc/common/header.html\"){}%>\r\n<article>\r\n<%include(\"/pc/include/product/productdetailbody.html\"){}%>\r\n</article>\r\n<%include(\"/pc/common/footer.html\"){}%>\r\n</body>\r\n</html>', '2017-10-23 11:29:20', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('922303900987219968', 'news', null, '/pc/include/index/news.html', '710670118122336256', '2', '\r\n<div id=\"box_main\">\r\n	<div id=\"box_main_sub1\">\r\n		<div id=\"box_main_sub1_sub1\">\r\n			<div id=\"box_main_sub1_sub1_sub1\">\r\n				<div class=\"clearBoth\"></div>\r\n				<div  class=\"columnSpace\" id=\"elem-FrontSpecifies_show01-1441867910396\" >\r\n					<div id=\"FrontSpecifies_show01-1441867910396\"\r\n						class=\"FrontSpecifies_show01-d3_c1\">\r\n						<div class=\"describe htmledit\">\r\n							<p>\r\n								<img alt=\"\" src=\"${ctxPath}/portal/picture/ec56747c-c639-4507-9b54-76f0ac1e5b7c_1.jpg\" />\r\n							</p>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n			<div id=\"box_main_sub1_sub1_sub2\">\r\n				<div  class=\"columnSpace\"\r\n					id=\"elem-FrontPublic_slideShow01-1441868103021\" >\r\n					<script type=\"text/javascript\"> \r\n						//<![CDATA[\r\n						FrontPublic_slideShow01[\'FrontPublic_slideShow01-1441868103021_init\'] = function() {\r\n							FrontPublic_slideShow01[\'FrontPublic_slideShow01-1441868103021_init\'] = new FrontPublic_slideShow01();\r\n							FrontPublic_slideShow01[\'FrontPublic_slideShow01-1441868103021_init\']\r\n									.ce_slide_init(\r\n											\"requestDataFilePath=/comp-FrontSlide_listJson01-1441868103021&showType=1&changeTimes=5000&slideWidth=960&slideHeight=null&openType=_blank&isShowSlideTitle=0&isShowSlideContent=0&slideData=1\",\r\n											\"slideCategoryId=2&interceptSlideTitle=&maxSlideTitle=10&interceptSlideContent=&maxSlideContent=20&productCategoryLink=/products_list.html&productLink=/products_detail.html&newsCategoryLink=/news_list.html&newsLink=/news_detail.html&downloadCategoryLink=/download_list.html&downloadLink=/download_detail.html&galleryCategoryLink=/gallery_list.html&galleryLink=/gallery_detail.html&jobLink=/job_detail.html&comcontentLink=/comcontent_detail.html\",\r\n											{\r\n												\"contents\" : [\r\n													 <#topic_article topicCode=\"qyxw\" page=\"1\" rows=\"5\" ;pageRecord> \r\n					 									<%for (article in pageRecord.dataList){%>\r\n					 									{\r\n															\"descriPtion\" : \"${article.meta_desc}\",\r\n															\"smallPicPath\" : \"${article.small_picurl}\",\r\n															\"plink\" : \"${article.big_picurl}\",\r\n															\"slideName\" : \"${article.big_picurl}\",\r\n															\"bigPicPath\" : \"${article.big_picurl}\"\r\n														},\r\n					 									<%}%></#topic_article> ],\r\n												\"setData\" : { \r\n													\"isPlaysSet\" : 1,\r\n													\"changeStyle\" : 1\r\n												}\r\n											});\r\n						}\r\n						$(FrontPublic_slideShow01[\'FrontPublic_slideShow01-1441868103021_init\']);\r\n						// ]]>\r\n					</script>\r\n					<div id=\"FrontPublic_slideShow01-1441868103021\"\r\n						class=\"FrontPublic_slideShow01-d1_c1\">\r\n						<script type=\"text/javascript\" src=\"${static_ctx}/portal/js/png_1.js\"></script>\r\n						<div class=\"slide-contente\">\r\n							<div class=\"slide-pic\">\r\n								<ul>\r\n\r\n								</ul>\r\n							</div>\r\n							<div class=\"slide-info-mark\"></div>\r\n							<div class=\"slide-info\">\r\n								<h3></h3>\r\n								<div class=\"slide-text\"></div>\r\n								<div class=\"slide-tag-text\">\r\n									<ul></ul>\r\n								</div>\r\n							</div>\r\n						</div>\r\n						<div class=\"slide-tag-thumbnail\">\r\n							<div class=\"arrowhead-left arrowhead\"></div>\r\n							<div class=\"thumbnail-list\">\r\n								<ul></ul>\r\n							</div>\r\n							<div class=\"arrowhead-right arrowhead\"></div>\r\n							<div class=\"clearBoth\"></div>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n		<script type=\"text/javascript\">\r\n		function changenews(id){\r\n			var tab = \"box_main_sub1_sub2_tab\";\r\n			var liHideTab = \"\";\r\n			var hideTab\r\n			if(id == \"1\") {\r\n				liHideTab = \"#new_\" + tab + \"2\";\r\n				hideTab = \"#\" + tab + \"2\";\r\n			} else {\r\n				liHideTab = \"#new_\" + tab + \"1\";\r\n				hideTab = \"#\" + tab + \"1\";\r\n			}\r\n			var liTab = \"#new_\" + tab + id;\r\n			tab = \"#\" + tab + id;\r\n			$(liHideTab).removeClass(); \r\n			$(liTab).removeClass(); \r\n			\r\n			$(liHideTab).addClass(\"MultiPageTab_link\");\r\n			$(liTab).addClass(\"MultiPageTab_hover\");\r\n			\r\n			$(hideTab).hide()\r\n			$(tab).show()\r\n		}\r\n		</script>\r\n		<div class=\"ebiztabs_top_left_4_click\" id=\"box_main_sub1_sub2\">\r\n			<ul>\r\n				<li class=\"MultiPageTab_hover\" id=\"new_box_main_sub1_sub2_tab1\" onclick=\"changenews(\'1\')\"  ><a style=\"cursor: pointer;\" >企业新闻</a></li>\r\n				<li class=\"MultiPageTab_link\" id=\"new_box_main_sub1_sub2_tab2\" onclick=\"changenews(\'2\')\" ><a style=\"cursor: pointer;\">公司咨询</a></li>\r\n\r\n			</ul>\r\n			<div class=\"clear\"></div>\r\n			<div class=\"tabs tabArea_a\" id=\"box_main_sub1_sub2_tab1\">\r\n				<div  class=\"columnSpace\" id=\"elem-FrontNews_list01-1441870094128\" >\r\n					<div id=\"FrontNews_list01-1441870094128\"  class=\"FrontNews_list01-d1_c1_01\">\r\n						<div>\r\n							<ul class=\"comstyle newslist-01\">\r\n							   <#topic_article topicCode=\"qyxw\" page=\"1\" rows=\"5\" ;pageRecord> \r\n 									<%for (article in pageRecord.dataList){%>\r\n 									<li class=\"content column-num1\">\r\n									<div class=\"newstitle\">\r\n										<ul>\r\n											<li class=\"title\">\r\n												<h3>\r\n													<a href=\"/news_detail/newsId=447.html\"\r\n														title=\"${article.title}\" target=\"_self\">\r\n														${article.title}</a>\r\n												</h3>\r\n											</li>\r\n											<li class=\"date\"><span>发布时间：</span>${strutil.subStringTo (article.publish_time,0,10)}</li>\r\n										</ul>\r\n									</div>\r\n									</li>\r\n									<li class=\"clearBoth\"></li>\r\n 									<%}%>\r\n 							   </#topic_article>\r\n							</ul>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n			<div class=\"tabs tabArea_b\" id=\"box_main_sub1_sub2_tab2\">\r\n				<div class=\"columnSpace\" id=\"elem-FrontNews_list01-10337963938\" >\r\n					<div id=\"FrontNews_list01-10337963938\" class=\"FrontNews_list01-d1_c1_01\">\r\n						<div>\r\n							<ul class=\"comstyle newslist-01\">\r\n							  <#topic_article topicCode=\"gszx\" page=\"1\" rows=\"5\" ;pageRecord> \r\n 									<%for (article in pageRecord.dataList){%>\r\n 									<li class=\"content column-num1\">\r\n									<div class=\"newstitle\">\r\n										<ul>\r\n											<li class=\"title\">\r\n												<h3>\r\n													<a href=\"/news_detail/newsId=447.html\"\r\n														title=\"${article.title}\" target=\"_self\">\r\n														${article.title}</a>\r\n												</h3>\r\n											</li>\r\n											<li class=\"date\"><span>发布时间：</span>${strutil.subStringTo (article.publish_time,0,10)}</li>\r\n										</ul>\r\n									</div>\r\n									</li>\r\n									<li class=\"clearBoth\"></li>\r\n 									<%}%>\r\n 							   </#topic_article>\r\n							</ul>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n		<div id=\"box_main_sub1_sub3\">\r\n			<div id=\"box_main_sub1_sub3_sub1\">\r\n				<div  class=\"columnSpace\" id=\"elem-FrontSpecifies_show01-1441876135917\" >\r\n					<div id=\"FrontSpecifies_show01-1441876135917\"\r\n						class=\"FrontSpecifies_show01-d3_c1\">\r\n						<div class=\"describe htmledit\">\r\n							<p>\r\n								<img alt=\"\" src=\"${ctxPath}/portal/picture/474929d9-86a0-43ac-ace7-abd78bd53787_1.jpg\" />\r\n							</p>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n			<div id=\"box_main_sub1_sub3_sub2\">\r\n				<div id=\"box_main_sub1_sub3_sub2_sub1\">\r\n					<div class=\"columnSpace\" id=\"elem-FrontSpecifies_show01-1442972988484\" >\r\n						<div id=\"FrontSpecifies_show01-1442972988484\"\r\n							class=\"FrontSpecifies_show01-d1_c1\">\r\n<style type=\"text/css\" >\r\n#box {\r\n	position: relative;\r\n	width: 360px;\r\n	height: 146px;\r\n	border: none;\r\n	margin: 0px auto;\r\n	cursor: pointer;\r\n}\r\n\r\n#box .list {\r\n	position: relative;\r\n	width: 360px;\r\n	height: 146px;\r\n	overflow: hidden;\r\n}\r\n\r\n#box .list ul {\r\n	position: absolute;\r\n	top: 0;\r\n	left: 0;\r\n}\r\n\r\n#box .list li {\r\n	width: 360px;\r\n	height: 146px;\r\n	overflow: hidden;\r\n}\r\n\r\n#box .count {\r\n	position: absolute;\r\n	right: 0;\r\n	bottom: 5px;\r\n}\r\n\r\n#box .count li {\r\n	color: #fff;\r\n	float: left;\r\n	width: 20px;\r\n	height: 20px;\r\n	cursor: pointer;\r\n	margin-right: 5px;\r\n	overflow: hidden;\r\n	background: #0b4e9d;\r\n	opacity: 0.7;\r\n	filter: alpha(opacity = 70);\r\n}\r\n\r\n#box .count li.current {\r\n	color: #fff;\r\n	opacity: 1;\r\n	filter: alpha(opacity = 100);\r\n	font-weight: 700;\r\n	background: #f89e00;\r\n}\r\n\r\n#tmp {\r\n	width: 100px;\r\n	height: 100px;\r\n	background: red;\r\n	position: absolute;\r\n}\r\n</style>\r\n							<script type=\"text/javascript\">\r\n								window.onload = function() {\r\n									var oBox = document.getElementById(\"box\");\r\n									var oList = oBox.getElementsByTagName(\"ul\")[0];\r\n									var aImg = oBox.getElementsByTagName(\"img\");\r\n									var timer = playTimer = null;\r\n									var index = i = 0;\r\n									var bOrder = true;\r\n									var aTmp = [];\r\n									//生成数字按钮\r\n									for (i = 0; i < aImg.length; i++) {\r\n										aTmp.push(\"<li>\" + (i + 1) + \"</li>\")\r\n									}\r\n									//插入元素\r\n									var oCount = document.createElement(\"ul\");\r\n									oCount.className = \"count\"\r\n									oCount.innerHTML = aTmp.join(\"\");\r\n									oBox.appendChild(oCount);\r\n									//初始化状态\r\n									var aBtn = oBox.getElementsByTagName(\"ul\")[1]\r\n											.getElementsByTagName(\"li\");\r\n									aBtn[index].className = \"current\";\r\n									//按钮点击切换\r\n									for (i = 0; i < aBtn.length; i++) {\r\n										aBtn[i].index = i;\r\n										aBtn[i].onclick = function() {\r\n											index = this.index;\r\n											for (i = 0; i < aBtn.length; i++)\r\n												aBtn[i].className = \"\";\r\n											this.className = \"current\";\r\n											startMove(-(this.index * aImg[0].offsetHeight))\r\n										}\r\n									}\r\n									//鼠标移入展示区停止自动播放\r\n									oBox.onmouseover = function() {\r\n										clearInterval(playTimer)\r\n									};\r\n									//自动播放函数\r\n									function autoPlay() {\r\n										playTimer = setInterval(\r\n												function() {\r\n													bOrder ? index++ : index--;\r\n													index == aBtn.length - 1\r\n															&& (bOrder = false);\r\n													index == 0\r\n															&& (bOrder = true);\r\n													aBtn[index].onclick();\r\n													startMove(-(index * aImg[0].offsetHeight))\r\n												}, 2000)\r\n									}\r\n									function startMove(iTarget) {\r\n										clearInterval(timer);\r\n										timer = setInterval(function() {\r\n											doMove(iTarget)\r\n										}, 30)\r\n									}\r\n									function doMove(iTarget) {\r\n										var iSpeed = (iTarget - oList.offsetTop) / 10;\r\n										iSpeed = iSpeed > 0 ? Math.ceil(iSpeed)\r\n												: Math.floor(iSpeed);\r\n										oList.offsetTop == iTarget ? clearInterval(timer)\r\n												: oList.style.top = oList.offsetTop\r\n														+ iSpeed + \"px\"\r\n									}\r\n								};\r\n							</script>\r\n							<div id=\"box\">\r\n								<div class=\"list\">\r\n									<ul>\r\n										<li><img alt=\"\"\r\n											src=\"${ctxPath}/portal/picture/f31a7ccd-1a6e-4672-b980-8237e384d5ab_1.jpg\" /></li>\r\n									</ul>\r\n								</div>\r\n							</div>\r\n						</div>\r\n					</div>\r\n				</div>\r\n				<div id=\"box_main_sub1_sub3_sub2_sub2\">\r\n					<div class=\"columnSpace\"\r\n						id=\"elem-FrontSpecifies_show01-1442304457011\" >\r\n						<div id=\"FrontSpecifies_show01-1442304457011\"\r\n							class=\"FrontSpecifies_show01-d3_c1\">\r\n							<div class=\"describe htmledit\">\r\n								<p>\r\n									<img alt=\"\" src=\"${ctxPath}/portal/picture/b7065557-c489-4781-9a44-b5311c7ccb2f_1.jpg\" usemap=\"#cyfxlj\" />\r\n									<map name=\"cyfxlj\">\r\n										<area coords=\"2,2,164,36\" href=\"/wxtx/&amp;pmcId=13.html\"\r\n											shape=\"rect\" />\r\n										<area coords=\"2,30,164,65\" href=\"/wxdh/&amp;pmcId=14.html\"\r\n											shape=\"rect\" />\r\n										<area coords=\"182,2,357,36\" href=\"/ldyxh/&amp;pmcId=36.html\"\r\n											shape=\"rect\" />\r\n										<area coords=\"182,30,357,65\" href=\"/fzycs/&amp;pmcId=67.html\"\r\n											shape=\"rect\" />\r\n									</map>\r\n								</p>\r\n							</div>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n		<div class=\"clearBoth\"></div>\r\n	</div>\r\n	<div id=\"box_main_sub2\">\r\n		<div id=\"box_main_sub2_sub1\">\r\n			<div  class=\"columnSpace\" id=\"elem-FrontSpecifies_show01-1441957477668\" >\r\n				<div id=\"FrontSpecifies_show01-1441957477668\"\r\n					class=\"FrontSpecifies_show01-d3_c1\">\r\n					<div class=\"describe htmledit\">\r\n						<p>\r\n							<img alt=\"\" src=\"${ctxPath}/portal/picture/f6c918bd-b324-4569-b966-037f3288770d_1.jpg\" />\r\n						</p>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n		<div id=\"box_main_sub2_sub2\">\r\n		\r\n		<#cms_banner type=\"wonderfulrecommend\" rows=\"3\";bans>\r\n  						 <%for(ban in bans){var pic=strutil.replace(ban.big_picurl,\'\\\\\',\'/\');%>\r\n									<div id=\"box_main_sub2_sub2_sub${banLP.index}\">\r\n										<div  class=\"columnSpace\"\r\n											id=\"elem-FrontSpecifies_show01-1442304832575\" >\r\n											<div id=\"FrontSpecifies_show01-1442304832575\" \r\n												class=\"FrontSpecifies_show01-d3_c1\">\r\n												<div class=\"describe htmledit\">\r\n													<p style=\"text-align: center;\">\r\n														<a\r\n															href=\"http://www.hwacreate.com.cn/jjfa_detail/newsId=424.html\"><img\r\n															alt=\"\" src=\"${pic}\"\r\n															style=\"width: 364px; height: 215px;\" /></a>\r\n													</p>\r\n												</div>\r\n											</div>\r\n										</div>\r\n									</div>\r\n    					 <%}%>\r\n 		</#cms_banner>\r\n			<div class=\"clearBoth\"></div>\r\n		</div>\r\n	</div>\r\n</div>\r\n', '2017-10-23 11:29:20', 'admin1', null, null);
-INSERT INTO `cms_template` VALUES ('922744926772977664', 'productbody', null, '/pc/include/product/productbody.html', '710691170238701568', '2', '\r\n<div id=\"box_main\">\r\n	<!--InstanceBeginEditable name=\"box_main\"-->\r\n	<div id=\"box_main_sub1\">\r\n		<div id=\"box_main_sub1_sub1\">\r\n			<div id=\"box_main_sub1_sub1_sub1\">\r\n				<div class=\"clearBoth\"></div>\r\n				<div  class=\"columnSpace\" id=\"elem-FrontProductsCategory_show01-1451222955593\" >\r\n					<script type=\"text/javascript\" src=\"${static_ctx}/portal/js/productstype_1.js\"></script>\r\n					<!-- 装饰器样式开始 -->\r\n					<%include(\"/pc/include/product/productnav.html\"){}%> \r\n					<!-- 装饰器样式结束 -->\r\n				</div>\r\n			</div>\r\n			<div id=\"box_main_sub1_sub1_sub2\">\r\n				<div  class=\"columnSpace\" id=\"elem-FrontSpecifies_show01-1442222513547\" >\r\n					<div id=\"FrontSpecifies_show01-1442222513547\"\r\n						class=\"FrontSpecifies_show01-d3_c1\">\r\n						<div class=\"describe htmledit\">\r\n							<p></p>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n		<div id=\"box_main_sub1_sub2\">\r\n			<div class=\"columnSpace\" id=\"elem-FrontProducts_list01-1443168517235001001\" >\r\n				<!-- 装饰器样式开始 -->\r\n				<div class=\"border_03\">\r\n					<div class=\"border_03-topr\">\r\n						<div class=\"border_03-topl\"></div>\r\n					</div>\r\n					<div class=\"border_03-mid\">\r\n						<div class=\"borderContent\">\r\n							<div id=\"FrontProducts_list01-1443168517235001001\"\r\n								class=\"FrontProducts_list01-d1_c1_01\">\r\n								<div class=\"comptitle_03\">\r\n									<strong class=\"titlestyle_03\">产品中心</strong>\r\n								</div>\r\n								<form id=\"FrontProducts_list01-1443168517235001001_Form\"\r\n									name=\"FrontProducts_list01-1443168517235001001_Form\"\r\n									action=\"/FrontProducts.do?method=submit\" method=\"post\">\r\n									<input type=\"hidden\" name=\"action_page\"\r\n										value=\"/products_list.html\" /> <input type=\"hidden\"\r\n										name=\"pmcId\" value=\"15\" /> <input type=\"hidden\" name=\"pmscId\"\r\n										value=\"\" /> <input type=\"hidden\" name=\"keyword\" value=\"\" /> <input\r\n										type=\"hidden\" name=\"propertyId\" value=\"\" /> <input\r\n										type=\"hidden\" name=\"searchType\" value=\"\" /> <input\r\n										type=\"hidden\" name=\"brandId\" value=\"\" /> <input type=\"hidden\"\r\n										name=\"beginValue\" value=\"\" /> <input type=\"hidden\"\r\n										name=\"endValue\" value=\"\" /> <input type=\"hidden\"\r\n										name=\"orderby\" value=\"8\" /> <input type=\"hidden\" name=\"spType\"\r\n										value=\"\" /> <input type=\"hidden\"\r\n										name=\"pageNo_FrontProducts_list01-1443168517235001001\"\r\n										value=\"1\" /> <input type=\"hidden\"\r\n										name=\"pageSize_FrontProducts_list01-1443168517235001001\"\r\n										value=\"10\" />\r\n								</form>\r\n								<div class=\"type\">\r\n									<span class=\"sort\"> </span>\r\n								</div>\r\n								<ul class=\"mainul productlist-02\">\r\n									<li class=\"content column-num1\">\r\n										<div class=\"pic-module\">\r\n											<div class=\"pic\">\r\n												<a href=\"/products_detail/productId=321.html\"\r\n													title=\"HTL-2200 手持天地多模卫星电话\" target=\"_self\"> <img\r\n													src=\"${static_ctx}/portal/picture/0e5ab200-c6a7-4b47-9a0b-864b27508921_1.png\"\r\n													id=\"FrontProducts_list01-1443168517235001001_321\" alt=\"\"\r\n													title=\"HTL-2200 手持天地多模卫星电话\"\r\n													 /></a>\r\n											</div>\r\n											<span class=\"lab\"> <img\r\n												src=\"${static_ctx}/portal/picture/404d8fd2-e92d-4f24-8e6a-59e6975bd460_1.png\"\r\n												/></span>\r\n										</div>\r\n										<div class=\"pro-module\">\r\n											<ul class=\"basic\">\r\n												<li class=\"code\">\r\n													<h1>\r\n														<span>产品名称：</span> <strong> <a\r\n															href=\"/products_detail/productId=321.html\"\r\n															title=\"HTL-2200 手持天地多模卫星电话\" target=\"_self\">\r\n																HTL-2200 手持天地多模卫星电话</a>\r\n														</strong>\r\n													</h1>\r\n												</li>\r\n												<li class=\"number2\"><span>产品编号：</span> <em\r\n													class=\"focustext\"> <a\r\n														href=\"/products_detail/productId=321.html\"\r\n														title=\"zhongduan006\" target=\"_self\"> zhongduan006</a>\r\n												</em></li>\r\n											</ul>\r\n											<p class=\"buttonP\"></p>\r\n											<div class=\"introduction\">\r\n												<span> 产品概要：</span> HTL-2200\r\n												是华力创通自主研发的卫星移动通信智能手机，支持天通卫星网络与地面全网通的双卡双待，无缝切换。兼具北斗及GPS\r\n												的定位导航功能，可提供保密而可靠的移动通信服务。具备高端的硬件配置及轻薄外形设计。本机可以提高陆海通信，政府服务，全球商务，科考探险，户外旅行等活动的信息化程度。\r\n											</div>\r\n										</div>\r\n									</li>\r\n									<li class=\"clearBoth\"></li>\r\n								</ul>\r\n								<div class=\"skip-pages\">\r\n									<div class=\"bottom\">\r\n										<div class=\"pageJump\">\r\n											<div class=\"totalcount\">当前显示1-10条共228条</div>\r\n											<div class=\"number\">\r\n												<span class=\"disabled\">首页</span><span class=\"disabled\">上一页</span><span\r\n													class=\"current\">1</span><a href=\"#\"\r\n													onclick=\"return jump_a4ce0e06549349cc8c029990aecf9808(2,10);\">2</a><a\r\n													href=\"#\"\r\n													onclick=\"return jump_a4ce0e06549349cc8c029990aecf9808(3,10);\">3</a><span\r\n													class=\"omit\">...</span><a href=\"#\"\r\n													onclick=\"return jump_a4ce0e06549349cc8c029990aecf9808(22,10);\">22</a><a\r\n													href=\"#\"\r\n													onclick=\"return jump_a4ce0e06549349cc8c029990aecf9808(23,10);\">23</a><a\r\n													href=\"#\"\r\n													onclick=\"return jump_a4ce0e06549349cc8c029990aecf9808(2,10);\">下一页</a><a\r\n													href=\"#\"\r\n													onclick=\"return jump_a4ce0e06549349cc8c029990aecf9808(23,10);\">末页</a>\r\n											</div>\r\n											<div class=\"total\">当前为第1页/共23页</div>\r\n											<script language=\"javascript\" type=\"text/JavaScript\">\r\n												//<![CDATA[\r\n												var locatona4ce0e06549349cc8c029990aecf9808 = window.location.href;\r\n												function scriptFunctiona4ce0e06549349cc8c029990aecf9808() {\r\n													var hrefTemp = document\r\n															.getElementById(\"hrefTempIda4ce0e06549349cc8c029990aecf9808\").value;\r\n													var hrefPageNo = document\r\n															.getElementById(\"pageNoIda4ce0e06549349cc8c029990aecf9808\");\r\n													var hrefPageNoValue = hrefPageNo.value;\r\n													var pattern = /^\\d+(\\.\\d+)?$/;\r\n													if (pattern\r\n															.test(hrefPageNoValue)\r\n															&& hrefPageNoValue > 0\r\n															&& hrefPageNoValue <= 23) {\r\n														window.location.href = hrefTemp\r\n																.replace(\r\n																		\"a4ce0e06549349cc8c029990aecf9808\",\r\n																		hrefPageNoValue);\r\n													} else {\r\n														alert(\"页数输入不合法\");\r\n														hrefPageNo.focus();\r\n													}\r\n												}\r\n												function jumpbutton_a4ce0e06549349cc8c029990aecf9808() {\r\n													var hrefPageNo = document\r\n															.getElementById(\"pageNoIda4ce0e06549349cc8c029990aecf9808\");\r\n													var hrefPageNoValue = hrefPageNo.value;\r\n													var pattern = /^\\d+$/;\r\n													if (pattern\r\n															.test(hrefPageNoValue)\r\n															&& hrefPageNoValue > 0\r\n															&& hrefPageNoValue <= 23) {\r\n														jump_a4ce0e06549349cc8c029990aecf9808(\r\n																hrefPageNoValue,\r\n																10)\r\n													} else {\r\n														alert(\"页数输入不合法\");\r\n														hrefPageNo.focus();\r\n													}\r\n												}\r\n												//]]>\r\n											</script>\r\n										</div>\r\n									</div>\r\n								</div>\r\n								<script type=\"text/javascript\">\r\n									//<![CDATA[\r\n									FrontProducts_list01[\'FrontProducts_list01-1443168517235001001_init\'] = function() {\r\n										jQuery(\".specChangeImg\")\r\n												.click(\r\n														function() {\r\n															var data = $(this)\r\n																	.metadata();\r\n															var srcStr = data.smallImgUrl;\r\n															var defaultImg = data.defaultImg;\r\n															$(this)\r\n																	.parent()\r\n																	.find(\r\n																			\".specChangeImg\")\r\n																	.removeClass(\r\n																			\"click\");\r\n															$(this).addClass(\r\n																	\"click\")\r\n															if (srcStr != \"\") {\r\n																jQuery(\r\n																		\"#FrontProducts_list01-1443168517235001001_\"\r\n																				+ data.id)\r\n																		.attr(\r\n																				\"src\",\r\n																				srcStr);\r\n															} else {\r\n																if (defaultImg != \"\") {\r\n																	jQuery(\r\n																			\"#FrontProducts_list01-1443168517235001001_\"\r\n																					+ data.id)\r\n																			.attr(\r\n																					\"src\",\r\n																					defaultImg);\r\n																} else {\r\n																	jQuery(\r\n																			\"#FrontProducts_list01-1443168517235001001_\"\r\n																					+ data.id)\r\n																			.attr(\r\n																					\"src\",\r\n																					\"/images/common/noimage.jpg\");\r\n																}\r\n															}\r\n														});\r\n									};\r\n									jQuery(document)\r\n											.ready(\r\n													FrontProducts_list01[\'FrontProducts_list01-1443168517235001001_init\']);\r\n									//]]>\r\n								</script>\r\n							</div>\r\n							<div class=\"clearBoth\"></div>\r\n						</div>\r\n					</div>\r\n					<div class=\"border_03-footerr\">\r\n						<div class=\"border_03-footerl\"></div>\r\n					</div>\r\n				</div>\r\n\r\n			</div>\r\n		</div>\r\n		<div class=\"clearBoth\"></div>\r\n	</div>\r\n	<div id=\"box_main_sub2\"></div>\r\n</div>\r\n', '2017-10-24 16:41:48', 'admin1', null, null);
-INSERT INTO `cms_template` VALUES ('922746466880221184', 'productnav', null, '/pc/include/product/productnav.html', '710691170238701568', '2', '<!-- 装饰器样式开始 -->\r\n					<div class=\"border_02\">\r\n						<div class=\"border_02-topr\">\r\n							<div class=\"border_02-topl\"></div>\r\n						</div>\r\n						<div class=\"border_02-mid\">\r\n							<div class=\"borderContent\">\r\n								<div id=\"FrontProductsCategory_show01-1451222955593\"\r\n									class=\"FrontProductsCategory_show01-d12_c1\">\r\n									<div class=\"comptitle_02\">\r\n										<strong class=\"titlestyle_02\">产品中心</strong>\r\n									</div>\r\n									<ul class=\"nav\">\r\n										<li><a\r\n											id=\"FrontProductsCategory_show01-145122295559322_menu\"\r\n											href=\"/products_list/pmcId=22.html\" target=\"_self\"\r\n											title=\"自组网产品\">自组网产品</a></li>\r\n										<li><a\r\n											id=\"FrontProductsCategory_show01-145122295559327_menu\"\r\n											href=\"/products_list/pmcId=27.html\" target=\"_self\"\r\n											title=\"有中心产品\">有中心产品</a></li>\r\n										<li><a\r\n											id=\"FrontProductsCategory_show01-145122295559327_menu\"\r\n											href=\"/products_list/pmcId=27.html\" target=\"_self\"\r\n											title=\"自组网+有中心双网合一产品\">自组网+有中心双网合一产品</a></li>\r\n										<li><a\r\n											id=\"FrontProductsCategory_show01-145122295559327_menu\"\r\n											href=\"/products_list/pmcId=27.html\" target=\"_self\"\r\n											title=\"解决方案\">解决方案</a></li>\r\n									</ul>\r\n								</div>\r\n								<div class=\"clearBoth\"></div>\r\n							</div>\r\n						</div>\r\n					</div>\r\n					<!-- 装饰器样式结束 -->', '2017-10-24 16:47:56', 'admin1', null, null);
+INSERT INTO `cms_template` VALUES ('922744926772977664', 'productbody', null, '/pc/include/product/productbody.html', '710691170238701568', '2', '\r\n<div id=\"box_main\" style=\"min-height: 350px;\">\r\n	<!--InstanceBeginEditable name=\"box_main\"-->\r\n	<div id=\"box_main_sub1\">\r\n		<div id=\"box_main_sub1_sub1\">\r\n			<div id=\"box_main_sub1_sub1_sub1\">\r\n				<div class=\"clearBoth\"></div>\r\n				<div  class=\"columnSpace\" id=\"elem-FrontProductsCategory_show01-1451222955593\" >\r\n					<script type=\"text/javascript\" src=\"${static_ctx}/portal/js/productstype_1.js\"></script>\r\n					<!-- 装饰器样式开始 -->\r\n					<%include(\"/pc/include/product/productnav.html\"){}%> \r\n					<!-- 装饰器样式结束 -->\r\n				</div>\r\n			</div>\r\n			<div id=\"box_main_sub1_sub1_sub2\">\r\n				<div  class=\"columnSpace\" id=\"elem-FrontSpecifies_show01-1442222513547\" >\r\n					<div id=\"FrontSpecifies_show01-1442222513547\"\r\n						class=\"FrontSpecifies_show01-d3_c1\">\r\n						<div class=\"describe htmledit\">\r\n							<p></p>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n		<div id=\"box_main_sub1_sub2\">\r\n			<div class=\"columnSpace\" id=\"elem-FrontProducts_list01-1443168517235001001\" >\r\n				<!-- 装饰器样式开始 -->\r\n				<div class=\"border_03\">\r\n					<div class=\"border_03-topr\">\r\n						<div class=\"border_03-topl\"></div>\r\n					</div>\r\n					<div class=\"border_03-mid\">\r\n						<div class=\"borderContent\">\r\n							<div id=\"FrontProducts_list01-1443168517235001001\"\r\n								class=\"FrontProducts_list01-d1_c1_01\">\r\n					\r\n								\r\n							</div>\r\n							<div class=\"clearBoth\"></div>\r\n						</div>\r\n					</div>\r\n					<div class=\"border_03-footerr\">\r\n						<div class=\"border_03-footerl\"></div>\r\n					</div>\r\n				</div>\r\n\r\n			</div>\r\n		</div>\r\n		<div class=\"clearBoth\"></div>\r\n	</div>\r\n	<div id=\"box_main_sub2\"></div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n	$(function(){\r\n	 gopage(\"1\",\'1\');\r\n	 });\r\n    function gopage(p,type){\r\n		$(\"#FrontProducts_list01-1443168517235001001\").load(\"${ctxPath}/productPage?p=\"+p+\"&type=\"+type);\r\n    }\r\n    function gotoPage1(p1,topicCode){ \r\n    	$(\"#FrontProducts_list01-1443168517235001001\").load(\"${ctxPath}/newsPage?topicCode=\"+topicCode+\"&p=\"+p1);\r\n    }\r\n</script>\r\n', '2017-10-24 16:41:48', 'admin1', null, null);
+INSERT INTO `cms_template` VALUES ('922746466880221184', 'productnav', null, '/pc/include/product/productnav.html', '710691170238701568', '2', '<!-- 装饰器样式开始 -->\r\n<div class=\"border_02\">\r\n	<div class=\"border_02-topr\">\r\n		<div class=\"border_02-topl\"></div>\r\n	</div>\r\n	<div class=\"border_02-mid\">\r\n		<div class=\"borderContent\">\r\n			<div id=\"FrontProductsCategory_show01-1451222955593\"\r\n				class=\"FrontProductsCategory_show01-d12_c1\">\r\n				<div class=\"comptitle_02\">\r\n					<strong class=\"titlestyle_02\">产品中心</strong>\r\n				</div>\r\n				<ul class=\"nav\">\r\n					<li><a id=\"FrontProductsCategory_show01-145122295559322_menu\"  href=\"javascript:void(0);\" target=\"_self\" title=\"自组网产品\"\r\n						onclick=\"gopage(\'1\',\'1\')\">自组网产品</a></li>\r\n					<li><a id=\"FrontProductsCategory_show01-145122295559327_menu\"\r\n						href=\"javascript:void(0);\" target=\"_self\" title=\"有中心产品\"\r\n						onclick=\"gopage(\'1\',\'2\')\">有中心产品</a></li>\r\n					<li><a id=\"FrontProductsCategory_show01-145122295559327_menu\"\r\n						href=\"javascript:void(0);\" target=\"_self\" title=\"自组网+有中心双网合一产品\"\r\n						onclick=\"gopage(\'1\',\'3\')\">自组网+有中心双网合一产品</a></li>\r\n					<li><a id=\"FrontProductsCategory_show01-145122295559327_menu\"\r\n						href=\"javascript:void(0);\" target=\"_self\" title=\"解决方案\"\r\n						onclick=\"gotoPage1(\'1\',\'jjfa\')\">解决方案</a></li>\r\n				</ul>\r\n			</div>\r\n			<div class=\"clearBoth\"></div>\r\n		</div>\r\n	</div>\r\n</div>\r\n<!-- 装饰器样式结束 -->', '2017-10-24 16:47:56', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('922755865816346624', 'newnav', null, '/pc/include/new/newnav.html', '710725777148190720', '2', '					<div class=\"border_02\">\r\n						<div class=\"border_02-topr\">\r\n							<div class=\"border_02-topl\"></div>\r\n						</div>\r\n						<div class=\"border_02-mid\">\r\n							<div class=\"borderContent\">\r\n								<div id=\"FrontNewsCategory_tree01-1443059485775\"\r\n									class=\"FrontNewsCategory_tree01-d1_c1\">\r\n									<div class=\"comptitle_02\">\r\n										<strong class=\"titlestyle_02\">新闻中心</strong>\r\n									</div>\r\n									<div class=\"menu-first\">\r\n										<ul>\r\n											<li class=\"menu-none\"><a  \r\n												onclick=\"getnewsinfo(\'qiyexinwen\')\"\r\n												class=\"menu-text1 hover\" > 公司新闻</a>\r\n											<li class=\"menu-none\"><a\r\n												onclick=\"getnewsinfo(\'hanyexinwen\')\"\r\n												class=\"menu-text1\" > 行业新闻</a>\r\n										</ul>\r\n									</div>\r\n								</div>\r\n								<div class=\"clearBoth\"></div>\r\n							</div>\r\n						</div>\r\n					</div>\r\n					<script>\r\n						function getnewsinfo(id){\r\n							\r\n							$(\"#qiyexinwen\").hide();\r\n							$(\"#hanyexinwen\").hide();\r\n							$(\"#\"+id).show();\r\n							if(id=\"qiyexinwen\"){\r\n								$(\".menu-text1 hover\").removeClass(); \r\n								$(\".menu-text1 hover\").addClass(\"hover\");\r\n							}\r\n							if(id=\"hanyexinwen\"){\r\n								$(\".menu-text1 hover\").removeClass(); \r\n								$(\".menu-text1 hover\").addClass(\"hover\");\r\n							}	\r\n						}\r\n					</script>', '2017-10-24 17:25:17', 'admin1', null, null);
-INSERT INTO `cms_template` VALUES ('924254913351045120', 'newsPage', null, '/pc/template/newsPage.html', '710666272982585344', '1', '							   <div class=\"comptitle_03\">\r\n									<strong class=\"titlestyle_03\"><%if(topicCode==\'qyxw\'){%>公司新闻<%}%>\r\n      																<%if(topicCode==\'gszx\'){%>行业新闻<%}%></strong>\r\n								</div>\r\n								<ul class=\"comstyle newslist-01\">\r\n								<#topic_article topicCode=\"${topicCode!}\" page=\"${p!}\" rows=\"2\" ;pageRecord> \r\n 									<%for (article in pageRecord.dataList){%>\r\n 									<li class=\"content column-num1\">\r\n									<div class=\"newstitle\">\r\n										<ul>\r\n											<li class=\"title\">\r\n												<h3>\r\n													<a href=\"/news_detail/newsId=447.html\"\r\n														title=\"${article.title}\" target=\"_self\">\r\n														${article.title}</a>\r\n												</h3>\r\n											</li>\r\n											<li class=\"date\"><span>发布时间：</span>${strutil.subStringTo (article.publish_time,0,10)}</li>\r\n										</ul>\r\n									</div>\r\n									</li>\r\n									<li class=\"clearBoth\"></li> \r\n 									<%}%>\r\n 							     \r\n								</ul>\r\n								             <%\r\n								               var p = pageRecord.page;  //当前页\r\n								               var totalPage = pageRecord.totalPage;  //总页数\r\n								             %>\r\n											<div class=\"pageJump\">\r\n									<div class=\"pageJump\">\r\n									<!-- 	<div class=\"totalcount\">当前显示1-10条共148条</div> -->\r\n										<div class=\"number\">\r\n											<a href=\"javascript:void(0);\" onclick=\"gotoPage(1);\">首页</a> \r\n											<a href=\"javascript:void(0);\" onclick=\"gotoPage(${p-1});\">上一页</a>\r\n											<a href=\"javascript:void(0);\" onclick=\"gotoPage(${p+1});\">下一页</a>\r\n											<a href=\"javascript:void(0);\" onclick=\"gotoPage(${totalPage});\">末页</a> 	\r\n										</div>\r\n										<div class=\"total\">当前为第${p}页/共${totalPage}页</div>\r\n									</div>\r\n								</div>\r\n				</#topic_article>', '2017-10-28 20:41:57', 'admin1', null, null);
+INSERT INTO `cms_template` VALUES ('924254913351045120', 'newsPage', null, '/pc/template/newsPage.html', '710666272982585344', '1', '\r\n<div class=\"comptitle_03\">\r\n	<strong class=\"titlestyle_03\"><%if(topicCode==\'qyxw\'){%>公司新闻<%}%>\r\n		<%if(topicCode==\'gszx\'){%>行业新闻<%}%>\r\n		<%if(topicCode==\'jjfa\'){%>解决方案<%}%></strong>\r\n</div>\r\n<ul class=\"comstyle newslist-01\">\r\n	<#topic_article topicCode=\"${topicCode!}\" page=\"${p!}\" rows=\"2\"\r\n	;pageRecord> <%for (article in pageRecord.dataList){%>\r\n	<li class=\"content column-num1\">\r\n		<div class=\"newstitle\">\r\n			<ul>\r\n				<li class=\"title\">\r\n					<h3>\r\n						<a href=\"/news_detail/newsId=447.html\" title=\"${article.title}\"\r\n							target=\"_self\"> ${article.title}</a>\r\n					</h3>\r\n				</li>\r\n				<li class=\"date\"><span>发布时间：</span>${strutil.subStringTo\r\n					(article.publish_time,0,10)}</li>\r\n			</ul>\r\n		</div>\r\n	</li>\r\n	<li class=\"clearBoth\"></li> <%}%>\r\n\r\n</ul>\r\n<% var p = pageRecord.page; //当前页\r\n var totalPage = pageRecord.totalPage;//总页数 %>\r\n<div class=\"pageJump\">\r\n	<div class=\"pageJump\">\r\n		<!-- 	<div class=\"totalcount\">当前显示1-10条共148条</div> -->\r\n		<div class=\"number\">\r\n			<a href=\"javascript:void(0);\" onclick=\"gotoPage(1);\">首页</a> <a\r\n				href=\"javascript:void(0);\" onclick=\"gotoPage(${p-1});\">上一页</a> <a\r\n				href=\"javascript:void(0);\" onclick=\"gotoPage(${p+1});\">下一页</a> <a\r\n				href=\"javascript:void(0);\" onclick=\"gotoPage(${totalPage});\">末页</a>\r\n		</div>\r\n		<div class=\"total\">当前为第${p}页/共${totalPage}页</div>\r\n	</div>\r\n</div>\r\n</#topic_article>\r\n', '2017-10-28 20:41:57', 'admin1', null, null);
 INSERT INTO `cms_template` VALUES ('924270042769666048', 'newsPage2', null, '/pc/template/newsPage2.html', '710666272982585344', '1', '							   <div class=\"comptitle_03\">\r\n									<strong class=\"titlestyle_03\"><%if(topicCode==\'qyxw\'){%>公司新闻<%}%>\r\n      																<%if(topicCode==\'gszx\'){%>行业新闻<%}%></strong>\r\n								</div>\r\n								<ul class=\"comstyle newslist-01\">\r\n								<#topic_article topicCode=\"${topicCode!}\" page=\"${p!}\" rows=\"2\" ;pageRecord> \r\n 									<%for (article in pageRecord.dataList){%>\r\n 									<li class=\"content column-num1\">\r\n									<div class=\"newstitle\">\r\n										<ul>\r\n											<li class=\"title\">\r\n												<h3>\r\n													<a href=\"/news_detail/newsId=447.html\"\r\n														title=\"${article.title}\" target=\"_self\">\r\n														${article.title}</a>\r\n												</h3>\r\n											</li>\r\n											<li class=\"date\"><span>发布时间：</span>${strutil.subStringTo (article.publish_time,0,10)}</li>\r\n										</ul>\r\n									</div>\r\n									</li>\r\n									<li class=\"clearBoth\"></li> \r\n 									<%}%>\r\n 							     \r\n								</ul>\r\n								             <%\r\n								               var p = pageRecord.page;  //当前页\r\n								               var totalPage = pageRecord.totalPage;  //总页数\r\n								             %>\r\n											<div class=\"pageJump\">\r\n									<div class=\"pageJump\">\r\n									<!-- 	<div class=\"totalcount\">当前显示1-10条共148条</div> -->\r\n										<div class=\"number\">\r\n											<a href=\"javascript:void(0);\" onclick=\"gotoPage1(1);\">首页</a> \r\n											<a href=\"javascript:void(0);\" onclick=\"gotoPage1(${p-1});\">上一页</a>\r\n											<a href=\"javascript:void(0);\" onclick=\"gotoPage1(${p+1});\">下一页</a>\r\n											<a href=\"javascript:void(0);\" onclick=\"gotoPage1(${totalPage});\">末页</a> 	\r\n										</div>\r\n										<div class=\"total\">当前为第${p}页/共${totalPage}页</div>\r\n									</div>\r\n								</div>\r\n				</#topic_article>', '2017-10-28 21:42:04', 'admin1', null, null);
+INSERT INTO `cms_template` VALUES ('930706348321644544', '产品分页模板', null, '/pc/template/产品分页模板.html', '710666272982585344', '1', ' <#pro_Lists type=\"indexbanner\" rows=\"3\" type=\"${type}\" ;pageRecord>\r\n<div class=\"comptitle_03\">\r\n	<strong class=\"titlestyle_03\"><%if(type==\'1\'){%>自组网产品<%}%><%if(type==\'2\'){%>有中心产品<%}%><%if(type==\'3\'){%>自组网+有中心双网合一产品<%}%></strong>\r\n</div>\r\n<div class=\"type\">\r\n	<span class=\"sort\"> </span>\r\n</div>\r\n<ul class=\"mainul productlist-02\">\r\n	<%if(pageRecord.dataList.~size>0){%> \r\n		<%for(p in pageRecord.dataList){%>\r\n	<li class=\"content column-num1\">\r\n		<div class=\"pic-module\">\r\n			<div class=\"pic\">\r\n				<a href=\"/products_detail/productId=321.html\" title=\"${p.name}\"\r\n					target=\"_self\"> <img src=\"${p.img_small}\"\r\n					id=\"FrontProducts_list01-1443168517235001001_321\" alt=\"\"\r\n					title=\"${p.name}\" /></a>\r\n			</div>\r\n			<%if(p.isHot==\'1\'){%> <span class=\"lab\"> <img\r\n				src=\"${static_ctx}/portal/picture/404d8fd2-e92d-4f24-8e6a-59e6975bd460_1.png\" /></span>\r\n			<%}%>\r\n		</div>\r\n		<div class=\"pro-module\">\r\n			<ul class=\"basic\">\r\n				<li class=\"code\">\r\n					<h1>\r\n						<span>产品名称：</span> <strong> <a\r\n							href=\"/products_detail/productId=321.html\" title=\"${p.name}\"\r\n							target=\"_self\"> ${p.name}</a>\r\n						</strong>\r\n					</h1>\r\n				</li>\r\n				<li class=\"number2\"><span>产品编号：</span> <em class=\"focustext\">\r\n						<a href=\"/products_detail/productId=321.html\" title=\"${p.code}\"\r\n						target=\"_self\"> ${p.code}</a>\r\n				</em></li>\r\n			</ul>\r\n			<p class=\"buttonP\"></p>\r\n			<div class=\"introduction\">\r\n				<span> 产品概要：</span> ${p.item}\r\n			</div>\r\n		</div>\r\n	</li>\r\n	<li class=\"clearBoth\"></li> <%}}else{%>\r\n	暂无相关信息\r\n	<%}%>\r\n</ul>\r\n<div class=\"skip-pages\">\r\n	<div class=\"bottom\">\r\n		<div class=\"pageJump\">\r\n			<div class=\"totalcount\">共${pageRecord.totalCount}条</div>\r\n			<div class=\"number\">\r\n			<%if(pageRecord.page==1){%>\r\n				<span class=\"disabled\">首页</span>\r\n				<span class=\"disabled\">上一页</span>\r\n				<a  href=\"#\" onclick=\"return jump_a4ce0e06549349cc8c029990aecf9808(2,10);\">下一页</a>\r\n				<a  href=\"#\" onclick=\"return jump_a4ce0e06549349cc8c029990aecf9808(23,10);\">末页</a>\r\n			<%}%>\r\n			</div>\r\n			<div class=\"total\">当前为第${pageRecord.page}页/共${pageRecord.totalPage}页</div>\r\n		</div>\r\n	</div>\r\n</div>\r\n</#pro_Lists>\r\n', '2017-11-15 15:57:39', 'admin1', null, null);
+INSERT INTO `cms_template` VALUES ('930721305392324608', '招聘咨询首页', null, '/pc/template/招聘咨询首页.html', '710666272982585344', '1', '<!DOCTYPE HTML>\r\n<html>\r\n<%include(\"/pc/common/meta.html\"){}%>\r\n<link href=\"${static_ctx}/portal/css/page_news_list.min.css\"\r\n	rel=\"stylesheet\" type=\"text/css\" />\r\n<body id=\"index\">\r\n	<div class=\"pageWidth\" id=\"box_root\">\r\n		<div id=\"box_top\">\r\n			<%include(\"/pc/common/header.html\",{flag:\"consult\"}){}%>\r\n			<div id=\"box_top_sub3\">\r\n				<div  class=\"columnSpace\"\r\n					id=\"elem-FrontPublic_slideShow01-1441866455619yeneiban\" >\r\n				</div>\r\n			</div>\r\n		</div>\r\n		<%include(\"/pc/include/constructionbody.html\"){}%>\r\n		<%include(\"/pc/common/footer.html\"){}%>\r\n	</div>\r\n	<script  src=\'${static_ctx}/portal/js/visittrack_1.js\' type=\'text/javascript\'></script>\r\n</body>\r\n</html>', '2017-11-15 16:57:05', 'admin1', null, null);
 
 -- ----------------------------
--- Table structure for `cms_topic`
+-- Table structure for cms_topic
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_topic`;
 CREATE TABLE `cms_topic` (
@@ -457,14 +461,16 @@ INSERT INTO `cms_topic` VALUES ('710728357979230208', '文章详情', '文章详
 INSERT INTO `cms_topic` VALUES ('710731287621783552', '产品列表', '产品列表', '产品列表', 'productlist', null, '/productlist', '', '1', '9', '710666702877745152', null, null, null, null, null, '产品列表', '产品列表', '产品列表', null, '', '710728917029335040', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
 INSERT INTO `cms_topic` VALUES ('710731489890615296', '产品详情页一', '产品详情页一', '产品详情页一', 'proone_detail', null, '/proone_detail', '', '1', '9', '710666702877745152', null, null, null, null, null, '产品详情页一', '产品详情页一', '产品详情页一', null, '', '710730948535865344', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
 INSERT INTO `cms_topic` VALUES ('710731650231517184', '产品详情页二', '产品详情页二', '产品详情页二', 'protwo_detail', null, '/protwo_detail', '', '1', '10', '710666702877745152', null, null, null, null, null, '产品详情页二', '产品详情页二', '产品详情页二', null, '', '710731112299261952', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
-INSERT INTO `cms_topic` VALUES ('922750089278644224', '招聘咨询', '招聘咨询', '招聘咨询', 'consult', null, '/consult', '', '1', '1', '710666702877745152', null, null, null, null, null, '招聘咨询', '招聘咨询', '招聘咨询', null, '', '710724718029250560', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
+INSERT INTO `cms_topic` VALUES ('922750089278644224', '招聘咨询', '招聘咨询', '招聘咨询', 'consult', null, '/consult', '', '1', '1', '710666702877745152', null, null, null, null, null, '招聘咨询', '招聘咨询', '招聘咨询', null, '', '930721305392324608', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
 INSERT INTO `cms_topic` VALUES ('923535602988163072', '企业新闻_文章', '企业新闻', '企业新闻', 'qyxw', null, '/qyxw', '', '1', '1', '710666702877745152', null, null, null, null, null, '企业新闻', '企业新闻', '企业新闻', null, '', '710724718029250560', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
 INSERT INTO `cms_topic` VALUES ('923536178997026816', '公司咨询_文章', '公司咨询_文章', '公司咨询_文章', 'gszx', null, '/gszx', '', '1', '1', '710666702877745152', null, null, null, null, null, '公司咨询_文章', '公司咨询_文章', '公司咨询_文章', null, '', '710724718029250560', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
 INSERT INTO `cms_topic` VALUES ('924255262719254528', '新闻信息的分页', '新闻信息的分页', '新闻信息的分页', 'newsPage', null, '/newsPage', '', '1', '1', '710666702877745152', null, null, null, null, null, '新闻信息的分页', '新闻信息的分页', '新闻信息的分页', null, '', '924254913351045120', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
 INSERT INTO `cms_topic` VALUES ('924270337700638720', '行业新闻分页', '行业新闻分页', '行业新闻分页', 'newsPage2', null, '/newsPage2', '', '1', '1', '710666702877745152', null, null, null, null, null, '行业新闻分页', '行业新闻分页', '行业新闻分页', null, '', '924270042769666048', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
+INSERT INTO `cms_topic` VALUES ('930706548488564736', '产品信息分页栏目', '产品信息分页栏目', '产品信息分页栏目', 'productPage', null, '/productPage', '', '1', '1', '710666702877745152', null, null, null, null, null, '产品信息分页栏目', '产品信息分页栏目', '产品信息分页栏目', null, '', '930706348321644544', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
+INSERT INTO `cms_topic` VALUES ('930716899278155776', '解决方案-文章栏目', '解决方案', '解决方案', 'jjfa', null, '/jjfa', '', '1', '1', '710666702877745152', null, null, null, null, null, '解决方案', '解决方案', '解决方案', null, '', '710722609934610432', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
 
 -- ----------------------------
--- Table structure for `cms_topic_article`
+-- Table structure for cms_topic_article
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_topic_article`;
 CREATE TABLE `cms_topic_article` (
@@ -477,7 +483,7 @@ CREATE TABLE `cms_topic_article` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cms_topic_attr`
+-- Table structure for cms_topic_attr
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_topic_attr`;
 CREATE TABLE `cms_topic_attr` (
@@ -495,7 +501,7 @@ CREATE TABLE `cms_topic_attr` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `credit_extension_con`
+-- Table structure for credit_extension_con
 -- ----------------------------
 DROP TABLE IF EXISTS `credit_extension_con`;
 CREATE TABLE `credit_extension_con` (
@@ -529,7 +535,7 @@ INSERT INTO `credit_extension_con` VALUES ('707141400087560192', '1', '1', '0003
 INSERT INTO `credit_extension_con` VALUES ('709267026799144960', '1', '2', '001985', '', '2016-03-14 14:36:51', null, '0', null);
 
 -- ----------------------------
--- Table structure for `custforopera_manger`
+-- Table structure for custforopera_manger
 -- ----------------------------
 DROP TABLE IF EXISTS `custforopera_manger`;
 CREATE TABLE `custforopera_manger` (
@@ -549,7 +555,7 @@ INSERT INTO `custforopera_manger` VALUES ('0002', '1', '693994946019946496', nul
 INSERT INTO `custforopera_manger` VALUES ('700238317081022464', '1', '690400639910256640', '20160218163959', null);
 
 -- ----------------------------
--- Table structure for `cust_manger`
+-- Table structure for cust_manger
 -- ----------------------------
 DROP TABLE IF EXISTS `cust_manger`;
 CREATE TABLE `cust_manger` (
@@ -579,7 +585,7 @@ INSERT INTO `cust_manger` VALUES ('700612244295479296', null, 'test1', null, '',
 INSERT INTO `cust_manger` VALUES ('706330992690958336', null, '周五', null, '2016-03-06', '0', '13221322232', '1032@qq.com', '2016-03-06', '1', '20160306121006', null, null);
 
 -- ----------------------------
--- Table structure for `dividend_info`
+-- Table structure for dividend_info
 -- ----------------------------
 DROP TABLE IF EXISTS `dividend_info`;
 CREATE TABLE `dividend_info` (
@@ -610,7 +616,7 @@ CREATE TABLE `dividend_info` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `file`
+-- Table structure for file
 -- ----------------------------
 DROP TABLE IF EXISTS `file`;
 CREATE TABLE `file` (
@@ -641,7 +647,7 @@ INSERT INTO `file` VALUES ('706312432233361408', '694025606138695680', 'http://s
 INSERT INTO `file` VALUES ('706312581441966080', '704192669822693376', 'http://static.51huoniu.com//upload/image/20160118/pI4GneBnMN5iSi8m.jpg', '0', null, '0', '2016-03-06 10:56:56', null, '0', null, null);
 
 -- ----------------------------
--- Table structure for `fund_info`
+-- Table structure for fund_info
 -- ----------------------------
 DROP TABLE IF EXISTS `fund_info`;
 CREATE TABLE `fund_info` (
@@ -684,7 +690,7 @@ CREATE TABLE `fund_info` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `hold_info`
+-- Table structure for hold_info
 -- ----------------------------
 DROP TABLE IF EXISTS `hold_info`;
 CREATE TABLE `hold_info` (
@@ -717,7 +723,7 @@ CREATE TABLE `hold_info` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `inform`
+-- Table structure for inform
 -- ----------------------------
 DROP TABLE IF EXISTS `inform`;
 CREATE TABLE `inform` (
@@ -735,7 +741,7 @@ CREATE TABLE `inform` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `inform_record`
+-- Table structure for inform_record
 -- ----------------------------
 DROP TABLE IF EXISTS `inform_record`;
 CREATE TABLE `inform_record` (
@@ -770,7 +776,7 @@ INSERT INTO `inform_record` VALUES ('338189c8084e4a41b585f018e5e18515', null, '\
 INSERT INTO `inform_record` VALUES ('339fa5a666fc45e4b90aeae50eaf9b4c', null, '15921612156', '您的短信验证码为：534271,请在五分钟内完成输入!', '2015-12-18 11:06:33', '2015-12-18 11:06:33', null, 'new', '0', null, '1', '0,成功', '1', '0');
 
 -- ----------------------------
--- Table structure for `investor_finpd`
+-- Table structure for investor_finpd
 -- ----------------------------
 DROP TABLE IF EXISTS `investor_finpd`;
 CREATE TABLE `investor_finpd` (
@@ -791,7 +797,7 @@ INSERT INTO `investor_finpd` VALUES ('4', '0', '理财产品4号', '700567307712
 INSERT INTO `investor_finpd` VALUES ('5', '1', '自营产品', '700567307712466944');
 
 -- ----------------------------
--- Table structure for `investor_org`
+-- Table structure for investor_org
 -- ----------------------------
 DROP TABLE IF EXISTS `investor_org`;
 CREATE TABLE `investor_org` (
@@ -851,7 +857,7 @@ INSERT INTO `investor_org` VALUES ('707099605577428992', '12', '机构全称', '
 INSERT INTO `investor_org` VALUES ('707099741067915264', '13', '机构全称', '机构简称', '2', null, '1234567', '2016-03-08', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2016-03-08 15:04:50', null, '0', '628471986294353920', '1', '628471986294353920', '628471986294353920');
 
 -- ----------------------------
--- Table structure for `log`
+-- Table structure for log
 -- ----------------------------
 DROP TABLE IF EXISTS `log`;
 CREATE TABLE `log` (
@@ -1054,7 +1060,7 @@ INSERT INTO `log` VALUES ('708918499987402752', '1', '0', '1', '变更操作员�
 INSERT INTO `log` VALUES ('708918544013131776', '1', '0', '1', '变更操作员状态成功', '628471986294353920', '2016-03-13 15:32:06');
 
 -- ----------------------------
--- Table structure for `mf_comps`
+-- Table structure for mf_comps
 -- ----------------------------
 DROP TABLE IF EXISTS `mf_comps`;
 CREATE TABLE `mf_comps` (
@@ -1090,7 +1096,7 @@ CREATE TABLE `mf_comps` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `mf_fund`
+-- Table structure for mf_fund
 -- ----------------------------
 DROP TABLE IF EXISTS `mf_fund`;
 CREATE TABLE `mf_fund` (
@@ -1134,7 +1140,7 @@ CREATE TABLE `mf_fund` (
 INSERT INTO `mf_fund` VALUES ('1', '测试产品全称', '测试产品简称', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 
 -- ----------------------------
--- Table structure for `openacc_bankinfo`
+-- Table structure for openacc_bankinfo
 -- ----------------------------
 DROP TABLE IF EXISTS `openacc_bankinfo`;
 CREATE TABLE `openacc_bankinfo` (
@@ -1154,7 +1160,7 @@ INSERT INTO `openacc_bankinfo` VALUES ('124', '农银', '6225501308384422', '1',
 INSERT INTO `openacc_bankinfo` VALUES ('125', '民生', '6225501308384433', '1', '006');
 
 -- ----------------------------
--- Table structure for `openacc_info`
+-- Table structure for openacc_info
 -- ----------------------------
 DROP TABLE IF EXISTS `openacc_info`;
 CREATE TABLE `openacc_info` (
@@ -1181,7 +1187,7 @@ INSERT INTO `openacc_info` VALUES ('00002', '690400639910256640', '7005673077124
 INSERT INTO `openacc_info` VALUES ('00003', '693994946019946496', '700567307712466944', '125', '52003', '80000221', '2015-02-25 23:53:12', '2015-02-26 23:53:12', 'dacheng', '52003', '0', '51430012');
 
 -- ----------------------------
--- Table structure for `open_confirm`
+-- Table structure for open_confirm
 -- ----------------------------
 DROP TABLE IF EXISTS `open_confirm`;
 CREATE TABLE `open_confirm` (
@@ -1210,7 +1216,7 @@ CREATE TABLE `open_confirm` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `product`
+-- Table structure for product
 -- ----------------------------
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
@@ -1232,7 +1238,7 @@ INSERT INTO `product` VALUES ('692619604112031744', '161211', null, '', '1', '20
 INSERT INTO `product` VALUES ('692882856167084032', '000499', null, '', '0', '2016-01-29 09:32:00', null, null);
 
 -- ----------------------------
--- Table structure for `product_acount_confim`
+-- Table structure for product_acount_confim
 -- ----------------------------
 DROP TABLE IF EXISTS `product_acount_confim`;
 CREATE TABLE `product_acount_confim` (
@@ -1258,7 +1264,7 @@ INSERT INTO `product_acount_confim` VALUES ('2', '1', '1', '1', '1', '1', '1', '
 INSERT INTO `product_acount_confim` VALUES ('er', '1', '1', '1', '1', '0000', '11', '1');
 
 -- ----------------------------
--- Table structure for `product_appoint`
+-- Table structure for product_appoint
 -- ----------------------------
 DROP TABLE IF EXISTS `product_appoint`;
 CREATE TABLE `product_appoint` (
@@ -1281,7 +1287,7 @@ INSERT INTO `product_appoint` VALUES ('1', '0', '2015-01-22 13:12:55', '69040063
 INSERT INTO `product_appoint` VALUES ('2', '0', '2015-01-22 13:00:00', '690400639910256640', '2016-03-10 10:35:03', '3', '100.00', '2015-01-22 13:12:15', null);
 
 -- ----------------------------
--- Table structure for `product_buy`
+-- Table structure for product_buy
 -- ----------------------------
 DROP TABLE IF EXISTS `product_buy`;
 CREATE TABLE `product_buy` (
@@ -1322,7 +1328,7 @@ INSERT INTO `product_buy` VALUES ('2', 'yyy', '1', '1.00', '1.00', '18.00', '18.
 INSERT INTO `product_buy` VALUES ('3', 'zzz', '1', '1.00', '1.00', '23.00', '23.00', '690400639910256640', '700567307712466944', '689706203264106496', '2016-02-17 00:00:00', '2016-02-19 10:00:00', '1', '1', '1', '1.00', '1', '1', '1', '1', '1', '1', '1', null, null, '');
 
 -- ----------------------------
--- Table structure for `product_manager`
+-- Table structure for product_manager
 -- ----------------------------
 DROP TABLE IF EXISTS `product_manager`;
 CREATE TABLE `product_manager` (
@@ -1348,7 +1354,7 @@ INSERT INTO `product_manager` VALUES ('690115283897700352', null, null, '8008580
 INSERT INTO `product_manager` VALUES ('701616821009735680', null, null, '80513967', '1', '2016-02-22 11:57:55', '1', '2016-02-22 11:58:12', '2016-02-22 11:57:40', null);
 
 -- ----------------------------
--- Table structure for `product_notradeday`
+-- Table structure for product_notradeday
 -- ----------------------------
 DROP TABLE IF EXISTS `product_notradeday`;
 CREATE TABLE `product_notradeday` (
@@ -1363,7 +1369,7 @@ CREATE TABLE `product_notradeday` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `product_recommend`
+-- Table structure for product_recommend
 -- ----------------------------
 DROP TABLE IF EXISTS `product_recommend`;
 CREATE TABLE `product_recommend` (
@@ -1391,7 +1397,7 @@ INSERT INTO `product_recommend` VALUES ('707756624725897216', '202009', '1', '62
 INSERT INTO `product_recommend` VALUES ('707756624728981504', '000001', '1', '628471986294353920', '12.00', null, '2', '2016-03-10 10:35:03', null);
 
 -- ----------------------------
--- Table structure for `product_recommend_hot`
+-- Table structure for product_recommend_hot
 -- ----------------------------
 DROP TABLE IF EXISTS `product_recommend_hot`;
 CREATE TABLE `product_recommend_hot` (
@@ -1412,7 +1418,7 @@ INSERT INTO `product_recommend_hot` VALUES ('709301988314451968', '001787', '0',
 INSERT INTO `product_recommend_hot` VALUES ('709302016073867264', '002240', '0', '0');
 
 -- ----------------------------
--- Table structure for `product_redeem`
+-- Table structure for product_redeem
 -- ----------------------------
 DROP TABLE IF EXISTS `product_redeem`;
 CREATE TABLE `product_redeem` (
@@ -1447,7 +1453,7 @@ INSERT INTO `product_redeem` VALUES ('2', 'yyy', '1', '2.00', '2.00', '1.00', '1
 INSERT INTO `product_redeem` VALUES ('3', 'zzz', '1', '2.00', '2.00', '3.00', '3.00', '1.50', '690400639910256640', '700567307712466944', '689706203264106496', '2016-02-19 00:00:00', '2016-02-19 08:00:00', '2', '2016-02-19 00:00:00', null, null, null, null, null);
 
 -- ----------------------------
--- Table structure for `product_self`
+-- Table structure for product_self
 -- ----------------------------
 DROP TABLE IF EXISTS `product_self`;
 CREATE TABLE `product_self` (
@@ -1491,7 +1497,7 @@ INSERT INTO `product_self` VALUES ('8', 'yyy', '1', '12.00', '12.00', '0.00', '1
 INSERT INTO `product_self` VALUES ('9', 'yyy', '2', '13.00', '13.00', '0.00', '13.00', '0.00', '0', '0', '2016-02-21', '6.00', '2.00', '1.00', '0000', null, '690400639910256640', '700567307712466944', '689706203264106496', '0', '0.013', '2016-02-20 00:00:00', null);
 
 -- ----------------------------
--- Table structure for `qualification_certificate`
+-- Table structure for qualification_certificate
 -- ----------------------------
 DROP TABLE IF EXISTS `qualification_certificate`;
 CREATE TABLE `qualification_certificate` (
@@ -1508,7 +1514,7 @@ CREATE TABLE `qualification_certificate` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `questionnaire`
+-- Table structure for questionnaire
 -- ----------------------------
 DROP TABLE IF EXISTS `questionnaire`;
 CREATE TABLE `questionnaire` (
@@ -1531,7 +1537,7 @@ INSERT INTO `questionnaire` VALUES ('699847584202952704', '6', '贵公司偏好�
 INSERT INTO `questionnaire` VALUES ('699847647941697536', '7', '未来五年中，贵公司预计可投资资金量会如何变化', '1');
 
 -- ----------------------------
--- Table structure for `redeem_confirm`
+-- Table structure for redeem_confirm
 -- ----------------------------
 DROP TABLE IF EXISTS `redeem_confirm`;
 CREATE TABLE `redeem_confirm` (
@@ -1570,7 +1576,7 @@ CREATE TABLE `redeem_confirm` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `risk_answer`
+-- Table structure for risk_answer
 -- ----------------------------
 DROP TABLE IF EXISTS `risk_answer`;
 CREATE TABLE `risk_answer` (
@@ -1619,7 +1625,7 @@ INSERT INTO `risk_answer` VALUES ('709928045723656192', '699847491311714304', '7
 INSERT INTO `risk_answer` VALUES ('709928045725036544', '699847647941697536', '700567307712466944', 'a', '2016-03-16 10:23:30', null, '0');
 
 -- ----------------------------
--- Table structure for `risk_option`
+-- Table structure for risk_option
 -- ----------------------------
 DROP TABLE IF EXISTS `risk_option`;
 CREATE TABLE `risk_option` (
@@ -1635,7 +1641,7 @@ CREATE TABLE `risk_option` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `risk_questions`
+-- Table structure for risk_questions
 -- ----------------------------
 DROP TABLE IF EXISTS `risk_questions`;
 CREATE TABLE `risk_questions` (
@@ -1656,7 +1662,7 @@ CREATE TABLE `risk_questions` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `risk_result`
+-- Table structure for risk_result
 -- ----------------------------
 DROP TABLE IF EXISTS `risk_result`;
 CREATE TABLE `risk_result` (
@@ -1674,7 +1680,7 @@ CREATE TABLE `risk_result` (
 INSERT INTO `risk_result` VALUES ('709920281252130816', '700567307712466944', '8', '2', '2016-03-16 09:52:39');
 
 -- ----------------------------
--- Table structure for `sys_apidoc`
+-- Table structure for sys_apidoc
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_apidoc`;
 CREATE TABLE `sys_apidoc` (
@@ -1726,7 +1732,7 @@ INSERT INTO `sys_apidoc` VALUES ('710284283259437056', '基金净值同期指数
 INSERT INTO `sys_apidoc` VALUES ('710284284426670080', '交易限额', '查询', '0', 'http://121.43.71.81/api/query/queryFundLimit', '查询交易限额', 'JSON', 'POST', '[{\"memo\":\"基金代码\",\"default_val\":null,\"name\":\"fundcode\",\"type_size\":\"string\",\"must\":\"true\"}]', null, null, '[]');
 
 -- ----------------------------
--- Table structure for `sys_dict`
+-- Table structure for sys_dict
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_dict`;
 CREATE TABLE `sys_dict` (
@@ -1746,7 +1752,7 @@ CREATE TABLE `sys_dict` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `sys_file`
+-- Table structure for sys_file
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_file`;
 CREATE TABLE `sys_file` (
@@ -1780,9 +1786,11 @@ INSERT INTO `sys_file` VALUES ('924228183571537920', '3C57C02734126C30C6197A5A80
 INSERT INTO `sys_file` VALUES ('924228218422415360', '3C57C02734126C30C6197A5A80191B87.png', 'Nvd8jycpoABo3Q9r.png', '/upload/image/20171028', 'image', 'http://localhost:8080//upload/image/20171028/Nvd8jycpoABo3Q9r.png', '149818', 'admin1', '2017-10-28 18:55:53', '0');
 INSERT INTO `sys_file` VALUES ('924230719123804160', 'Z0_XV9A2YH]R}R}MMRJ@9BE.jpg', 'wfel6VheIrET902H.jpg', '/upload/image/20171028', 'image', 'http://localhost:8080//upload/image/20171028/wfel6VheIrET902H.jpg', '81594', 'admin1', '2017-10-28 19:05:49', '0');
 INSERT INTO `sys_file` VALUES ('924231759381385216', '3C57C02734126C30C6197A5A80191B87.png', 'ugdKcbPRDTkHRDbc.png', '/upload/image/20171028', 'image', 'http://localhost:8080//upload/image/20171028/ugdKcbPRDTkHRDbc.png', '149818', 'admin1', '2017-10-28 19:09:57', '0');
+INSERT INTO `sys_file` VALUES ('929328086470066176', 'QQ截图20171109131321.png', 'pTuPyesSwyzG8KEn.png', '/upload/image/20171111', 'image', 'http://localhost:8080//upload/image/20171111/pTuPyesSwyzG8KEn.png', '13439', 'admin1', '2017-11-11 20:40:56', '0');
+INSERT INTO `sys_file` VALUES ('929328127393103872', 'QQ截图20171109131321.png', 'GBFYJfVFbC91D2hO.png', '/upload/image/20171111', 'image', 'http://localhost:8080//upload/image/20171111/GBFYJfVFbC91D2hO.png', '13439', 'admin1', '2017-11-11 20:41:06', '0');
 
 -- ----------------------------
--- Table structure for `sys_ftpserver`
+-- Table structure for sys_ftpserver
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_ftpserver`;
 CREATE TABLE `sys_ftpserver` (
@@ -1809,7 +1817,7 @@ CREATE TABLE `sys_ftpserver` (
 INSERT INTO `sys_ftpserver` VALUES ('636042257339510784', '127.0.0.1', 'static', '21', '123', '123', '1', '1', 'http://localhost:8080/', '1', '', '/', 'UTF-8', '0');
 
 -- ----------------------------
--- Table structure for `sys_left_menu`
+-- Table structure for sys_left_menu
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_left_menu`;
 CREATE TABLE `sys_left_menu` (
@@ -1901,7 +1909,7 @@ INSERT INTO `sys_left_menu` VALUES ('920180692669210624', '文章', '88888888888
 INSERT INTO `sys_left_menu` VALUES ('924496135123189760', '产品管理', '628466500442517504', '924494653406920704', null, '1', null, '');
 
 -- ----------------------------
--- Table structure for `sys_managerconfig`
+-- Table structure for sys_managerconfig
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_managerconfig`;
 CREATE TABLE `sys_managerconfig` (
@@ -1926,7 +1934,7 @@ CREATE TABLE `sys_managerconfig` (
 INSERT INTO `sys_managerconfig` VALUES ('Aresoft', '/resource-injar/image?t=logo.png', '/resource-injar/image?t=/favicon.ico', '/admin/center', '1', '/resource-injar/image?t=logo.png', '/resource-injar/image?t=logo.png', '0', 'admin', 'F83AC316F83BC312C48EA22F885AD5A0', 'super', '379A1057F1FC6F8A951601F094E07A54', '{\"allow_upload\":1,\"save_dir\":\"upload\",\"save_type\":\"1\",\"upload_setting\":{\"music\":{\"fileType\":\"music\",\"ftpServers\":[\"636042257339510784\"],\"maxSize\":10240000,\"suffix\":[\"mp3\"]},\"file\":{\"fileType\":\"file\",\"ftpServers\":[\"636042257339510784\"],\"maxSize\":10240000,\"suffix\":[\"zip\",\"rar\",\"apk\",\"ipa\"]},\"image\":{\"fileType\":\"image\",\"ftpServers\":[\"636042257339510784\"],\"maxSize\":10240,\"suffix\":[\"gif\",\"bmp\",\"jpeg\",\"jpg\",\"png\",\"JPG\",\"PNG\",\"JPEG\",\"BMP\",\"GIF\"]},\"media\":{\"fileType\":\"media\",\"ftpServers\":[\"636042257339510784\"],\"maxSize\":10240000,\"suffix\":[\"flv\"]}}}');
 
 -- ----------------------------
--- Table structure for `sys_monitor`
+-- Table structure for sys_monitor
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_monitor`;
 CREATE TABLE `sys_monitor` (
@@ -22541,7 +22549,7 @@ INSERT INTO `sys_monitor` VALUES ('2015-11-15 23:58', '29', '15');
 INSERT INTO `sys_monitor` VALUES ('2015-11-15 23:59', '70', '29');
 
 -- ----------------------------
--- Table structure for `sys_msg_template`
+-- Table structure for sys_msg_template
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_msg_template`;
 CREATE TABLE `sys_msg_template` (
@@ -22565,7 +22573,7 @@ INSERT INTO `sys_msg_template` VALUES ('694780469291786240', '4', '44444', '2', 
 INSERT INTO `sys_msg_template` VALUES ('695056752755294208', '11', '1222', '2', '122', null, '22');
 
 -- ----------------------------
--- Table structure for `sys_resource`
+-- Table structure for sys_resource
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_resource`;
 CREATE TABLE `sys_resource` (
@@ -22697,7 +22705,7 @@ INSERT INTO `sys_resource` VALUES ('924495480340369408', '删除产品', '/admin
 INSERT INTO `sys_resource` VALUES ('924495653742567424', '产品审核', '/admin/product/audit', '产品审核', '924492848428589056', null, '');
 
 -- ----------------------------
--- Table structure for `sys_role`
+-- Table structure for sys_role
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_role`;
 CREATE TABLE `sys_role` (
@@ -22715,7 +22723,7 @@ INSERT INTO `sys_role` VALUES ('628472255799357440', 'Audit', '审核员', '审�
 INSERT INTO `sys_role` VALUES ('636093177158955008', 'manger', '服务经理', '服务经理');
 
 -- ----------------------------
--- Table structure for `sys_role_resource`
+-- Table structure for sys_role_resource
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_role_resource`;
 CREATE TABLE `sys_role_resource` (
@@ -22839,7 +22847,7 @@ INSERT INTO `sys_role_resource` VALUES ('598735761148997632', '92449548034036940
 INSERT INTO `sys_role_resource` VALUES ('598735761148997632', '924495653742567424');
 
 -- ----------------------------
--- Table structure for `sys_sub`
+-- Table structure for sys_sub
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_sub`;
 CREATE TABLE `sys_sub` (
@@ -22860,7 +22868,7 @@ CREATE TABLE `sys_sub` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `sys_user`
+-- Table structure for sys_user
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user`;
 CREATE TABLE `sys_user` (
@@ -22884,7 +22892,7 @@ INSERT INTO `sys_user` VALUES ('646148642760814592', 'managerA', 'managerA', '96
 INSERT INTO `sys_user` VALUES ('646174430256164864', 'managerB', 'managerB', '96E79218965EB72C92A549DD5A330112', '13444444444', '1@163.com', '1');
 
 -- ----------------------------
--- Table structure for `sys_user_role`
+-- Table structure for sys_user_role
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user_role`;
 CREATE TABLE `sys_user_role` (
@@ -22903,7 +22911,39 @@ INSERT INTO `sys_user_role` VALUES ('628471986294353920', '598735761148997632');
 INSERT INTO `sys_user_role` VALUES ('628471986294353920', '628472255799357440');
 
 -- ----------------------------
--- Table structure for `template`
+-- Table structure for tb_product_info
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_product_info`;
+CREATE TABLE `tb_product_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `code` varchar(50) DEFAULT NULL COMMENT '产品代码',
+  `name` varchar(200) DEFAULT NULL COMMENT '产品名称',
+  `item` varchar(200) DEFAULT NULL COMMENT '产品简介、摘要',
+  `isHot` varchar(10) DEFAULT NULL COMMENT '产品热度',
+  `status` varchar(10) DEFAULT NULL COMMENT '状态',
+  `type` varchar(50) DEFAULT NULL COMMENT '产品类型（1：自组网产品，2：有中心产品，3.自组网+有中心双网合一产品）',
+  `content` varchar(500) DEFAULT NULL COMMENT '产品内容',
+  `img_big` varchar(100) DEFAULT NULL COMMENT '大图地址',
+  `img_small` varchar(100) DEFAULT NULL COMMENT '小图地址',
+  `i_createuser` varchar(100) DEFAULT NULL COMMENT '建立人',
+  `d_lastmodtime` varchar(20) DEFAULT NULL COMMENT '最后修改时间',
+  `i_moduser` varchar(100) DEFAULT NULL COMMENT '修改人',
+  `public_time` varchar(30) DEFAULT NULL COMMENT '发布时间',
+  `i_createtime` varchar(30) DEFAULT NULL COMMENT '创建时间',
+  `sort_num` varchar(10) DEFAULT NULL COMMENT '排列序号',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tb_product_info
+-- ----------------------------
+INSERT INTO `tb_product_info` VALUES ('2', 'jinwang1234', '金网产品', '产品', null, '1', '2', '12', '', '', '628471986294353920', '2017-11-15 15:20:33', '628471986294353920', '2017-11-11 19:20:33', '2017-11-11 19:20:55', '');
+INSERT INTO `tb_product_info` VALUES ('3', '12', '21111', '2111', '1', '', '1', '21', '', '', '628471986294353920', '2017-11-15 15:19:38', '628471986294353920', '2017-11-11 19:42:46', '2017-11-11 19:42:50', '2');
+INSERT INTO `tb_product_info` VALUES ('4', '21', '21', '21', '1', '2', '1', '哈哈', 'http://localhost:8080//upload/image/20171111/pTuPyesSwyzG8KEn.png', 'http://localhost:8080//upload/image/20171111/GBFYJfVFbC91D2hO.png', '628471986294353920', '2017-11-15 15:15:57', '628471986294353920', '2017-11-11 20:41:12', '2017-11-11 20:41:14', '1');
+INSERT INTO `tb_product_info` VALUES ('5', '90', '看', '简介', '1', '1', '3', '哈哈', 'http://localhost:8080//upload/image/20171111/pTuPyesSwyzG8KEn.png', 'http://localhost:8080//upload/image/20171111/GBFYJfVFbC91D2hO.png', '628471986294353920', '2017-11-11 21:21:29', '628471986294353920', '2017-11-11 20:41:12', '2017-11-11 21:21:29', '1');
+
+-- ----------------------------
+-- Table structure for template
 -- ----------------------------
 DROP TABLE IF EXISTS `template`;
 CREATE TABLE `template` (
@@ -22918,7 +22958,7 @@ CREATE TABLE `template` (
 INSERT INTO `template` VALUES ('699820351713423360', '0', 'http://192.168.199.110//upload/image/20160217/zlDDzaf5TJXKPReN.png');
 
 -- ----------------------------
--- Table structure for `trade_confirm`
+-- Table structure for trade_confirm
 -- ----------------------------
 DROP TABLE IF EXISTS `trade_confirm`;
 CREATE TABLE `trade_confirm` (
@@ -22959,7 +22999,7 @@ CREATE TABLE `trade_confirm` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_basic`
+-- Table structure for user_basic
 -- ----------------------------
 DROP TABLE IF EXISTS `user_basic`;
 CREATE TABLE `user_basic` (
@@ -23007,7 +23047,7 @@ INSERT INTO `user_basic` VALUES ('706761759006089216', '男', '62d40812e76dedc0'
 INSERT INTO `user_basic` VALUES ('707083465085603840', '男', 'dcb2a9f9d7b7c6bc', '18221019707', '0', '342224199205161934', '20160308', 'zhou', '704499035851304960', '', '123@11.com', '', '', '', '', null, '0', '20160308 14:00:09', '20160308 14:09:56', '0', null, '1', null, '628471986294353920', '628471986294353920');
 
 -- ----------------------------
--- Table structure for `u_history`
+-- Table structure for u_history
 -- ----------------------------
 DROP TABLE IF EXISTS `u_history`;
 CREATE TABLE `u_history` (
@@ -23030,7 +23070,7 @@ CREATE TABLE `u_history` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `web_log`
+-- Table structure for web_log
 -- ----------------------------
 DROP TABLE IF EXISTS `web_log`;
 CREATE TABLE `web_log` (
@@ -23051,7 +23091,7 @@ INSERT INTO `web_log` VALUES ('21', '690400639910256640', '2016-01-23 21:00:00',
 INSERT INTO `web_log` VALUES ('690400639910256641', '690400639910256640', '2016-01-29 12:23:15', '0', '0', '1', '');
 
 -- ----------------------------
--- View structure for `tradels`
+-- View structure for tradels
 -- ----------------------------
 DROP VIEW IF EXISTS `tradels`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`fhcf`@`%` SQL SECURITY DEFINER VIEW `tradels` AS select `p1`.`account` AS `account`,`p1`.`pd_code` AS `pd_code`,`p1`.`status` AS `status`,`p1`.`money` AS `money`,`p1`.`confim_money` AS `confim_money`,`p1`.`apply_time` AS `apply_time`,`p1`.`confim_time` AS `confim_time`,`p1`.`o_id` AS `o_id`,`p1`.`u_id` AS `u_id` from `product_redeem` `p1` union all select `p2`.`account` AS `account`,`p2`.`pd_code` AS `pd_code`,`p2`.`business_type` AS `business_type`,`p2`.`money` AS `money`,`p2`.`confim_money` AS `confim_money`,`p2`.`apply_time` AS `apply_time`,`p2`.`confim_time` AS `confim_time`,`p2`.`o_id` AS `o_id`,`p2`.`u_id` AS `u_id` from `product_buy` `p2` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`fhcf`@`%` SQL SECURITY DEFINER  VIEW `tradels` AS select `p1`.`account` AS `account`,`p1`.`pd_code` AS `pd_code`,`p1`.`status` AS `status`,`p1`.`money` AS `money`,`p1`.`confim_money` AS `confim_money`,`p1`.`apply_time` AS `apply_time`,`p1`.`confim_time` AS `confim_time`,`p1`.`o_id` AS `o_id`,`p1`.`u_id` AS `u_id` from `product_redeem` `p1` union all select `p2`.`account` AS `account`,`p2`.`pd_code` AS `pd_code`,`p2`.`business_type` AS `business_type`,`p2`.`money` AS `money`,`p2`.`confim_money` AS `confim_money`,`p2`.`apply_time` AS `apply_time`,`p2`.`confim_time` AS `confim_time`,`p2`.`o_id` AS `o_id`,`p2`.`u_id` AS `u_id` from `product_buy` `p2` ;
