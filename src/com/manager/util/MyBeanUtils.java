@@ -1,4 +1,4 @@
-package com.fhcf.manager.util;
+package com.manager.util;
 
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.InvocationTargetException;

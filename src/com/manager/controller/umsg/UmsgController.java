@@ -1,14 +1,14 @@
-package com.fhcf.manager.controller.umsg;
+package com.manager.controller.umsg;
 
 import java.util.List;
 
 import cn.aresoft.cms.common.cache.CmsPropertiesCache;
 import cn.aresoft.common.model.RetMsg;
-import cn.aresoft.fhcf.common.model.msg.Umsg;
-import cn.aresoft.fhcf.common.service.UmsgService;
 import cn.aresoft.manager.controller.CommonController;
 import cn.aresoft.manager.plugin.MyBeetlView;
 
+import com.manager.model.Umsg;
+import com.manager.service.UmsgService;
 import com.puff.framework.annotation.Controller;
 import com.puff.framework.annotation.Inject;
 import com.puff.jdbc.core.PageRecord;

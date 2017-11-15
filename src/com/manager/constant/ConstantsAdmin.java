@@ -1,4 +1,4 @@
-package com.fhcf.manager.constant;
+package com.manager.constant;
 
 public class ConstantsAdmin {
 	//开户确认文件类型

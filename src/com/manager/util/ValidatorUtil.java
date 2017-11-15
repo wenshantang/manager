@@ -1,4 +1,4 @@
-package com.fhcf.manager.util;
+package com.manager.util;
 
 import java.math.BigDecimal;
 import java.net.HttpURLConnection;

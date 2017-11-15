@@ -28,21 +28,21 @@ KindEditor.ready(function(K) {
 		fileManagerJson : '${ctx}/admin/sys/file/list'
 	});
 
-	K('#select_small_image').click(function() {
+	K('#select_img_big').click(function() {
 		editor.loadPlugin('smimage', function() {
 			editor.plugin.imageDialog({
 				clickFn : function(url,title, width, height, border, align) {
-					if (K('#image_show_small')) {
+					if (K('#image_show_img_big')) {
 						if(url.startWith("http://")||url.startWith("https://")){
-							 K('#image_show_small').attr('src', url);
-							 K('#image_show_small').attr('src', url);
-							 K('#vc_pub2').val(url);
+							 K('#image_show_img_big').attr('src', url);
+							 K('#image_show_img_big').attr('src', url);
+							 K('#img_big').val(url);
 						}else{
-							 K('#image_show_small').attr('src', CTX+url);
-							 K('#vc_pub2').val(CTX+url);
-							 K('#image_show_small').attr('src', url);
+							 K('#image_show_img_big').attr('src', CTX+url);
+							 K('#img_big').val(CTX+url);
+							 K('#image_show_img_big').attr('src', url);
 						}
-						 K('#image_show_small').show();
+						 K('#image_show_img_big').show();
 					}
 					editor.hideDialog();
 				}
@@ -50,26 +50,26 @@ KindEditor.ready(function(K) {
 		});
 	});
 	
-	K('#dele_small_image').click(function() {
-		 K('#image_show_small').attr('src', '');
-		 K('#vc_pub2').val('');
+	K('#dele_img_big').click(function() {
+		 K('#image_show_img_big').attr('src', '');
+		 K('#img_big').val('');
 	});
 	
-	K('#select_small_image_risk').click(function() {
+	K('#select_img_small').click(function() {
 		editor.loadPlugin('smimage', function() {
 			editor.plugin.imageDialog({
 				clickFn : function(url,title, width, height, border, align) {
-					if (K('#image_show_small_risk')) {
+					if (K('#image_show_img_small')) {
 						if(url.startWith("http://")||url.startWith("https://")){
-							 K('#image_show_small_risk').attr('src', url);
-							 K('#image_show_small_risk').attr('src', url);
-							 K('#risk').val(url);
+							 K('#image_show_img_small').attr('src', url);
+							 K('#image_show_img_small').attr('src', url);
+							 K('#img_small').val(url);
 						}else{
-							 K('#image_show_small_risk').attr('src', CTX+url);
-							 K('#image_show_small_risk').attr('src', url);
-							 K('#risk').val(CTX+url);
+							 K('#image_show_img_small').attr('src', CTX+url);
+							 K('#image_show_img_small').attr('src', url);
+							 K('#img_small').val(CTX+url);
 						}
-						 K('#image_show_small_risk').show();
+						 K('#image_show_img_small').show();
 					}
 					editor.hideDialog();
 				}
@@ -77,9 +77,9 @@ KindEditor.ready(function(K) {
 		});
 	});
 	
-	K('#dele_small_image').click(function() {
-		 K('#image_show_small_risk').attr('src', '');
-		 K('#risk').val('');
+	K('#dele_small_img_small').click(function() {
+		 K('#image_show_img_small').attr('src', '');
+		 K('#img_small').val('');
 	});
 	
 });
@@ -90,247 +90,109 @@ KindEditor.ready(function(K) {
 			<div id="floatHead" class="content-tab">
 				<div class="content-tab-ul-wrap">
 					<ul>
-						<li><a href="javascript:;" onclick="tabs(this);"class="selected">产品信息修改</a></li>
+						<li><a href="javascript:;" onclick="tabs(this);"class="selected">产品信息</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<form id="data_form">
-		 <input   name="i_id" type="hidden" id="i_id" class="input normal"  value="${p.i_id}"/>	
+		<input  type="hidden" id="id"  name="id"  value="${p.id}" />
+		<input  type="hidden" id="i_createuser"  name="i_createuser"  value="${p.i_createuser}" />
+		<input  type="hidden" id="d_lastmodtime"  name="d_lastmodtime"  value="${p.d_lastmodtime}" />
+		<input  type="hidden" id="i_moduser"  name="i_moduser"  value="${p.i_moduser}" />
+		<input  type="hidden" id="i_createtime"  name="i_createtime"  value="${p.i_createtime}" />
+		<input  type="hidden" id="status"  name="status"  value="${p.status}" />
 		<div class="tab-content">
+			<dl>
+				<dt>是否热推</dt>
+				<dd>
+					<div class="rule-single-checkbox">
+						<input id="isHot" type="checkbox" name="isHot" value="${p.isHot}" ${p.isHot=='1'?'checked':''}
+							onclick="javascript:if(this.checked){$('#dl_top').css('display','block')}else{$('#dl_top').css('display','none')}" />
+					</div>
+					<span id="Validform_checktip"></span>
+				</dd>
+			</dl>
+			<dl id="dl_top" ${p.isHot=='1'?'':'style="display: none"'} >
+				<dt>热推排序</dt>
+				<dd>
+					<input name="sort_num" type="text" value="${p.sort_num}" id="sort_num" class="input small" style="text-align: center"/>
+					<span id="Validform_checktip">*数字（大于0，越大越靠前）</span>
+				</dd>
+			</dl>
 		    <dl>
 				<dt>产品代码</dt>
 				<dd>
-                  <input   name="pro_code" type="text" id="pro_code" class="input normal" value="${p.pro_code}" />	
+                  <input   name="code" type="text" id="code" class="input normal" value="${p.code}"/>	
                   <span id="Validform_checktip">*</span>
 				</dd>
 			</dl>
 			<dl>
 				<dt>产品名称</dt>
 				<dd>
-                  <input   name="pro_name" type="text" id="pro_name" class="input normal" value="${p.pro_name}" />	
+                  <input   name="name" type="text" id="name" class="input normal"  value="${p.name}" />	
                   <span id="Validform_checktip">*</span>
 				</dd>
 			</dl>
 			<dl>
 				<dt>产品简称</dt>
 				<dd>
-                  <input   name="pro_short_name" type="text" id="pro_short_name" class="input normal" value="${p.pro_short_name}" />	
+                  <input   name="item" type="text" id="item" class="input normal" value="${p.item}" />	
                   <span id="Validform_checktip">*</span>
 				</dd>
 			</dl>
 			<dl>
 				<dt>产品类型</dt>
 				<dd>
-                  <select  style="width: 133px" id="pro_style" name="pro_style" class="js-example-basic-single">
+                  <select  style="width: 133px" id="type" name="type" class="js-example-basic-single">
    		      	    <option value="">请选择</option>
-						<%for(dict in types!){%>
-					<option value="${dict.value}"  ${dict.value==p.pro_style?'selected':''} >${dict.name}</option>
-						<%}%>
+					<option value="1" ${p.type=='1'?'selected':''} >自组网产品</option>
+					<option value="2" ${p.type=='2'?'selected':''} >有中心产品</option>
+					<option value="3" ${p.type=='3'?'selected':''} >自组网+有中心双网合一产品</option>
    		      	  </select>		
 				</dd>
 			</dl>
 			<dl>
-				<dt>开放状态</dt>
-				<dd>
-					<select  style="width: 133px" id="i_prostatus" name="i_prostatus" class="js-example-basic-single">
-   		      	    <option value="">请选择</option>
-   		      	    <option value="1" ${p.i_prostatus=='1'?'selected':''} >在售</option>
-   		            <option value="2" ${p.i_prostatus=='2'?'selected':''}>即将开放</option>
-   		            <option value="3" ${p.i_prostatus=='3'?'selected':''}>已售罄</option>
-   		      	  </select>		
-				</dd>
-			</dl>
-			
-			
-				<dl>
 				<dt>发布时间</dt>
 				<dd>
-                  <input  name="public_time" type="text" id="public_time" class="input normal" onclick='WdatePicker({dateFmt:"yyyy-MM-dd HH:mm:ss"})'
-						readonly="readonly"  value="${p.public_time}" />	
+                  <input  name="public_time" type="text" id="public_time" class="input normal"  value="${p.public_time}" onclick='WdatePicker({dateFmt:"yyyy-MM-dd HH:mm:ss"})'
+						readonly="readonly" />	
                   <span id="Validform_checktip">*用于排序</span>
 				</dd>
 			</dl>
-			<dl>
-				<dt>产品风向</dt>
-				<dd>
-                  <select  style="width: 133px" id="pro_direction" name="pro_direction" class="js-example-basic-single">
-   		      	    <option value="">请选择</option>
-						<%for(dict in directions!){%>
-					<option value="${dict.value}"  ${dict.value==p.pro_direction?'selected':''} >${dict.name}</option>
-						<%}%>
-   		      	  </select>		
-                  <span id="Validform_checktip">*用于产品首页分类</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>产品特点</dt>
-				<dd>
-                  <input   name="pro_features" type="text" id="pro_features" class="input normal" value="${p.pro_features}"/>	
-                  <span id="Validform_checktip">*首页产品显示：比如每月开放</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>产品优点</dt>
-				<dd>
-                  <input   name="pro_merits" type="text" id="pro_merits" class="input normal" value="${p.pro_merits}" />	
-                  <span id="Validform_checktip">*首页产品显示：比如资金灵活配置</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>产品风格</dt>
-				<dd>
-                  <input   name="i_prostyle" type="text" id="i_prostyle" class="input normal" value="${p.i_prostyle}"/>	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>开始时间</dt>
-				<dd>
-                  <input   name="d_startdate" type="text" id="d_startdate" class="input normal" value="${p.d_startdate}" onclick='WdatePicker({dateFmt:"yyyy-MM-dd HH:mm:ss"})'
-						readonly="readonly"  />	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>结束时间</dt>
-				<dd>
-                  <input   name="d_enddate" type="text" id="d_enddate" class="input normal" value="${p.d_enddate}" onclick='WdatePicker({dateFmt:"yyyy-MM-dd HH:mm:ss"})'
-						readonly="readonly" />	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>运作期</dt>
-				<dd>
-                  <input   name="pro_due" type="text" id="pro_due" class="input normal" value="${p.pro_due}" />	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>产品期限</dt>
-				<dd>
-                  <input   name="pro_term" type="text" id="pro_term" class="input normal" value="${p.pro_term}" />	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>购买起点</dt>
-				<dd>
-                  <input   name="vc_leastsubscribe" type="text" id="vc_leastsubscribe" class="input normal" value="${p.vc_leastsubscribe}" />	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl><dl>
-				<dt>投资类型</dt>
-				<dd>
-                  <input   name="vc_pub1" type="text" id="vc_pub1" class="input normal" value="${p.vc_pub1}"/>	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>相关产品</dt>
-				<dd>
-                  <select  style="width: 300px" id="vc_pro_code" name="vc_pro_code" class="js-example-basic-single">
-   		      	    <option value="">请选择</option>
-						<%for(pro in products!){%>
-					<option value="${pro.pro_code}"  ${pro.pro_code==p.vc_pro_code?'selected':''} >${pro.pro_name}</option>
-						<%}%>
-   		      	  </select>		
-				</dd>
-			</dl>
-			<dl>
-				<dt>托管人</dt>
-				<dd>
-                  <input   name="vc_fundtrustee" type="text" id="vc_fundtrustee" class="input normal" value="${p.vc_fundtrustee}" />	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>投资策略</dt>
-				<dd>
-				  <textarea id="vc_tactics" name="vc_tactics"  class="input normal">${p.vc_tactics}</textarea>
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
 			
 			<dl>
-				<dt>适合</dt>
+				<dt>产品大图</dt>
 				<dd>
-				  <textarea id="pro_fit" name="pro_fit"  class="input normal">${p.pro_fit}</textarea>
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>投资顾问</dt>
-				<dd>
-                  <input   name="vc_fundadministrator" type="text" id="vc_fundadministrator" class="input normal" value="${p.vc_fundadministrator}"/>	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-			
-					<dl>
-				<dt>基金经理</dt>
-				<dd>
-                  <input   name="vc_fundmanager" type="text" id="vc_fundmanager" class="input normal" value="${p.vc_fundmanager}" />	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-					<dl>
-				<dt>基金类型</dt>
-				<dd>
-                  <input   name="fund_style" type="text" id="fund_style" class="input normal" value="${p.fund_style}" />	
-                  <span id="Validform_checktip">*</span>
-				</dd>
-			</dl>
-					<dl>
-				<dt>所属行业</dt>
-				<dd>
-				 <select  style="width: 133px" id="industry" name="industry" class="js-example-basic-single">
-   		      	    <option value="">请选择</option>
-						<%for(dict in industrys!){%>
-					<option value="${dict.value}"  ${dict.value==p.industry?'selected':''} >${dict.name}</option>
-						<%}%>
-   		      	  </select>		
-				</dd>
-			</dl>
-					<dl>
-				<dt>海外产品所属模板</dt>
-				<dd>
-				 <select  style="width: 133px" id="flag" name="flag" class="js-example-basic-single">
-   		      	    <option value="">请选择</option>
-   		      	    <option value="1"  ${p.i_prostatus=='1'?'selected':''} >产品类</option>
-   		            <option value="2"  ${p.i_prostatus=='2'?'selected':''} >基金类</option>
-   		      	  </select>	
-				</dd>
-			</dl>	
-			
-			<dl>
-				<dt>资金投向</dt>
-				<dd>
-				
-				         <img id="image_show_small" src="${p.vc_pub2}" style="max-height:100px;" />
-						 <input id="vc_pub2" type="text" name="vc_pub2" value="${p.vc_pub2}"  readonly="readonly" class="input normal"/>
-	                     <span class="help-inline"><a id="select_small_image" class="icon-btn add" href="javascript:;"><i></i><span>选择图片</span></a>
-	                     <a id="dele_small_image" class="icon-btn edit" href="javascript:;"><i></i><span>删除</span></a>
+				  <img id="image_show_img_big" src="${p.img_big}" style="max-height:100px;" />
+						 <input id="img_big" type="text" name="img_big"  readonly="readonly" class="input normal" value="${p.img_big}" />
+	                     <span class="help-inline"><a id="select_img_big" class="icon-btn add" href="javascript:;"><i></i><span>选择图片</span></a>
+	                     <a id="dele_img_big" class="icon-btn edit" href="javascript:;"><i></i><span>删除</span></a>
 	                     </span>
 				</dd>
 			</dl>	
 			<dl>
-				<dt>风险控制</dt>
+				<dt>产品小图</dt>
 				<dd>
-				  <img id="image_show_small_risk" src="${p.risk}" style="max-height:100px;" />
-						 <input id="risk" type="text" name="risk" value="${p.risk}" readonly="readonly" class="input normal"/>
-	                     <span class="help-inline"><a id="select_small_image_risk" class="icon-btn add" href="javascript:;"><i></i><span>选择图片</span></a>
-	                     <a id="dele_small_image_risk" class="icon-btn edit" href="javascript:;"><i></i><span>删除</span></a>
+				  <img id="image_show_img_small" src="${p.img_small}" style="max-height:100px;" />
+						 <input id="img_small" type="text" name="img_small"  readonly="readonly" class="input normal" value="${p.img_small}" />
+	                     <span class="help-inline"><a id="select_img_small" class="icon-btn add" href="javascript:;"><i></i><span>选择图片</span></a>
+	                     <a id="dele_small_img_small" class="icon-btn edit" href="javascript:;"><i></i><span>删除</span></a>
 	                     </span>
 				</dd>
-			</dl>											
+			</dl>
+		<dl>
+				<dt>产品内容</dt>
+				<dd>
+					<textarea rows="3" cols="50" name="content" id="content">${p.content}</textarea>
+				</dd>
+			</dl>								
 		</div>
 		</form>
 		<div class="page-footer">
 			<div class="btn-list">
 			<#permission url="/admin/product/update">
-				<input type="button" name="btnSubmit" value="确 认" id="btnSubmit" class="btn" onclick="Public.ajaxInsert('${ctx}/admin/product/update')"/> 
+				<input type="button" name="btnSubmit" value="确 认" id="btnSubmit" class="btn" onclick="Public.ajaxUpdate('${ctx}/admin/product/update')"/> 
             </#permission>
 				<input name="btnReturn" type="button" value="取 消" class="btn yellow" onclick="Public.closeDialog();" />
 			</div>

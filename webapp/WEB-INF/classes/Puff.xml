@@ -13,8 +13,8 @@
 	</monitor>
 
 	<scan>
-		<property name="bean" value="cn.aresoft.fhcf.common,cn.aresof.ftp,com.fhcf.manager" />
-		<property name="controller" value="com.fhcf.manager.controller" />
+		<property name="bean" value="cn.aresoft.common,cn.aresof.ftp,com.manager" />
+		<property name="controller" value="com.manager.controller" />
 	</scan>
 
 	<dispatcher class="com.puff.web.dispatcher.Zh_CN_GetDispatcher" />
@@ -47,6 +47,6 @@
 		<property name="scanIntervalSeconds" value="1"></property>
 	</plugin> -->
 		<plugin name="TemplateSyncPlugin" class="cn.aresoft.cms.manager.synctemplate.TemplateSyncPlugin">
-		<property name="templatePath" value="G:/gitMaven/manager/webapp/WEB-INF/template"></property>
+		<property name="templatePath" value="E:/workspaces/manager/webapp/WEB-INF/template"></property>
 	</plugin>
 </Puff>
