@@ -13,10 +13,10 @@
 										<ul>
 											<li class="menu-none"><a  
 												onclick="getnewsinfo('qiyexinwen')"
-												class="menu-text1 hover" > 公司新闻</a>
+												class="menu-text1 hover" id="qiyexinwen_class" > 公司新闻</a>
 											<li class="menu-none"><a
 												onclick="getnewsinfo('hanyexinwen')"
-												class="menu-text1" > 行业新闻</a>
+												class="menu-text1" id="hanyexinwen_class" > 行业新闻</a>
 										</ul>
 									</div>
 								</div>
@@ -26,17 +26,10 @@
 					</div>
 					<script>
 						function getnewsinfo(id){
-							
-							$("#qiyexinwen").hide();
+							$("#qiyexinwen").hide();  
 							$("#hanyexinwen").hide();
-							$("#"+id).show();
-							if(id="qiyexinwen"){
-								$(".menu-text1 hover").removeClass(); 
-								$(".menu-text1 hover").addClass("hover");
-							}
-							if(id="hanyexinwen"){
-								$(".menu-text1 hover").removeClass(); 
-								$(".menu-text1 hover").addClass("hover");
-							}	
+							$("#" + id).show();
+							$(".menu-text1").removeClass();
+							$("#"+id+"_class").addClass("menu-text1 hover");  
 						}
 					</script>
