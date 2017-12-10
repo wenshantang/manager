@@ -21,6 +21,15 @@ String.prototype.startWith=function(s){
 
 //交易结构图片上传
 KindEditor.ready(function(K) {
+	var editor1 = K.create('textarea[name="content"]', {
+		allowFileManager : true,
+		allowFlashUpload : true,
+		allowMediaUpload : true,
+		allowFileUpload : true,
+		uploadJson : '${ctx}/admin/sys/file/upload',
+		fileManagerJson : '${ctx}/admin/sys/file/list',
+		afterBlur: function(){this.sync();}
+	});
 	var editor = K.editor({
 		allowFileManager : true,
 		themeType: "simple",
@@ -91,6 +100,7 @@ KindEditor.ready(function(K) {
 				<div class="content-tab-ul-wrap">
 					<ul>
 						<li><a href="javascript:;" onclick="tabs(this);"class="selected">产品信息</a></li>
+						<li><a href="javascript:;" onclick="tabs(this);">产品内容</a></li>
 					</ul>
 				</div>
 			</div>
@@ -181,12 +191,15 @@ KindEditor.ready(function(K) {
 	                     </span>
 				</dd>
 			</dl>
-		<dl>
-				<dt>产品内容</dt>
+		</div>
+		<div class="tab-content" style="display: none">
+			<dl>
+				<dt>文章内容</dt>
 				<dd>
-					<textarea rows="3" cols="50" name="content" id="content">${p.content}</textarea>
+                    <textarea name="content" rows="3" cols="20" id="content" class="input" style="width: 700px;height: 500px;">${p.content}</textarea>
+					<span id="Validform_checktip"></span>
 				</dd>
-			</dl>								
+			</dl>
 		</div>
 		</form>
 		<div class="page-footer">

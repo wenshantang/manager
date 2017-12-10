@@ -46,7 +46,19 @@ public class ProductInfo extends BaseModel {
 		private String i_createtime;//创建时间
         @Column
         private String sort_num;//排列序号
+        @Column
+        private String file_url;//附件上传地址
         
+        
+        public String getFile_url() {
+            return file_url;
+        }
+
+        
+        public void setFile_url(String file_url) {
+            this.file_url = file_url;
+        }
+
         public String getSort_num() {
 			return sort_num;
 		}

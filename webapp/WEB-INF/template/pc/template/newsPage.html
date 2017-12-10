@@ -1,4 +1,34 @@
-
+<style>
+ .newstitle li h3 {
+    display: inline;
+    background: url(${static_ctx}/portal/images/xwtb.gif) 0 5px no-repeat;
+    padding-left: 20px;
+    color: #000;
+    font-size: 13px;
+    font-family: "微软雅黑";
+    }
+     .newstitle .date {
+    float: right;
+    text-align: right;
+    padding-right: 20px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 13px;
+    }
+    .newstitle .title {
+    text-align: left;
+    height: 36px;
+    line-height: 36px;
+    }
+    .newstitle li {
+    float: left;
+	}
+	
+	.newstitle li span {
+    color: #999;
+    display: block;
+    }
+</style>
 <div class="comptitle_03">
 	<strong class="titlestyle_03"><%if(topicCode=='qyxw'){%>公司新闻<%}%>
 		<%if(topicCode=='gszx'){%>行业新闻<%}%>
@@ -12,7 +42,7 @@
 			<ul>
 				<li class="title">
 					<h3>
-						<a href="/news_detail/newsId=447.html" title="${article.title}"
+						<a href="${ctxPath}/articledetail?id=${article.id}&topicCode=${topicCode!}" title="${article.title}"
 							target="_self"> ${article.title}</a>
 					</h3>
 				</li>

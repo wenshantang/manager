@@ -4,7 +4,7 @@
 		<!-- 是否使用Puff的开发模式。 正式上线后改成false -->
 		<property name="devMode" value="true" />
 		<!-- JSP页面放置路径 WebRoot下使用"/" WEB-INF下使用"/WEB-INF" -->
-		<property name="fileViewPath" value="/WEB-INF/jsp/" />
+		<property name="fileViewPath" value="/WEB-INF/" />
 	</constant>
 	
 	<monitor>

@@ -98,101 +98,45 @@
 								class="FrontNews_list01-d1_c1_01">
 
 								<div class="FrontMessages_customizeEmit01-d1_c1">
-									<form
-										id="FrontMessages_customizeEmit01-1445321935284_referForm"
-										action="/FrontMessages.do?method=addContent&amp;compId=FrontMessages_customizeEmit01-1445321935284"
-										method="post"
-										name="FrontMessages_customizeEmit01-1445321935284_referForm">
-										<input type="hidden" id="messagesCategoryId"
-											name="messagesCategoryId"
-											value="741a7315-2b8b-4547-a85b-f18cdcc4832f"> <input
-											type="hidden" id="succesUrl" name="succesUrl"
-											value="/rcly.html"> <input type="hidden" id="token"
+									 <input type="hidden" id="token"
 											name="token" value="f15114c7db1e466ed1afff19e4b8dbdf">
-										<input type="hidden" name="orignal_url"
-											id="FrontMessages_customizeEmit01-1445321935284_currentPage"
-											value="">
 										<table width="100%" border="0" cellspacing="0" cellpadding="0">
 											<tbody>
 												<tr class="title">
-													<th>标题：</th>
+													<th>应聘岗位：</th>
 													<td><input type="hidden" id="isDisplayMessagesTitle"
 														value="0">
 														<div class="text-oper">
-															<span class="fontnone">&nbsp;</span> <input
+														<span class="fontred">*</span>
+															<input
 																class="input input-gray" type="text" id="messagesTitle"
-																name="messagesTitle" value="" maxlength="255"
-																onfocus="FrontMessages_customizeEmit01.showinfo('FrontMessages_customizeEmit01-1445321935284_messagesTitle')"
-																onblur="FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1445321935284'+'_referForm'),'messagesTitle','FrontMessages_customizeEmit01-1445321935284','null','null')">
+																name="messagesTitle" value="" maxlength="255">
 														</div>
-														<div class="text-tip">
-															<span class="tip-default"
-																id="FrontMessages_customizeEmit01-1445321935284_infomessagesTitle"
-																style="display: block;"> </span> <span
-																class="tip-remind" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_infomessagesTitle_black">
-															</span> <span class="tip-error" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_nomessagesTitle">
-																留言标题为必填项，请填写</span> <span class="tip-error"
-																style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_errmessagesTitle">
-															</span>
-														</div></td>
+													</td>
 												</tr>
 												<tr class="info">
-													<th valign="top">留言内容：</th>
+													<th valign="top">申请描述：</th>
 													<td><input type="hidden" name="maxContent"
 														id="maxContent" value="500">
 														<div class="text-oper">
 															<span class="fontred">*</span>
-															<textarea class="textarea input-gray" name="content"
-																onfocus="FrontMessages_customizeEmit01.showinfo('FrontMessages_customizeEmit01-1445321935284_content')"
-																onblur="FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1445321935284'+'_referForm'),'content','FrontMessages_customizeEmit01-1445321935284','null','null')"
-																onkeyup="FrontMessages_customizeEmit01.dynamicNum('FrontMessages_customizeEmit01-1445321935284_cpForm',this,'null')"></textarea>
-															<span class="tips"> 已输入字符：<span id="dynamicNum">0</span>
-																字<span class="tips"> </span>
-															</span>
+															<textarea class="textarea input-gray" name="content" id="content" ></textarea>
 														</div>
 														<div class="text-tip">
-															<span class="tip-default"
-																id="FrontMessages_customizeEmit01-1445321935284_infocontent"
-																style="display: none;"> 小于等于500字符</span> <span
-																class="tip-remind" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_infocontent_black">
-																小于等于500字符</span> <span class="tip-error"
-																style="display: block;"
-																id="FrontMessages_customizeEmit01-1445321935284_nocontent">
-																留言内容为必填项，请填写</span> <span class="tip-error"
-																style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_errcontent">
-																留言内容应小于等于500字符，请重新填写</span>
-														</div></td>
+														</div>
+													</td>
 												</tr>
 												<tr class="name">
-													<th>留言人：</th>
+													<th valign="top">申请人：</th>
 													<td><input type="hidden" id="isDisplayAuthor"
 														value="0">
 														<div class="text-oper">
-															<span class="fontnone">&nbsp;</span> <input class="input"
+														<span class="fontred">*</span>
+														<input class="input"
 																type="text" id="author" name="author" value=""
-																maxlength="20"
-																onfocus="FrontMessages_customizeEmit01.showinfo('FrontMessages_customizeEmit01-1445321935284_author')"
-																onblur="FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1445321935284'+'_referForm'),'author','FrontMessages_customizeEmit01-1445321935284','null','null')">
+																maxlength="20">
 														</div>
-														<div class="text-tip">
-															<span class="tip-default"
-																id="FrontMessages_customizeEmit01-1445321935284_infoauthor">
-																小于等于20个字符（包括A-Z、a-z、0-9、汉字、不含特殊字符）</span> <span
-																class="tip-remind" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_infoauthor_black">
-																小于等于20个字符（包括A-Z、a-z、0-9、汉字、不含特殊字符）</span> <span
-																class="tip-error" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_errauthor">
-																留言人应包括A-Z、a-z、0-9、汉字、不含特殊字符，请重新填写</span> <span
-																class="tip-error" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_noauthor">
-																留言人为必填项，请填写</span>
-														</div></td>
+													</td>
 												</tr>
 												<tr class="sex">
 													<th>性别：</th>
@@ -202,42 +146,22 @@
 															男<input type="radio" value="1" id="sex2" name="sex">
 															女
 														</div>
-														<div class="text-tip">
-															<span class="tip-default"
-																id="FrontMessages_customizeEmit01-1445321935284_infosex">
-															</span> <span class="tip-remind" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_infosex_black">
-															</span> <span class="tip-error" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_errsex">
-															</span> <span class="tip-error" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_nosex">
-															</span>
-														</div></td>
+												   </td>
 												</tr>
 												<tr class="tel2">
 													<th>联系电话：</th>
 													<td><input type="hidden" id="isDisplayPhone" value="0">
 														<div class="text-oper">
+														<span class="fontred">*</span>
 															<span class="fontnone">&nbsp;</span> <input
 																class="input input-gray" type="text" id="phone"
-																name="phone" value="" maxlength="32"
-																onfocus="FrontMessages_customizeEmit01.showinfo('FrontMessages_customizeEmit01-1445321935284_phone')"
-																onblur="FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1445321935284'+'_referForm'),'phone','FrontMessages_customizeEmit01-1445321935284','null','null')">
+																name="phone" value="" maxlength="32">
 
 														</div>
 														<div class="text-tip">
 															<span class="tip-default"
 																id="FrontMessages_customizeEmit01-1445321935284_infophone">
-																小于等于32个字符（包含0-9、-、（、）、顿号）</span> <span class="tip-remind"
-																style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_infophone_black">
-																小于等于32个字符（包含0-9、-、（、）、顿号）</span> <span class="tip-error"
-																style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_errphone">
-																联系电话应包括0-9、-、（、）、顿号，请重新填写 联系电话为必填项，请填写</span> <span
-																class="tip-error" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_nophone">
-																联系电话为必填项，请填写</span>
+																联系电话应包括0-9、-、（、）、顿号，请重新填写 联系电话为必填项，请填写</span> 
 														</div></td>
 												</tr>
 												<tr class="address">
@@ -245,74 +169,41 @@
 													<td><input type="hidden" id="isDisplayAddress"
 														value="0">
 														<div class="text-oper">
+														<span class="fontred">*</span>
 															<span class="fontnone">&nbsp;</span> <input
 																class="input input-gray" type="text" id="address"
-																name="address" value="" maxlength="200"
-																onfocus="FrontMessages_customizeEmit01.showinfo('FrontMessages_customizeEmit01-1445321935284_address')"
-																onblur="FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1445321935284'+'_referForm'),'address','FrontMessages_customizeEmit01-1445321935284','null','null')">
+																name="address" value="" maxlength="200">
 														</div>
-														<div class="text-tip">
-															<span class="tip-default"
-																id="FrontMessages_customizeEmit01-1445321935284_infoaddress">
-															</span> <span class="tip-remind" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_infoaddress_black">
-															</span> <span class="tip-error" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_noaddress">
-																联系地址为必填项，请填写</span> <span class="tip-error"
-																style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_erraddress">
-															</span>
-														</div></td>
+													</td>
 												</tr>
-												<tr class="verify">
-													<th>验证码：</th>
-													<td><div class="text-oper">
-															<span class="fontred">*</span> 
+												
+												<tr class="address">
+													<th>简历附件：</th>
+													<td><input type="hidden" id="file_url"
+														value="0">
+														<div class="text-oper">
+														<span class="fontred">*</span>
+															<span class="fontnone">&nbsp;</span> 
+																<form id="upload-form"  method="post" enctype="multipart/form-data" >
+																<input
+																class="input input-gray" type="file" id="file_url"  size="30"
+																name="file" value="22" maxlength="200" readonly="readonly"><span onclick="uploadfile()">上传</span>
+																</form>
 														</div>
-														<div class="text-tip">
-															<span class="tip-error" style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_noverifyCode">
-																验证码为必填项，请填写</span> <span class="tip-error"
-																style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_pastverifyCode">
-																验证码已过期，请重新输入</span> <span class="tip-error"
-																style="display: none;"
-																id="FrontMessages_customizeEmit01-1445321935284_errverifyCode">
-																验证码输入错误，请重新输入</span>
-														</div></td>
+														</td>
 												</tr>
-
+												
 												<tr class="button-position">
-													<th>&nbsp; <input type="hidden" id="compId"
-														name="compId"
-														value="FrontMessages_customizeEmit01-1445321935284">
-														<input type="hidden"
-														id="FrontMessages_customizeEmit01-1445321935284_newsId"
-														name="FrontMessages_customizeEmit01-1445321935284_newsId"
-														value=""> <input type="hidden"
-														id="FrontMessages_customizeEmit01-1445321935284_productId"
-														name="FrontMessages_customizeEmit01-1445321935284_productId"
-														value=""> <input type="hidden"
-														id="FrontMessages_customizeEmit01-1445321935284_downloadsId"
-														name="FrontMessages_customizeEmit01-1445321935284_downloadsId"
-														value=""> <input type="hidden"
-														id="FrontMessages_customizeEmit01-1445321935284_onlineId"
-														name="FrontMessages_customizeEmit01-1445321935284_onlineId"
-														value=""> <input type="hidden"
-														id="FrontMessages_customizeEmit01-1445321935284_membersarticleId" 
-														name="FrontMessages_customizeEmit01-1445321935284_membersarticleId"
-														value="">
-													</th>
+													<th></th>
 													<td><span class="fontnone">&nbsp;</span> <input
 														id="FrontMessages_customizeEmit01-1445321935284_submit"
-														title="发表留言" class="btn btn-com-01" type="button"
-														value="发表留言"
-														onclick="return FrontMessages_customizeEmit01.checkForm(document.getElementById('FrontMessages_customizeEmit01-1445321935284'+'_referForm'),'all','FrontMessages_customizeEmit01-1445321935284')">
+														title="申请" class="btn btn-com-01" type="button"
+														value="申请"
+														onclick="sumityingpin()">
 													</td>
 												</tr>
 											</tbody>
 										</table>
-									</form>
 								</div>
 
 
@@ -333,8 +224,73 @@
 	<!--InstanceEndEditable-->
 </div>
 <script type="text/javascript">
+function sumityingpin(){
+	   var messagesTitle=$("#messagesTitle").val();//应聘岗位
+	   var content=$("#content").val();//申请描述
+	   var author=$("#author").val();//申请人
+	   var phone=$("#phone").val();//联系电话
+	   var address=$("#address").val();//联系地址
+	   var sex=$('input:radio:checked').val();//性别
+	   var file_url=$("#file_url").val();//文件附件
+	   var reg_m=/1[3-8]\d{9}/;
+	   if(messagesTitle==""||messagesTitle==null){
+		  alert("请填写应聘岗位!");
+		   return false;
+	   }
+	   if(content==""||content==null){
+			  alert("请填写申请描述!");
+			   return false;
+		}
+	   if(author==""||author==null){
+			  alert("请填写申请人!");
+			   return false;
+		}
+	   if(phone==""||phone==null){
+			  alert("请填写联系电话!");
+			   return false;
+		}
+	   if(address==""||address==null){
+			  alert("请填写联系地址!");
+			   return false;
+		}
+	   if(sex==""||sex==null){
+			  alert("请选择性别!");
+			   return false;
+		}
+	   if(!reg_m.test(phone) || phone.length != 11){
+		   alert("手机号码格式错误!");
+		   return false;
+	   }
+	   if(file_url==""||file_url==null){
+		   alert("请上传附件!");
+		   return false;
+	   }
+	  $.ajax({
+		  	url : '${ctxPath}/portal/recruit/add',
+	        type : "POST",
+	        data:{"messagesTitle":messagesTitle,"content":content,"author":author,"phone":phone,"address":address,"sex":sex,"file_url":file_url},
+	        success : function(result) {
+	        	if (result.code == '0000') {
+	        		alert("添加成功!");
+	        	}else{
+	        		alert(result.msg);
+	        	}
+	        }
+	  }); 
+}
+function uploadfile(){
+	  $.ajax({
+		  url : '${ctxPath}/portal/recruit/upload',
+	        type : "POST",
+	        data:$('#upload-form').serialize(),
+	        success : function(result) {
+	        	console.log(result);
+	        	alert("ddsds");
+	        }
+	  }); 
+}
+
 $(function(){
-	//gotoPage("1","qyxw");
 	gotoPage1("1","consult");
 });
 function gotoPage1(p1,topicCode){ 

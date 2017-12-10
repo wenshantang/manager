@@ -11,7 +11,7 @@
 	<li class="content column-num1">
 		<div class="pic-module">
 			<div class="pic">
-				<a href="/products_detail/productId=321.html" title="${p.name}"
+				<a href="${ctxPath}/proone_detail?proId=${p.code}" title="${p.name}"
 					target="_self"> <img src="${p.img_small}"
 					id="FrontProducts_list01-1443168517235001001_321" alt=""
 					title="${p.name}" /></a>
@@ -25,13 +25,13 @@
 				<li class="code">
 					<h1>
 						<span>产品名称：</span> <strong> <a
-							href="/products_detail/productId=321.html" title="${p.name}"
+							href="${ctxPath}/proone_detail?proId=${p.code}" title="${p.name}"
 							target="_self"> ${p.name}</a>
 						</strong>
 					</h1>
 				</li>
 				<li class="number2"><span>产品编号：</span> <em class="focustext">
-						<a href="/products_detail/productId=321.html" title="${p.code}"
+						<a href="${ctxPath}/proone_detail?proId=${p.code}" title="${p.code}"
 						target="_self"> ${p.code}</a>
 				</em></li>
 			</ul>

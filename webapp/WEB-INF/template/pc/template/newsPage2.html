@@ -1,3 +1,9 @@
+<style>
+	.newstitle li span {
+    color: #999;
+    display: block;
+    }
+</style>
 							   <div class="comptitle_03">
 									<strong class="titlestyle_03"><%if(topicCode=='qyxw'){%>公司新闻<%}%>
       																<%if(topicCode=='gszx'){%>行业新闻<%}%><%if(topicCode=='consult'){%>招聘信息<%}%></strong>
@@ -10,7 +16,7 @@
 										<ul>
 											<li class="title">
 												<h3>
-													<a href="/news_detail/newsId=447.html"
+													<a href="${ctxPath}/articledetail?id=${article.id}&topicCode=${topicCode!}"
 														title="${article.title}" target="_self">
 														${article.title}</a>
 												</h3>
