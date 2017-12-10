@@ -10,13 +10,13 @@ Target Server Type    : MYSQL
 Target Server Version : 50519
 File Encoding         : 65001
 
-Date: 2017-11-26 22:10:12
+Date: 2017-12-10 21:43:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for `answer`
+-- Table structure for answer
 -- ----------------------------
 DROP TABLE IF EXISTS `answer`;
 CREATE TABLE `answer` (
@@ -56,7 +56,7 @@ INSERT INTO `answer` VALUES ('709620814895067136', '699847647941697536', '0', '0
 INSERT INTO `answer` VALUES ('709620885810724864', '699847647941697536', '0', '0', '有明确方向', 'c', null);
 
 -- ----------------------------
--- Table structure for `bank`
+-- Table structure for bank
 -- ----------------------------
 DROP TABLE IF EXISTS `bank`;
 CREATE TABLE `bank` (
@@ -73,7 +73,7 @@ CREATE TABLE `bank` (
 INSERT INTO `bank` VALUES ('1', '1', '1', '1');
 
 -- ----------------------------
--- Table structure for `browse_history`
+-- Table structure for browse_history
 -- ----------------------------
 DROP TABLE IF EXISTS `browse_history`;
 CREATE TABLE `browse_history` (
@@ -91,7 +91,7 @@ CREATE TABLE `browse_history` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `care`
+-- Table structure for care
 -- ----------------------------
 DROP TABLE IF EXISTS `care`;
 CREATE TABLE `care` (
@@ -110,7 +110,7 @@ CREATE TABLE `care` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cms_access_permission`
+-- Table structure for cms_access_permission
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_access_permission`;
 CREATE TABLE `cms_access_permission` (
@@ -128,7 +128,7 @@ CREATE TABLE `cms_access_permission` (
 INSERT INTO `cms_access_permission` VALUES ('605982104892469248', '必须登录才能访问', 'com.hnrich.portal.interceptor.AccountLoginAccessIntercept', '1', '必须登录才能访问');
 
 -- ----------------------------
--- Table structure for `cms_article`
+-- Table structure for cms_article
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_article`;
 CREATE TABLE `cms_article` (
@@ -188,7 +188,7 @@ INSERT INTO `cms_article` VALUES ('13', '922750089278644224', '0', '/consult/13'
 INSERT INTO `cms_article` VALUES ('14', '934777974037229568', '0', '/companydesc/14', '', '', '公司简介', '公司简介', null, null, '公司简介', '公司简介', '公司简介', '公司简介', '公司简介', '0', '公司简介', null, null, null, '', 'news', '1', '2017-11-26 21:45:16', 'admin1', null, null, null, 'admin1', '2017-11-26 21:44:15', '0', '', '公司简介', '公司简介');
 
 -- ----------------------------
--- Table structure for `cms_article_pic`
+-- Table structure for cms_article_pic
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_article_pic`;
 CREATE TABLE `cms_article_pic` (
@@ -203,7 +203,7 @@ CREATE TABLE `cms_article_pic` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cms_article_txt`
+-- Table structure for cms_article_txt
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_article_txt`;
 CREATE TABLE `cms_article_txt` (
@@ -233,7 +233,7 @@ INSERT INTO `cms_article_txt` VALUES ('13', '哈哈哈啊啊哈哈啊哈 啊', n
 INSERT INTO `cms_article_txt` VALUES ('14', '<table border=\"0\" cellpadding=\"0\" cellspacing=\"3\" style=\"width:847px;\" class=\"ke-zeroborder\">\r\n	<tbody>\r\n		<tr>\r\n			<td>\r\n				<div>\r\n					<span style=\"font-size:14px;\">&nbsp; &nbsp; &nbsp; &nbsp; \r\n					公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司司“双软”公司介绍公司介绍公司公司介绍公司介绍公司公司介绍公司介绍公司公司介绍公司介绍公司公司介绍公司介绍公司公司介绍公司介绍公司。</span>\r\n				</div>\r\n				<div>\r\n					<span style=\"font-size:14px;\">&nbsp; &nbsp; &nbsp; &nbsp;司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司</span>\r\n				</div>\r\n				<div>\r\n					<span style=\"font-size:14px;\">&nbsp; &nbsp; &nbsp; &nbsp; 司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司。</span>\r\n				</div>\r\n				<div>\r\n					<span style=\"font-size:14px;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-size:14px;\">司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司司公司介绍公司介绍公司</span>\r\n				</div>\r\n			</td>\r\n			<td>\r\n				<span style=\"font-size:14px;\">&nbsp;</span><img alt=\"\" src=\"picture/1a287dc3-f457-456c-a1f6-d9e779afb2da.jpg\" style=\"width:300px;height:220px;\" />\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>', null, null, null);
 
 -- ----------------------------
--- Table structure for `cms_banner`
+-- Table structure for cms_banner
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_banner`;
 CREATE TABLE `cms_banner` (
@@ -266,7 +266,7 @@ INSERT INTO `cms_banner` VALUES ('924228450188222464', 'banner2', 'banner2', '',
 INSERT INTO `cms_banner` VALUES ('924228752583131136', 'banner3', 'banner3', '', '0', '1', 'http://localhost:8080//upload/image/20171028/wfel6VheIrET902H.jpg', 'http://localhost:8080//upload/image/20171028/wfel6VheIrET902H.jpg', '', '', 'wonderfulrecommend', '1', '1', '2017-10-28 19:05:55', 'admin1');
 
 -- ----------------------------
--- Table structure for `cms_model`
+-- Table structure for cms_model
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_model`;
 CREATE TABLE `cms_model` (
@@ -295,7 +295,7 @@ CREATE TABLE `cms_model` (
 INSERT INTO `cms_model` VALUES ('news', '新闻', '0', '0', '0', '0', '1', null, '1', null, null, null, '新闻模板', '710727459744325632', '710727459744325632', null);
 
 -- ----------------------------
--- Table structure for `cms_model_attr`
+-- Table structure for cms_model_attr
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_model_attr`;
 CREATE TABLE `cms_model_attr` (
@@ -312,7 +312,7 @@ CREATE TABLE `cms_model_attr` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cms_properties`
+-- Table structure for cms_properties
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_properties`;
 CREATE TABLE `cms_properties` (
@@ -331,7 +331,7 @@ CREATE TABLE `cms_properties` (
 INSERT INTO `cms_properties` VALUES ('708903237258301440', 'openAccount', 'openAccount', 'openacco_folder', '开户文件目录', '1', '1');
 
 -- ----------------------------
--- Table structure for `cms_site_config`
+-- Table structure for cms_site_config
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_site_config`;
 CREATE TABLE `cms_site_config` (
@@ -352,7 +352,7 @@ CREATE TABLE `cms_site_config` (
 INSERT INTO `cms_site_config` VALUES ('888888888', '{\"html_meta_description\":\"基煜基金\",\"html_meta_keywords\":\"基煜基金\",\"html_meta_title\":\"基煜基金\",\"location\":\"\",\"simple_name\":\"基煜基金\",\"site_domain\":\"www.51huoniu.com\",\"site_name\":\"基煜基金\",\"visit_protocol\":\"https://\"}', '{\"fail_lock\":5,\"fail_show_authcode\":3,\"fail_time\":5,\"lock_time\":30,\"send_sms\":true,\"sms_content\":\"你的账户连续登录失败。【火牛高端理财】\"}', '{\"allow_reg\":true,\"email_activate\":false,\"email_content\":\"<div style=\\\"text-align:center;\\\">\\r\\n\\t<strong><span style=\\\"font-size:32px;background-color:#99BB00;\\\">感谢你注册火牛财富</span></strong> \\r\\n</div>\",\"email_subject\":\"感谢您注册火牛财富\",\"max_username\":20,\"min_username\":8,\"send_smscode\":true,\"sms_content\":\"\",\"smscode_format\":3}', '{\"email\":\"service@51huoniu.com\",\"encoding\":\"UTF-8\",\"memo\":\"火牛财富\",\"nick_name\":\"火牛财富\",\"originator\":\"火牛财富\",\"password\":\"110119120\",\"smtp_port\":\"25\",\"smtp_server\":\"mail.51huoniu.com\"}', '{\"realize_class_name\":\"com.hnrich.common.constant.ToOfficeSmsSender\"}', '{}', '0');
 
 -- ----------------------------
--- Table structure for `cms_template`
+-- Table structure for cms_template
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_template`;
 CREATE TABLE `cms_template` (
@@ -417,7 +417,7 @@ INSERT INTO `cms_template` VALUES ('934778691053424640', 'qiyewenhua', null, '/p
 INSERT INTO `cms_template` VALUES ('934778835531702272', 'gongsizizhi', null, '/pc/template/gongsizizhi.html', '710666272982585344', '1', '<!DOCTYPE HTML>\r\n<html>\r\n<%include(\"/pc/common/meta.html\"){}%>\r\n<link href=\"${static_ctx}/portal/css/page_comcontent_detail.min.css\"  rel=\"stylesheet\" type=\"text/css\" />\r\n<body id=\"index\">\r\n	<div class=\"pageWidth\" id=\"box_root\">\r\n		<div id=\"box_top\">\r\n			<%include(\"/pc/common/header.html\",{flag:\"index\"}){}%>\r\n			<div id=\"box_top_sub3\">\r\n				<div  class=\"columnSpace\"\r\n					id=\"elem-FrontPublic_slideShow01-1441866455619yeneiban\" >\r\n				</div>\r\n			</div>\r\n		</div>\r\n		  <div id=\"box_main\"> \r\n        <!--InstanceBeginEditable name=\"box_main\"-->  \r\n        <div id=\"box_main_sub1\"> \r\n          <div id=\"box_main_sub1_sub1\"> \r\n            <div id=\"box_main_sub1_sub1_sub1\"> \r\n              <div class=\"clearBoth\"></div>  \r\n              <div xmlns=\"\" class=\"columnSpace\" id=\"elem-FrontColumns_navigation01-1442996227449\" name=\"栏目导航\">  \r\n\r\n<!-- 装饰器样式开始 -->\r\n<div class=\"border_02\"> \r\n  <div class=\"border_02-topr\">\r\n    <div class=\"border_02-topl\">\r\n    </div>\r\n  </div>\r\n  <div class=\"border_02-mid\">\r\n\r\n  </div> \r\n</div>\r\n<!-- 装饰器样式结束 -->  \r\n              </div>\r\n            </div>  \r\n            <div id=\"box_main_sub1_sub1_sub2\"> \r\n              <div xmlns=\"\" class=\"columnSpace\" id=\"elem-FrontSpecifies_show01-1442222513547\" name=\"说明页\">  \r\n                <div id=\"FrontSpecifies_show01-1442222513547\" class=\"FrontSpecifies_show01-d3_c1\"><div class=\"describe htmledit\">\r\n       <p>\r\n	　</p></div>\r\n</div> \r\n              </div>\r\n            </div> \r\n          </div>  \r\n          <div id=\"box_main_sub1_sub2\"> \r\n            <div xmlns=\"\" class=\"columnSpace\" id=\"elem-FrontComContent_detail01-144222249682001\" name=\"通用内容详细信息\">  \r\n              <!-- 装饰器样式开始 -->\r\n<div class=\"border_03\">\r\n  <div class=\"border_03-topr\">\r\n    <div class=\"border_03-topl\">\r\n    </div>\r\n  </div>\r\n  <div class=\"border_03-mid\">\r\n      <div class=\"borderContent\"><div id=\"FrontComContent_detail01-144222249682001\" class=\"FrontComContent_detail01-d1_c1\"><div class=\"comptitle_03\"><strong class=\"titlestyle_03\">公司资质</strong></div><div class=\"content\">\r\n  	<div class=\"describe htmledit\">\r\n  		<div class=\"FrontComContent_detail01-144222249682001_htmlbreak\" id=\"FrontComContent_detail01-144222249682001_cont_1\"\r\n				style=\"display: block;\"><p>\r\n	 </p>\r\n 		 <#article_content id=\'14\';content>\r\n			${content}\r\n		 </#article_content>\r\n</div>\r\n		</div>\r\n  </div>\r\n  </div>\r\n	  <div class=\"clearBoth\"></div></div>\r\n  </div>\r\n  <div class=\"border_03-footerr\">\r\n    <div class=\"border_03-footerl\"></div>\r\n  </div>\r\n</div>\r\n<!-- 装饰器样式结束 --> \r\n            </div>\r\n          </div>  \r\n          <div class=\"clearBoth\"></div> \r\n        </div>  \r\n        <div id=\"box_main_sub2\"></div>  \r\n        <!--InstanceEndEditable--> \r\n      </div>  \r\n		<%include(\"/pc/common/footer.html\"){}%>\r\n	</div>\r\n	<script  src=\'${static_ctx}/portal/js/visittrack_1.js\' type=\'text/javascript\'></script>\r\n</body>\r\n</html> ', '2017-11-26 21:40:16', 'admin1', null, null);
 
 -- ----------------------------
--- Table structure for `cms_topic`
+-- Table structure for cms_topic
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_topic`;
 CREATE TABLE `cms_topic` (
@@ -483,7 +483,7 @@ INSERT INTO `cms_topic` VALUES ('934779054375714816', '企业文化', '企业文
 INSERT INTO `cms_topic` VALUES ('934779280409280512', '公司资质', '公司资质', '公司资质', 'companyaptitude', null, '/companyaptitude', '', '1', '1', '710666702877745152', null, null, null, null, null, '公司资质', '公司资质', '公司资质', null, '', '934778835531702272', null, '0', '0', null, '0', '0', '_blank', '20', null, null);
 
 -- ----------------------------
--- Table structure for `cms_topic_article`
+-- Table structure for cms_topic_article
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_topic_article`;
 CREATE TABLE `cms_topic_article` (
@@ -496,7 +496,7 @@ CREATE TABLE `cms_topic_article` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cms_topic_attr`
+-- Table structure for cms_topic_attr
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_topic_attr`;
 CREATE TABLE `cms_topic_attr` (
@@ -514,7 +514,7 @@ CREATE TABLE `cms_topic_attr` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `credit_extension_con`
+-- Table structure for credit_extension_con
 -- ----------------------------
 DROP TABLE IF EXISTS `credit_extension_con`;
 CREATE TABLE `credit_extension_con` (
@@ -548,7 +548,7 @@ INSERT INTO `credit_extension_con` VALUES ('707141400087560192', '1', '1', '0003
 INSERT INTO `credit_extension_con` VALUES ('709267026799144960', '1', '2', '001985', '', '2016-03-14 14:36:51', null, '0', null);
 
 -- ----------------------------
--- Table structure for `custforopera_manger`
+-- Table structure for custforopera_manger
 -- ----------------------------
 DROP TABLE IF EXISTS `custforopera_manger`;
 CREATE TABLE `custforopera_manger` (
@@ -568,7 +568,7 @@ INSERT INTO `custforopera_manger` VALUES ('0002', '1', '693994946019946496', nul
 INSERT INTO `custforopera_manger` VALUES ('700238317081022464', '1', '690400639910256640', '20160218163959', null);
 
 -- ----------------------------
--- Table structure for `cust_manger`
+-- Table structure for cust_manger
 -- ----------------------------
 DROP TABLE IF EXISTS `cust_manger`;
 CREATE TABLE `cust_manger` (
@@ -598,7 +598,7 @@ INSERT INTO `cust_manger` VALUES ('700612244295479296', null, 'test1', null, '',
 INSERT INTO `cust_manger` VALUES ('706330992690958336', null, '周五', null, '2016-03-06', '0', '13221322232', '1032@qq.com', '2016-03-06', '1', '20160306121006', null, null);
 
 -- ----------------------------
--- Table structure for `dividend_info`
+-- Table structure for dividend_info
 -- ----------------------------
 DROP TABLE IF EXISTS `dividend_info`;
 CREATE TABLE `dividend_info` (
@@ -629,7 +629,7 @@ CREATE TABLE `dividend_info` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `file`
+-- Table structure for file
 -- ----------------------------
 DROP TABLE IF EXISTS `file`;
 CREATE TABLE `file` (
@@ -660,7 +660,7 @@ INSERT INTO `file` VALUES ('706312432233361408', '694025606138695680', 'http://s
 INSERT INTO `file` VALUES ('706312581441966080', '704192669822693376', 'http://static.51huoniu.com//upload/image/20160118/pI4GneBnMN5iSi8m.jpg', '0', null, '0', '2016-03-06 10:56:56', null, '0', null, null);
 
 -- ----------------------------
--- Table structure for `fund_info`
+-- Table structure for fund_info
 -- ----------------------------
 DROP TABLE IF EXISTS `fund_info`;
 CREATE TABLE `fund_info` (
@@ -703,7 +703,7 @@ CREATE TABLE `fund_info` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `hold_info`
+-- Table structure for hold_info
 -- ----------------------------
 DROP TABLE IF EXISTS `hold_info`;
 CREATE TABLE `hold_info` (
@@ -736,7 +736,7 @@ CREATE TABLE `hold_info` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `inform`
+-- Table structure for inform
 -- ----------------------------
 DROP TABLE IF EXISTS `inform`;
 CREATE TABLE `inform` (
@@ -754,7 +754,7 @@ CREATE TABLE `inform` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `inform_record`
+-- Table structure for inform_record
 -- ----------------------------
 DROP TABLE IF EXISTS `inform_record`;
 CREATE TABLE `inform_record` (
@@ -789,7 +789,7 @@ INSERT INTO `inform_record` VALUES ('338189c8084e4a41b585f018e5e18515', null, '\
 INSERT INTO `inform_record` VALUES ('339fa5a666fc45e4b90aeae50eaf9b4c', null, '15921612156', '您的短信验证码为：534271,请在五分钟内完成输入!', '2015-12-18 11:06:33', '2015-12-18 11:06:33', null, 'new', '0', null, '1', '0,成功', '1', '0');
 
 -- ----------------------------
--- Table structure for `investor_finpd`
+-- Table structure for investor_finpd
 -- ----------------------------
 DROP TABLE IF EXISTS `investor_finpd`;
 CREATE TABLE `investor_finpd` (
@@ -810,7 +810,7 @@ INSERT INTO `investor_finpd` VALUES ('4', '0', '理财产品4号', '700567307712
 INSERT INTO `investor_finpd` VALUES ('5', '1', '自营产品', '700567307712466944');
 
 -- ----------------------------
--- Table structure for `investor_org`
+-- Table structure for investor_org
 -- ----------------------------
 DROP TABLE IF EXISTS `investor_org`;
 CREATE TABLE `investor_org` (
@@ -870,7 +870,7 @@ INSERT INTO `investor_org` VALUES ('707099605577428992', '12', '机构全称', '
 INSERT INTO `investor_org` VALUES ('707099741067915264', '13', '机构全称', '机构简称', '2', null, '1234567', '2016-03-08', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2016-03-08 15:04:50', null, '0', '628471986294353920', '1', '628471986294353920', '628471986294353920');
 
 -- ----------------------------
--- Table structure for `log`
+-- Table structure for log
 -- ----------------------------
 DROP TABLE IF EXISTS `log`;
 CREATE TABLE `log` (
@@ -1073,7 +1073,7 @@ INSERT INTO `log` VALUES ('708918499987402752', '1', '0', '1', '变更操作员�
 INSERT INTO `log` VALUES ('708918544013131776', '1', '0', '1', '变更操作员状态成功', '628471986294353920', '2016-03-13 15:32:06');
 
 -- ----------------------------
--- Table structure for `mf_comps`
+-- Table structure for mf_comps
 -- ----------------------------
 DROP TABLE IF EXISTS `mf_comps`;
 CREATE TABLE `mf_comps` (
@@ -1109,7 +1109,7 @@ CREATE TABLE `mf_comps` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `mf_fund`
+-- Table structure for mf_fund
 -- ----------------------------
 DROP TABLE IF EXISTS `mf_fund`;
 CREATE TABLE `mf_fund` (
@@ -1153,7 +1153,7 @@ CREATE TABLE `mf_fund` (
 INSERT INTO `mf_fund` VALUES ('1', '测试产品全称', '测试产品简称', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 
 -- ----------------------------
--- Table structure for `openacc_bankinfo`
+-- Table structure for openacc_bankinfo
 -- ----------------------------
 DROP TABLE IF EXISTS `openacc_bankinfo`;
 CREATE TABLE `openacc_bankinfo` (
@@ -1173,7 +1173,7 @@ INSERT INTO `openacc_bankinfo` VALUES ('124', '农银', '6225501308384422', '1',
 INSERT INTO `openacc_bankinfo` VALUES ('125', '民生', '6225501308384433', '1', '006');
 
 -- ----------------------------
--- Table structure for `openacc_info`
+-- Table structure for openacc_info
 -- ----------------------------
 DROP TABLE IF EXISTS `openacc_info`;
 CREATE TABLE `openacc_info` (
@@ -1200,7 +1200,7 @@ INSERT INTO `openacc_info` VALUES ('00002', '690400639910256640', '7005673077124
 INSERT INTO `openacc_info` VALUES ('00003', '693994946019946496', '700567307712466944', '125', '52003', '80000221', '2015-02-25 23:53:12', '2015-02-26 23:53:12', 'dacheng', '52003', '0', '51430012');
 
 -- ----------------------------
--- Table structure for `open_confirm`
+-- Table structure for open_confirm
 -- ----------------------------
 DROP TABLE IF EXISTS `open_confirm`;
 CREATE TABLE `open_confirm` (
@@ -1229,7 +1229,7 @@ CREATE TABLE `open_confirm` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `product`
+-- Table structure for product
 -- ----------------------------
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
@@ -1251,7 +1251,7 @@ INSERT INTO `product` VALUES ('692619604112031744', '161211', null, '', '1', '20
 INSERT INTO `product` VALUES ('692882856167084032', '000499', null, '', '0', '2016-01-29 09:32:00', null, null);
 
 -- ----------------------------
--- Table structure for `product_acount_confim`
+-- Table structure for product_acount_confim
 -- ----------------------------
 DROP TABLE IF EXISTS `product_acount_confim`;
 CREATE TABLE `product_acount_confim` (
@@ -1277,7 +1277,7 @@ INSERT INTO `product_acount_confim` VALUES ('2', '1', '1', '1', '1', '1', '1', '
 INSERT INTO `product_acount_confim` VALUES ('er', '1', '1', '1', '1', '0000', '11', '1');
 
 -- ----------------------------
--- Table structure for `product_appoint`
+-- Table structure for product_appoint
 -- ----------------------------
 DROP TABLE IF EXISTS `product_appoint`;
 CREATE TABLE `product_appoint` (
@@ -1300,7 +1300,7 @@ INSERT INTO `product_appoint` VALUES ('1', '0', '2015-01-22 13:12:55', '69040063
 INSERT INTO `product_appoint` VALUES ('2', '0', '2015-01-22 13:00:00', '690400639910256640', '2016-03-10 10:35:03', '3', '100.00', '2015-01-22 13:12:15', null);
 
 -- ----------------------------
--- Table structure for `product_buy`
+-- Table structure for product_buy
 -- ----------------------------
 DROP TABLE IF EXISTS `product_buy`;
 CREATE TABLE `product_buy` (
@@ -1341,7 +1341,7 @@ INSERT INTO `product_buy` VALUES ('2', 'yyy', '1', '1.00', '1.00', '18.00', '18.
 INSERT INTO `product_buy` VALUES ('3', 'zzz', '1', '1.00', '1.00', '23.00', '23.00', '690400639910256640', '700567307712466944', '689706203264106496', '2016-02-17 00:00:00', '2016-02-19 10:00:00', '1', '1', '1', '1.00', '1', '1', '1', '1', '1', '1', '1', null, null, '');
 
 -- ----------------------------
--- Table structure for `product_manager`
+-- Table structure for product_manager
 -- ----------------------------
 DROP TABLE IF EXISTS `product_manager`;
 CREATE TABLE `product_manager` (
@@ -1367,7 +1367,7 @@ INSERT INTO `product_manager` VALUES ('690115283897700352', null, null, '8008580
 INSERT INTO `product_manager` VALUES ('701616821009735680', null, null, '80513967', '1', '2016-02-22 11:57:55', '1', '2016-02-22 11:58:12', '2016-02-22 11:57:40', null);
 
 -- ----------------------------
--- Table structure for `product_notradeday`
+-- Table structure for product_notradeday
 -- ----------------------------
 DROP TABLE IF EXISTS `product_notradeday`;
 CREATE TABLE `product_notradeday` (
@@ -1382,7 +1382,7 @@ CREATE TABLE `product_notradeday` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `product_recommend`
+-- Table structure for product_recommend
 -- ----------------------------
 DROP TABLE IF EXISTS `product_recommend`;
 CREATE TABLE `product_recommend` (
@@ -1410,7 +1410,7 @@ INSERT INTO `product_recommend` VALUES ('707756624725897216', '202009', '1', '62
 INSERT INTO `product_recommend` VALUES ('707756624728981504', '000001', '1', '628471986294353920', '12.00', null, '2', '2016-03-10 10:35:03', null);
 
 -- ----------------------------
--- Table structure for `product_recommend_hot`
+-- Table structure for product_recommend_hot
 -- ----------------------------
 DROP TABLE IF EXISTS `product_recommend_hot`;
 CREATE TABLE `product_recommend_hot` (
@@ -1431,7 +1431,7 @@ INSERT INTO `product_recommend_hot` VALUES ('709301988314451968', '001787', '0',
 INSERT INTO `product_recommend_hot` VALUES ('709302016073867264', '002240', '0', '0');
 
 -- ----------------------------
--- Table structure for `product_redeem`
+-- Table structure for product_redeem
 -- ----------------------------
 DROP TABLE IF EXISTS `product_redeem`;
 CREATE TABLE `product_redeem` (
@@ -1466,7 +1466,7 @@ INSERT INTO `product_redeem` VALUES ('2', 'yyy', '1', '2.00', '2.00', '1.00', '1
 INSERT INTO `product_redeem` VALUES ('3', 'zzz', '1', '2.00', '2.00', '3.00', '3.00', '1.50', '690400639910256640', '700567307712466944', '689706203264106496', '2016-02-19 00:00:00', '2016-02-19 08:00:00', '2', '2016-02-19 00:00:00', null, null, null, null, null);
 
 -- ----------------------------
--- Table structure for `product_self`
+-- Table structure for product_self
 -- ----------------------------
 DROP TABLE IF EXISTS `product_self`;
 CREATE TABLE `product_self` (
@@ -1510,7 +1510,7 @@ INSERT INTO `product_self` VALUES ('8', 'yyy', '1', '12.00', '12.00', '0.00', '1
 INSERT INTO `product_self` VALUES ('9', 'yyy', '2', '13.00', '13.00', '0.00', '13.00', '0.00', '0', '0', '2016-02-21', '6.00', '2.00', '1.00', '0000', null, '690400639910256640', '700567307712466944', '689706203264106496', '0', '0.013', '2016-02-20 00:00:00', null);
 
 -- ----------------------------
--- Table structure for `qualification_certificate`
+-- Table structure for qualification_certificate
 -- ----------------------------
 DROP TABLE IF EXISTS `qualification_certificate`;
 CREATE TABLE `qualification_certificate` (
@@ -1527,7 +1527,7 @@ CREATE TABLE `qualification_certificate` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `questionnaire`
+-- Table structure for questionnaire
 -- ----------------------------
 DROP TABLE IF EXISTS `questionnaire`;
 CREATE TABLE `questionnaire` (
@@ -1550,7 +1550,7 @@ INSERT INTO `questionnaire` VALUES ('699847584202952704', '6', '贵公司偏好�
 INSERT INTO `questionnaire` VALUES ('699847647941697536', '7', '未来五年中，贵公司预计可投资资金量会如何变化', '1');
 
 -- ----------------------------
--- Table structure for `redeem_confirm`
+-- Table structure for redeem_confirm
 -- ----------------------------
 DROP TABLE IF EXISTS `redeem_confirm`;
 CREATE TABLE `redeem_confirm` (
@@ -1589,7 +1589,7 @@ CREATE TABLE `redeem_confirm` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `risk_answer`
+-- Table structure for risk_answer
 -- ----------------------------
 DROP TABLE IF EXISTS `risk_answer`;
 CREATE TABLE `risk_answer` (
@@ -1638,7 +1638,7 @@ INSERT INTO `risk_answer` VALUES ('709928045723656192', '699847491311714304', '7
 INSERT INTO `risk_answer` VALUES ('709928045725036544', '699847647941697536', '700567307712466944', 'a', '2016-03-16 10:23:30', null, '0');
 
 -- ----------------------------
--- Table structure for `risk_option`
+-- Table structure for risk_option
 -- ----------------------------
 DROP TABLE IF EXISTS `risk_option`;
 CREATE TABLE `risk_option` (
@@ -1654,7 +1654,7 @@ CREATE TABLE `risk_option` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `risk_questions`
+-- Table structure for risk_questions
 -- ----------------------------
 DROP TABLE IF EXISTS `risk_questions`;
 CREATE TABLE `risk_questions` (
@@ -1675,7 +1675,7 @@ CREATE TABLE `risk_questions` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `risk_result`
+-- Table structure for risk_result
 -- ----------------------------
 DROP TABLE IF EXISTS `risk_result`;
 CREATE TABLE `risk_result` (
@@ -1693,7 +1693,7 @@ CREATE TABLE `risk_result` (
 INSERT INTO `risk_result` VALUES ('709920281252130816', '700567307712466944', '8', '2', '2016-03-16 09:52:39');
 
 -- ----------------------------
--- Table structure for `sys_apidoc`
+-- Table structure for sys_apidoc
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_apidoc`;
 CREATE TABLE `sys_apidoc` (
@@ -1745,7 +1745,7 @@ INSERT INTO `sys_apidoc` VALUES ('710284283259437056', '基金净值同期指数
 INSERT INTO `sys_apidoc` VALUES ('710284284426670080', '交易限额', '查询', '0', 'http://121.43.71.81/api/query/queryFundLimit', '查询交易限额', 'JSON', 'POST', '[{\"memo\":\"基金代码\",\"default_val\":null,\"name\":\"fundcode\",\"type_size\":\"string\",\"must\":\"true\"}]', null, null, '[]');
 
 -- ----------------------------
--- Table structure for `sys_dict`
+-- Table structure for sys_dict
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_dict`;
 CREATE TABLE `sys_dict` (
@@ -1765,7 +1765,7 @@ CREATE TABLE `sys_dict` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `sys_file`
+-- Table structure for sys_file
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_file`;
 CREATE TABLE `sys_file` (
@@ -1803,7 +1803,7 @@ INSERT INTO `sys_file` VALUES ('929328086470066176', 'QQ截图20171109131321.png
 INSERT INTO `sys_file` VALUES ('929328127393103872', 'QQ截图20171109131321.png', 'GBFYJfVFbC91D2hO.png', '/upload/image/20171111', 'image', 'http://localhost:8080//upload/image/20171111/GBFYJfVFbC91D2hO.png', '13439', 'admin1', '2017-11-11 20:41:06', '0');
 
 -- ----------------------------
--- Table structure for `sys_ftpserver`
+-- Table structure for sys_ftpserver
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_ftpserver`;
 CREATE TABLE `sys_ftpserver` (
@@ -1830,7 +1830,7 @@ CREATE TABLE `sys_ftpserver` (
 INSERT INTO `sys_ftpserver` VALUES ('636042257339510784', '127.0.0.1', 'static', '21', '123', '123', '1', '1', 'http://localhost:8080/', '1', '', '/', 'UTF-8', '0');
 
 -- ----------------------------
--- Table structure for `sys_left_menu`
+-- Table structure for sys_left_menu
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_left_menu`;
 CREATE TABLE `sys_left_menu` (
@@ -1922,7 +1922,7 @@ INSERT INTO `sys_left_menu` VALUES ('920180692669210624', '文章', '88888888888
 INSERT INTO `sys_left_menu` VALUES ('924496135123189760', '产品管理', '628466500442517504', '924494653406920704', null, '1', null, '');
 
 -- ----------------------------
--- Table structure for `sys_managerconfig`
+-- Table structure for sys_managerconfig
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_managerconfig`;
 CREATE TABLE `sys_managerconfig` (
@@ -1947,7 +1947,7 @@ CREATE TABLE `sys_managerconfig` (
 INSERT INTO `sys_managerconfig` VALUES ('Aresoft', '/resource-injar/image?t=logo.png', '/resource-injar/image?t=/favicon.ico', '/admin/center', '1', '/resource-injar/image?t=logo.png', '/resource-injar/image?t=logo.png', '0', 'admin', 'F83AC316F83BC312C48EA22F885AD5A0', 'super', '379A1057F1FC6F8A951601F094E07A54', '{\"allow_upload\":1,\"save_dir\":\"upload\",\"save_type\":\"1\",\"upload_setting\":{\"music\":{\"fileType\":\"music\",\"ftpServers\":[\"636042257339510784\"],\"maxSize\":10240000,\"suffix\":[\"mp3\"]},\"file\":{\"fileType\":\"file\",\"ftpServers\":[\"636042257339510784\"],\"maxSize\":10240000,\"suffix\":[\"zip\",\"rar\",\"apk\",\"ipa\"]},\"image\":{\"fileType\":\"image\",\"ftpServers\":[\"636042257339510784\"],\"maxSize\":10240,\"suffix\":[\"gif\",\"bmp\",\"jpeg\",\"jpg\",\"png\",\"JPG\",\"PNG\",\"JPEG\",\"BMP\",\"GIF\"]},\"media\":{\"fileType\":\"media\",\"ftpServers\":[\"636042257339510784\"],\"maxSize\":10240000,\"suffix\":[\"flv\"]}}}');
 
 -- ----------------------------
--- Table structure for `sys_monitor`
+-- Table structure for sys_monitor
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_monitor`;
 CREATE TABLE `sys_monitor` (
@@ -22562,7 +22562,7 @@ INSERT INTO `sys_monitor` VALUES ('2015-11-15 23:58', '29', '15');
 INSERT INTO `sys_monitor` VALUES ('2015-11-15 23:59', '70', '29');
 
 -- ----------------------------
--- Table structure for `sys_msg_template`
+-- Table structure for sys_msg_template
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_msg_template`;
 CREATE TABLE `sys_msg_template` (
@@ -22586,7 +22586,7 @@ INSERT INTO `sys_msg_template` VALUES ('694780469291786240', '4', '44444', '2', 
 INSERT INTO `sys_msg_template` VALUES ('695056752755294208', '11', '1222', '2', '122', null, '22');
 
 -- ----------------------------
--- Table structure for `sys_resource`
+-- Table structure for sys_resource
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_resource`;
 CREATE TABLE `sys_resource` (
@@ -22718,7 +22718,7 @@ INSERT INTO `sys_resource` VALUES ('924495480340369408', '删除产品', '/admin
 INSERT INTO `sys_resource` VALUES ('924495653742567424', '产品审核', '/admin/product/audit', '产品审核', '924492848428589056', null, '');
 
 -- ----------------------------
--- Table structure for `sys_role`
+-- Table structure for sys_role
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_role`;
 CREATE TABLE `sys_role` (
@@ -22736,7 +22736,7 @@ INSERT INTO `sys_role` VALUES ('628472255799357440', 'Audit', '审核员', '审�
 INSERT INTO `sys_role` VALUES ('636093177158955008', 'manger', '服务经理', '服务经理');
 
 -- ----------------------------
--- Table structure for `sys_role_resource`
+-- Table structure for sys_role_resource
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_role_resource`;
 CREATE TABLE `sys_role_resource` (
@@ -22860,7 +22860,7 @@ INSERT INTO `sys_role_resource` VALUES ('598735761148997632', '92449548034036940
 INSERT INTO `sys_role_resource` VALUES ('598735761148997632', '924495653742567424');
 
 -- ----------------------------
--- Table structure for `sys_sub`
+-- Table structure for sys_sub
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_sub`;
 CREATE TABLE `sys_sub` (
@@ -22881,7 +22881,7 @@ CREATE TABLE `sys_sub` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `sys_user`
+-- Table structure for sys_user
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user`;
 CREATE TABLE `sys_user` (
@@ -22905,7 +22905,7 @@ INSERT INTO `sys_user` VALUES ('646148642760814592', 'managerA', 'managerA', '96
 INSERT INTO `sys_user` VALUES ('646174430256164864', 'managerB', 'managerB', '96E79218965EB72C92A549DD5A330112', '13444444444', '1@163.com', '1');
 
 -- ----------------------------
--- Table structure for `sys_user_role`
+-- Table structure for sys_user_role
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user_role`;
 CREATE TABLE `sys_user_role` (
@@ -22924,7 +22924,7 @@ INSERT INTO `sys_user_role` VALUES ('628471986294353920', '598735761148997632');
 INSERT INTO `sys_user_role` VALUES ('628471986294353920', '628472255799357440');
 
 -- ----------------------------
--- Table structure for `tb_product_info`
+-- Table structure for tb_product_info
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_product_info`;
 CREATE TABLE `tb_product_info` (
@@ -22956,7 +22956,29 @@ INSERT INTO `tb_product_info` VALUES ('4', '21', '21', '21', '1', '2', '1', '哈
 INSERT INTO `tb_product_info` VALUES ('5', '90', '看', '简介', '1', '1', '3', '哈哈', 'http://localhost:8080//upload/image/20171111/pTuPyesSwyzG8KEn.png', 'http://localhost:8080//upload/image/20171111/GBFYJfVFbC91D2hO.png', '628471986294353920', '2017-11-11 21:21:29', '628471986294353920', '2017-11-11 20:41:12', '2017-11-11 21:21:29', '1');
 
 -- ----------------------------
--- Table structure for `template`
+-- Table structure for tb_recruit_info
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_recruit_info`;
+CREATE TABLE `tb_recruit_info` (
+  `id` varchar(30) NOT NULL,
+  `messagesTitle` varchar(100) DEFAULT NULL COMMENT '应聘岗位',
+  `content` varchar(500) DEFAULT NULL COMMENT '申请描述',
+  `author` varchar(100) DEFAULT NULL COMMENT '申请人',
+  `phone` varchar(20) DEFAULT NULL COMMENT '联系电话',
+  `address` varchar(100) DEFAULT NULL COMMENT '联系地址',
+  `sex` varchar(2) DEFAULT NULL COMMENT '性别',
+  `file_url` varchar(100) DEFAULT NULL COMMENT '文件附件',
+  `create_time` varchar(30) DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tb_recruit_info
+-- ----------------------------
+INSERT INTO `tb_recruit_info` VALUES ('ouGu8q4rAXEyNhJf', '21', '21', '21', '13816331234', '21', '0', '0', '2017-12-10 21:36:42');
+
+-- ----------------------------
+-- Table structure for template
 -- ----------------------------
 DROP TABLE IF EXISTS `template`;
 CREATE TABLE `template` (
@@ -22971,7 +22993,7 @@ CREATE TABLE `template` (
 INSERT INTO `template` VALUES ('699820351713423360', '0', 'http://192.168.199.110//upload/image/20160217/zlDDzaf5TJXKPReN.png');
 
 -- ----------------------------
--- Table structure for `trade_confirm`
+-- Table structure for trade_confirm
 -- ----------------------------
 DROP TABLE IF EXISTS `trade_confirm`;
 CREATE TABLE `trade_confirm` (
@@ -23012,7 +23034,7 @@ CREATE TABLE `trade_confirm` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_basic`
+-- Table structure for user_basic
 -- ----------------------------
 DROP TABLE IF EXISTS `user_basic`;
 CREATE TABLE `user_basic` (
@@ -23060,7 +23082,7 @@ INSERT INTO `user_basic` VALUES ('706761759006089216', '男', '62d40812e76dedc0'
 INSERT INTO `user_basic` VALUES ('707083465085603840', '男', 'dcb2a9f9d7b7c6bc', '18221019707', '0', '342224199205161934', '20160308', 'zhou', '704499035851304960', '', '123@11.com', '', '', '', '', null, '0', '20160308 14:00:09', '20160308 14:09:56', '0', null, '1', null, '628471986294353920', '628471986294353920');
 
 -- ----------------------------
--- Table structure for `u_history`
+-- Table structure for u_history
 -- ----------------------------
 DROP TABLE IF EXISTS `u_history`;
 CREATE TABLE `u_history` (
@@ -23083,7 +23105,7 @@ CREATE TABLE `u_history` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `web_log`
+-- Table structure for web_log
 -- ----------------------------
 DROP TABLE IF EXISTS `web_log`;
 CREATE TABLE `web_log` (
@@ -23104,7 +23126,7 @@ INSERT INTO `web_log` VALUES ('21', '690400639910256640', '2016-01-23 21:00:00',
 INSERT INTO `web_log` VALUES ('690400639910256641', '690400639910256640', '2016-01-29 12:23:15', '0', '0', '1', '');
 
 -- ----------------------------
--- View structure for `tradels`
+-- View structure for tradels
 -- ----------------------------
 DROP VIEW IF EXISTS `tradels`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`fhcf`@`%` SQL SECURITY DEFINER VIEW `tradels` AS select `p1`.`account` AS `account`,`p1`.`pd_code` AS `pd_code`,`p1`.`status` AS `status`,`p1`.`money` AS `money`,`p1`.`confim_money` AS `confim_money`,`p1`.`apply_time` AS `apply_time`,`p1`.`confim_time` AS `confim_time`,`p1`.`o_id` AS `o_id`,`p1`.`u_id` AS `u_id` from `product_redeem` `p1` union all select `p2`.`account` AS `account`,`p2`.`pd_code` AS `pd_code`,`p2`.`business_type` AS `business_type`,`p2`.`money` AS `money`,`p2`.`confim_money` AS `confim_money`,`p2`.`apply_time` AS `apply_time`,`p2`.`confim_time` AS `confim_time`,`p2`.`o_id` AS `o_id`,`p2`.`u_id` AS `u_id` from `product_buy` `p2` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`fhcf`@`%` SQL SECURITY DEFINER  VIEW `tradels` AS select `p1`.`account` AS `account`,`p1`.`pd_code` AS `pd_code`,`p1`.`status` AS `status`,`p1`.`money` AS `money`,`p1`.`confim_money` AS `confim_money`,`p1`.`apply_time` AS `apply_time`,`p1`.`confim_time` AS `confim_time`,`p1`.`o_id` AS `o_id`,`p1`.`u_id` AS `u_id` from `product_redeem` `p1` union all select `p2`.`account` AS `account`,`p2`.`pd_code` AS `pd_code`,`p2`.`business_type` AS `business_type`,`p2`.`money` AS `money`,`p2`.`confim_money` AS `confim_money`,`p2`.`apply_time` AS `apply_time`,`p2`.`confim_time` AS `confim_time`,`p2`.`o_id` AS `o_id`,`p2`.`u_id` AS `u_id` from `product_buy` `p2` ;
