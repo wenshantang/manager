@@ -170,26 +170,19 @@
 														value="0">
 														<div class="text-oper">
 														<span class="fontred">*</span>
-															<span class="fontnone">&nbsp;</span> <input
-																class="input input-gray" type="text" id="address"
-																name="address" value="" maxlength="200">
+															<span class="fontnone">&nbsp;</span> <textarea
+																class="input input-gray"  id="address" style="width: 500px;height: 30px;"
+																name="address"  maxlength="200"></textarea>
 														</div>
 													</td>
 												</tr>
 												
 												<tr class="address">
 													<th>简历附件：</th>
-													<td><input type="hidden" id="file_url"
-														value="0">
-														<div class="text-oper">
-														<span class="fontred">*</span>
-															<span class="fontnone">&nbsp;</span> 
-																<form id="upload-form"  method="post" enctype="multipart/form-data" >
-																<input
-																class="input input-gray" type="file" id="file_url"  size="30"
-																name="file" value="22" maxlength="200" readonly="readonly"><span onclick="uploadfile()">上传</span>
-																</form>
-														</div>
+													<td><span class="fontred">*</span> 
+													<span class="fontnone">&nbsp;</span>
+													<textarea name="file_url" rows="3" cols="20" id="file_url" class="input" style="width: 500px;height: 30px;line-height: 30px;"></textarea>
+															<div id="file_url_upload-img" class="upload-box upload-img" ></div>
 														</td>
 												</tr>
 												
@@ -202,7 +195,7 @@
 														onclick="sumityingpin()">
 													</td>
 												</tr>
-											</tbody>
+											</tbody> 
 										</table>
 								</div>
 
@@ -219,12 +212,29 @@
 			</div>
 		</div>
 		<div class="clearBoth"></div>
-	</div>
+	</div> 
 	<div id="box_main_sub2"></div>
 	<!--InstanceEndEditable-->
 </div>
+<link href="${static_ctx}/portal/webuploader/style.css?version=${version}" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="${static_ctx}/portal/webuploader/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="${static_ctx}/portal/webuploader/webuploader.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="${static_ctx}/portal/webuploader/upload.js"></script>
 <script type="text/javascript">
-function sumityingpin(){
+function loadimg(paramkey){ 
+	var imgid = "#"+paramkey+"_upload-img";
+	$(imgid).InitUploader({btntext:'选择文件...',sendurl: "${ctxPath}/portal/recruit/upload", swf: "${static_ctx}/portal/webuploader/Uploader.swf",paramkeyname:paramkey});
+}
+function uploadError(data){
+	alert(data.message);
+} 
+function uploadSuccess(data,paramkey){
+	$("#file_url").html(data.url);
+
+}
+</script>
+<script type="text/javascript">
+function sumityingpin(){ 
 	   var messagesTitle=$("#messagesTitle").val();//应聘岗位
 	   var content=$("#content").val();//申请描述
 	   var author=$("#author").val();//申请人
@@ -272,6 +282,7 @@ function sumityingpin(){
 	        success : function(result) {
 	        	if (result.code == '0000') {
 	        		alert("添加成功!");
+	        		$(".button-position").hide();
 	        	}else{
 	        		alert(result.msg);
 	        	}
@@ -292,6 +303,7 @@ function uploadfile(){
 
 $(function(){
 	gotoPage1("1","consult");
+	loadimg("file_url");
 });
 function gotoPage1(p1,topicCode){ 
 	$("#FrontNews_list01-1443144624301").load("${ctxPath}/newsPage2?topicCode="+topicCode+"&p="+p1);
